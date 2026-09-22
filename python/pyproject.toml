@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "syncfit-contracts"
 version = "1.0.0"
 description = "Single source of truth for every interface between SyncFit Edge repositories."
-readme = "../README.md"
+readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
 dependencies = [
