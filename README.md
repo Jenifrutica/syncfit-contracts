@@ -56,6 +56,21 @@ syncfit-contracts/
 
 Python 3.11+ (Pydantic) and TypeScript (Zod / JSON Schema tooling).
 
+## Tasks
+
+### Requirements
+
+- [ ] Define the JSON Schema for the telemetry frame (PPG at 100 Hz, thermal delta, isometric load).
+- [ ] Define the WebSocket message envelope (client → server and server → client).
+- [ ] Define the adapted-routine schema returned by the reasoning layer.
+- [ ] Define the strict DeepSeek JSON Mode output schema.
+- [ ] Publish the OpenAPI specification for all backend REST endpoints.
+- [ ] Generate Python models (Pydantic).
+- [ ] Generate TypeScript types and Zod validators.
+- [ ] Add a versioning strategy and changelog.
+- [ ] Add example fixtures used as test data across all repositories.
+- [ ] Add schema validation tests.
+
 ## Related repositories
 
 - [`syncfit-hardware`](../syncfit-hardware) — produces telemetry frames.
