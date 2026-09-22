@@ -36,40 +36,93 @@ Although this repository contains no algorithms, its schemas formally describe t
 | Directed State Graph | Node and weighted-edge schema for physiological states. |
 | Time-Series Segment Tree | Range-query request/response schema (min, max, mean). |
 
-## Suggested structure
+## Repository layout
 
 ```
 syncfit-contracts/
-├── schemas/            # JSON Schema files
-│   ├── telemetry-frame.schema.json
-│   ├── ws-envelope.schema.json
-│   ├── adapted-routine.schema.json
-│   └── ai-response.schema.json
-├── openapi/            # OpenAPI specification
-├── python/             # Pydantic models (syncfit_contracts)
-├── typescript/         # Generated types and Zod validators
-├── examples/           # Fixtures and sample payloads
+├── schemas/                              # JSON Schema (Draft 2020-12)
+│   ├── common.schema.json                # shared definitions ($defs)
+│   ├── telemetry-frame.schema.json       # 100 Hz telemetry frame (Ring Buffer)
+│   ├── ws-envelope.schema.json           # WebSocket envelope
+│   ├── alert.schema.json                 # alert entry (Max-Heap)
+│   ├── adapted-routine.schema.json       # adapted prescription
+│   ├── ai-response.schema.json           # strict DeepSeek JSON Mode output
+│   ├── range-query-request.schema.json   # Segment Tree query (request)
+│   ├── range-query-response.schema.json  # Segment Tree query (response)
+│   └── state-graph.schema.json           # Directed State Graph
+├── openapi/openapi.yaml                  # backend REST contract
+├── python/
+│   ├── syncfit_contracts/                # Pydantic v2 models
+│   ├── tests/                            # schema + model validation tests
+│   └── pyproject.toml
+├── typescript/
+│   ├── src/                              # Zod validators + inferred types
+│   ├── test/                             # validation tests (vitest)
+│   ├── package.json
+│   └── tsconfig.json
+├── examples/                             # fixtures used across all repos
+├── CHANGELOG.md
+├── VERSION
 └── README.md
 ```
 
+## Usage
+
+### Python
+
+```bash
+cd python
+pip install -e ".[dev]"
+pytest -q
+```
+
+```python
+from syncfit_contracts import TelemetryFrame, AdaptedRoutine
+
+frame = TelemetryFrame.model_validate(payload)
+routine = AdaptedRoutine.model_validate(ai_payload)
+```
+
+### TypeScript
+
+```bash
+cd typescript
+npm install
+npm run typecheck
+npm test
+```
+
+```ts
+import { TelemetryFrame, AdaptedRoutine } from "@syncfit/contracts";
+
+const frame = TelemetryFrame.parse(payload);
+const routine = AdaptedRoutine.parse(aiPayload);
+```
+
+## Versioning
+
+The contract follows Semantic Versioning. The current version lives in `VERSION`
+and `python/syncfit_contracts/version.py` (`SCHEMA_VERSION`); every change is
+recorded in `CHANGELOG.md`. Consumers should pin a known-good version.
+
 ## Stack
 
-Python 3.11+ (Pydantic) and TypeScript (Zod / JSON Schema tooling).
+Python 3.11+ (Pydantic v2, jsonschema) and TypeScript (Zod, vitest).
 
 ## Tasks
 
 ### Requirements
 
-- [ ] Define the JSON Schema for the telemetry frame (PPG at 100 Hz, thermal delta, isometric load).
-- [ ] Define the WebSocket message envelope (client → server and server → client).
-- [ ] Define the adapted-routine schema returned by the reasoning layer.
-- [ ] Define the strict DeepSeek JSON Mode output schema.
-- [ ] Publish the OpenAPI specification for all backend REST endpoints.
-- [ ] Generate Python models (Pydantic).
-- [ ] Generate TypeScript types and Zod validators.
-- [ ] Add a versioning strategy and changelog.
-- [ ] Add example fixtures used as test data across all repositories.
-- [ ] Add schema validation tests.
+- [x] Define the JSON Schema for the telemetry frame (PPG at 100 Hz, thermal delta, isometric load).
+- [x] Define the WebSocket message envelope (client → server and server → client).
+- [x] Define the adapted-routine schema returned by the reasoning layer.
+- [x] Define the strict DeepSeek JSON Mode output schema.
+- [x] Publish the OpenAPI specification for all backend REST endpoints.
+- [x] Generate Python models (Pydantic).
+- [x] Generate TypeScript types and Zod validators.
+- [x] Add a versioning strategy and changelog.
+- [x] Add example fixtures used as test data across all repositories.
+- [x] Add schema validation tests.
 
 ## Related repositories
 

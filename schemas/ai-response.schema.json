@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/ai-response.schema.json",
+  "title": "AIReasoningResponse",
+  "description": "Strict output contract for the DeepSeek JSON Mode reasoning kernel. The model must return exactly this object, with no prose, markdown or wrapper.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "phase_inferred",
+    "fatigue_level",
+    "articular_risk_pct",
+    "k_load_multiplier",
+    "alerts",
+    "adapted_routine"
+  ],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/SchemaVersion" },
+    "session_id": { "$ref": "common.schema.json#/$defs/Uuid" },
+    "phase_inferred": { "$ref": "common.schema.json#/$defs/InferredPhase" },    "fatigue_level": { "$ref": "common.schema.json#/$defs/FatigueLevel" },
+    "articular_risk_pct": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "k_load_multiplier": {
+      "type": "number",
+      "description": "Echoed from syncfit-core; the model must preserve this value verbatim.",
+      "minimum": 0.7,
+      "maximum": 1.05
+    },
+    "alerts": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "adapted_routine": {
+      "type": "array",
+      "items": { "$ref": "common.schema.json#/$defs/ExerciseAdaptation" }
+    }
+  }
+}

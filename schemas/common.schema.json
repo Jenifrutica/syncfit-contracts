@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/common.schema.json",
+  "title": "SyncFit Common Definitions",
+  "description": "Shared definitions reused by every SyncFit Edge contract.",
+  "$defs": {
+    "SchemaVersion": {
+      "type": "string",
+      "description": "Semantic version of the contract this payload conforms to.",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "Timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 / RFC 3339 UTC timestamp."
+    },
+    "Uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "Modality": {
+      "type": "string",
+      "description": "Physiological modality selected by the athlete.",
+      "enum": ["MENSTRUAL_CYCLE", "GESTATIONAL"]
+    },
+    "CyclePhase": {
+      "type": "string",
+      "enum": ["MENSTRUAL", "FOLLICULAR", "OVULATORY", "LUTEAL"]
+    },
+    "Trimester": {
+      "type": "string",
+      "enum": ["TRIMESTER_1", "TRIMESTER_2", "TRIMESTER_3"]
+    },
+    "InferredPhase": {
+      "type": "string",
+      "description": "Phase of the menstrual cycle or gestational trimester inferred by the system.",
+      "enum": [
+        "MENSTRUAL",
+        "FOLLICULAR",
+        "OVULATORY",
+        "LUTEAL",
+        "TRIMESTER_1",
+        "TRIMESTER_2",
+        "TRIMESTER_3"
+      ]
+    },
+    "FatigueLevel": {
+      "type": "string",
+      "enum": ["LOW", "MEDIUM", "HIGH"]
+    },
+    "AlertSeverity": {
+      "type": "string",
+      "enum": ["INFO", "WARNING", "CRITICAL"]
+    },
+    "Biomarkers": {
+      "type": "object",
+      "description": "Basal and neuromuscular biomarkers sampled at the edge.",
+      "additionalProperties": false,
+      "required": [
+        "delta_temperature_c",
+        "rmssd_hrv_ms",
+        "isometric_force_loss_pct"
+      ],
+      "properties": {
+        "delta_temperature_c": {
+          "type": "number",
+          "description": "Skin thermal variation relative to the individual baseline, in Celsius.",
+          "minimum": -2.0,
+          "maximum": 2.0
+        },
+        "rmssd_hrv_ms": {
+          "type": "number",
+          "description": "Root mean square of successive R-R differences, in milliseconds.",
+          "minimum": 0,
+          "maximum": 300
+        },
+        "isometric_force_loss_pct": {
+          "type": "number",
+          "description": "Percentage of isometric strength lost versus baseline, from the load cell.",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },
+    "ExerciseAdaptation": {
+      "type": "object",
+      "description": "Adaptation applied to a single programmed exercise.",
+      "additionalProperties": false,
+      "required": [
+        "exercise_original",
+        "blocked",
+        "block_reason",
+        "exercise_substitute",
+        "series_adapted",
+        "reps_adapted",
+        "weight_suggested_kg"
+      ],
+      "properties": {
+        "exercise_original": { "type": "string" },
+        "blocked": { "type": "boolean" },
+        "block_reason": {
+          "type": "string",
+          "description": "Empty string when the exercise is not blocked."
+        },
+        "exercise_substitute": {
+          "type": "string",
+          "description": "Empty string when no substitution is required."
+        },
+        "series_adapted": { "type": "integer", "minimum": 0, "maximum": 20 },
+        "reps_adapted": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "weight_suggested_kg": { "type": "number", "minimum": 0 }
+      }
+    },
+    "PhysiologicalState": {
+      "type": "object",
+      "description": "Node of the Directed State Graph.",
+      "additionalProperties": false,
+      "required": ["id", "state", "kind", "label"],
+      "properties": {
+        "id": { "type": "string" },
+        "state": { "$ref": "#/$defs/InferredPhase" },
+        "kind": { "type": "string", "enum": ["CYCLE_PHASE", "TRIMESTER"] },
+        "label": { "type": "string" }
+      }
+    },
+    "StateTransition": {
+      "type": "object",
+      "description": "Weighted, directed edge of the Directed State Graph.",
+      "additionalProperties": false,
+      "required": ["from", "to", "weight"],
+      "properties": {
+        "from": { "type": "string" },
+        "to": { "type": "string" },
+        "weight": {
+          "type": "number",
+          "description": "Transition probability in [0, 1]; below 1 models irregularity.",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "condition": {
+          "type": "string",
+          "description": "Optional human-readable condition guarding the transition."
+        }
+      }
+    }
+  }
+}

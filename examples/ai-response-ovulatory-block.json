@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "3f1b2c4d-5e6f-4a7b-8c9d-0e1f2a3b4c5d",
+  "phase_inferred": "OVULATORY",
+  "fatigue_level": "HIGH",
+  "articular_risk_pct": 78.0,
+  "k_load_multiplier": 0.72,
+  "alerts": [
+    "Ovulatory phase detected: elevated ligament laxity and ACL injury risk.",
+    "Central nervous system fatigue detected from isometric strength loss."
+  ],
+  "adapted_routine": [
+    {
+      "exercise_original": "Heavy back squat",
+      "blocked": true,
+      "block_reason": "High axial load and shear vector at the knee during the ovulatory phase increase ACL rupture risk.",
+      "exercise_substitute": "Guided goblet squat on a stable box",
+      "series_adapted": 3,
+      "reps_adapted": 10,
+      "weight_suggested_kg": 16.0
+    },
+    {
+      "exercise_original": "Plyometric box jumps",
+      "blocked": true,
+      "block_reason": "High-impact plyometrics are contraindicated during peak relaxin/estrogen.",
+      "exercise_substitute": "Controlled step-ups",
+      "series_adapted": 3,
+      "reps_adapted": 12,
+      "weight_suggested_kg": 0.0
+    },
+    {
+      "exercise_original": "Flat barbell bench press",
+      "blocked": false,
+      "block_reason": "",
+      "exercise_substitute": "",
+      "series_adapted": 4,
+      "reps_adapted": 8,
+      "weight_suggested_kg": 32.4
+    }
+  ]
+}

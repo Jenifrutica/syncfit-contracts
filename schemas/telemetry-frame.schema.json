@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/telemetry-frame.schema.json",
+  "title": "TelemetryFrame",
+  "description": "A fixed-window telemetry frame emitted by the ESP32 device at 100 Hz and carried by the Ring Buffer.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "device_id",
+    "session_id",
+    "timestamp",
+    "modality",
+    "day_or_week",
+    "biomarkers",
+    "ppg_window"
+  ],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/SchemaVersion" },
+    "device_id": { "type": "string", "minLength": 1 },
+    "session_id": { "$ref": "common.schema.json#/$defs/Uuid" },
+    "timestamp": { "$ref": "common.schema.json#/$defs/Timestamp" },
+    "modality": { "$ref": "common.schema.json#/$defs/Modality" },
+    "day_or_week": {
+      "type": "integer",
+      "description": "Day of the menstrual cycle (1-35) or week of gestation (1-42), according to modality.",
+      "minimum": 1,
+      "maximum": 42
+    },
+    "biomarkers": { "$ref": "common.schema.json#/$defs/Biomarkers" },
+    "ppg_window": {
+      "type": "object",
+      "description": "Ring-buffer window of optical PPG samples.",
+      "additionalProperties": false,
+      "required": ["sample_rate_hz", "samples"],
+      "properties": {
+        "sample_rate_hz": {
+          "const": 100,
+          "description": "Fixed sampling frequency required by the technical document."
+        },
+        "window_size": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Capacity of the fixed ring buffer."
+        },
+        "samples": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 1,
+          "description": "Raw PPG samples in the current window."
+        }
+      }
+    }
+  }
+}

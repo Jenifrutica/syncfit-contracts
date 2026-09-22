@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "3f1b2c4d-5e6f-4a7b-8c9d-0e1f2a3b4c5d",
+  "metric": "rmssd",
+  "start_index": 7,
+  "end_index": 21,
+  "aggregation": "mean"
+}

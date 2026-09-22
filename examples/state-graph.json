@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "nodes": [
+    { "id": "menstrual", "state": "MENSTRUAL", "kind": "CYCLE_PHASE", "label": "Menstrual phase" },
+    { "id": "follicular", "state": "FOLLICULAR", "kind": "CYCLE_PHASE", "label": "Follicular phase" },
+    { "id": "ovulatory", "state": "OVULATORY", "kind": "CYCLE_PHASE", "label": "Ovulatory phase" },
+    { "id": "luteal", "state": "LUTEAL", "kind": "CYCLE_PHASE", "label": "Luteal phase" },
+    { "id": "t1", "state": "TRIMESTER_1", "kind": "TRIMESTER", "label": "First trimester" },
+    { "id": "t2", "state": "TRIMESTER_2", "kind": "TRIMESTER", "label": "Second trimester" },
+    { "id": "t3", "state": "TRIMESTER_3", "kind": "TRIMESTER", "label": "Third trimester" }
+  ],
+  "edges": [
+    { "from": "menstrual", "to": "follicular", "weight": 0.95 },
+    { "from": "follicular", "to": "ovulatory", "weight": 0.9 },
+    { "from": "ovulatory", "to": "luteal", "weight": 0.88 },
+    { "from": "luteal", "to": "menstrual", "weight": 0.85, "condition": "no pregnancy detected" },
+    { "from": "t1", "to": "t2", "weight": 0.99 },
+    { "from": "t2", "to": "t3", "weight": 0.99 }
+  ]
+}

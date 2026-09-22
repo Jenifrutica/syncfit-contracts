@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/range-query-response.schema.json",
+  "title": "TimeSeriesRangeQueryResponse",
+  "description": "Response of a Time-Series Segment Tree range query.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "session_id", "metric", "start_index", "end_index", "aggregation", "value", "count"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/SchemaVersion" },
+    "session_id": { "$ref": "common.schema.json#/$defs/Uuid" },
+    "metric": { "type": "string", "enum": ["temperature", "rmssd", "isometric_force_loss"] },
+    "start_index": { "type": "integer", "minimum": 0 },
+    "end_index": { "type": "integer", "minimum": 0 },
+    "aggregation": { "type": "string", "enum": ["min", "max", "mean"] },
+    "value": { "type": "number" },
+    "count": { "type": "integer", "minimum": 0 }
+  }
+}

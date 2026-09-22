@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "3f1b2c4d-5e6f-4a7b-8c9d-0e1f2a3b4c5d",
+  "phase_inferred": "LUTEAL",
+  "fatigue_level": "MEDIUM",
+  "k_load_multiplier": 0.9,
+  "alerts": [
+    "Late luteal phase: elevated basal temperature and reduced HRV."
+  ],
+  "adapted_routine": [
+    {
+      "exercise_original": "Romanian deadlift",
+      "blocked": false,
+      "block_reason": "",
+      "exercise_substitute": "",
+      "series_adapted": 4,
+      "reps_adapted": 8,
+      "weight_suggested_kg": 45.0
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/ws-envelope.schema.json",
+  "title": "WebSocketEnvelope",
+  "description": "Envelope for every message exchanged over the SyncFit Edge WebSocket in either direction.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "type", "timestamp", "payload"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/SchemaVersion" },
+    "type": {
+      "type": "string",
+      "enum": ["telemetry", "alert", "prescription", "ack", "error", "ping", "pong"]
+    },
+    "timestamp": { "$ref": "common.schema.json#/$defs/Timestamp" },
+    "session_id": { "$ref": "common.schema.json#/$defs/Uuid" },
+    "correlation_id": {
+      "type": "string",
+      "description": "Optional identifier correlating a response with its request."
+    },
+    "payload": {
+      "type": "object",
+      "description": "Message body. Its shape is determined by 'type': a TelemetryFrame for 'telemetry', an Alert for 'alert', an AdaptedRoutine for 'prescription'."
+    }
+  }
+}

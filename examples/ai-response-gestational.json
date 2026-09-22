@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "8a2d4e6f-1b3c-4d5e-9f70-a1b2c3d4e5f6",
+  "phase_inferred": "TRIMESTER_2",
+  "fatigue_level": "MEDIUM",
+  "articular_risk_pct": 54.0,
+  "k_load_multiplier": 0.85,
+  "alerts": [
+    "Gestational week 18: supine exercises are now contraindicated (vena cava compression).",
+    "Pelvic floor protection required; avoid forced Valsalva maneuvers."
+  ],
+  "adapted_routine": [
+    {
+      "exercise_original": "Flat barbell bench press",
+      "blocked": true,
+      "block_reason": "Prolonged supine decubitus from week 16 compromises venous return.",
+      "exercise_substitute": "Incline bench press (30 degrees)",
+      "series_adapted": 3,
+      "reps_adapted": 10,
+      "weight_suggested_kg": 20.0
+    },
+    {
+      "exercise_original": "Standing cable row",
+      "blocked": false,
+      "block_reason": "",
+      "exercise_substitute": "",
+      "series_adapted": 3,
+      "reps_adapted": 12,
+      "weight_suggested_kg": 18.0
+    }
+  ]
+}

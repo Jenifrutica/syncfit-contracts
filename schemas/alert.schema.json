@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/alert.schema.json",
+  "title": "PhysiologicalAlert",
+  "description": "Critical physiological alert dispatched through the Max-Heap in O(1).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "alert_id",
+    "session_id",
+    "timestamp",
+    "severity",
+    "code",
+    "message"
+  ],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/SchemaVersion" },
+    "alert_id": { "$ref": "common.schema.json#/$defs/Uuid" },
+    "session_id": { "$ref": "common.schema.json#/$defs/Uuid" },
+    "timestamp": { "$ref": "common.schema.json#/$defs/Timestamp" },
+    "severity": { "$ref": "common.schema.json#/$defs/AlertSeverity" },
+    "code": {
+      "type": "string",
+      "description": "Stable machine-readable code, e.g. RMSSD_DROP, CORE_TEMP_RISE, CNS_FATIGUE.",
+      "enum": ["RMSSD_DROP", "CORE_TEMP_RISE", "CNS_FATIGUE", "ARTICULAR_RISK", "SENSOR_FAULT"]
+    },
+    "message": { "type": "string" },
+    "metric": { "type": "string" },
+    "value": { "type": "number" },
+    "threshold": { "type": "number" }
+  }
+}

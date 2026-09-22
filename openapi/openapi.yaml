@@ -1,0 +1,215 @@
+openapi: 3.1.0
+info:
+  title: SyncFit Edge Backend API
+  version: 1.0.0
+  description: >
+    REST contract for the SyncFit Edge backend (Python / FastAPI).
+    Continuous telemetry is ingested over WebSockets; this document covers
+    persistence, queries and prescription generation. Every payload is defined
+    once in ../schemas and referenced here.
+servers:
+  - url: http://localhost:8000
+    description: Local development
+tags:
+  - name: sessions
+  - name: telemetry
+  - name: metrics
+  - name: alerts
+  - name: prescriptions
+  - name: health
+
+paths:
+  /api/v1/health:
+    get:
+      tags: [health]
+      summary: Service health check
+      operationId: getHealth
+      responses:
+        "200":
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [status, version]
+                properties:
+                  status: { type: string, enum: [ok] }
+                  version: { type: string }
+
+  /api/v1/sessions:
+    post:
+      tags: [sessions]
+      summary: Create a training session
+      operationId: createSession
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [modality, day_or_week]
+              properties:
+                modality:
+                  $ref: ../schemas/common.schema.json#/$defs/Modality
+                day_or_week:
+                  type: integer
+                  minimum: 1
+                  maximum: 42
+      responses:
+        "201":
+          description: Session created
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [session_id]
+                properties:
+                  session_id:
+                    $ref: ../schemas/common.schema.json#/$defs/Uuid
+
+  /api/v1/sessions/{session_id}:
+    get:
+      tags: [sessions]
+      summary: Get a session
+      operationId: getSession
+      parameters:
+        - $ref: "#/components/parameters/SessionId"
+      responses:
+        "200":
+          description: Session found
+          content:
+            application/json:
+              schema:
+                type: object
+        "404":
+          $ref: "#/components/responses/NotFound"
+
+  /api/v1/sessions/{session_id}/telemetry:
+    post:
+      tags: [telemetry]
+      summary: Ingest a single telemetry frame over HTTP (fallback for WebSockets)
+      operationId: ingestTelemetry
+      parameters:
+        - $ref: "#/components/parameters/SessionId"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: ../schemas/telemetry-frame.schema.json
+      responses:
+        "202":
+          description: Frame accepted
+        "422":
+          description: Frame failed schema validation
+
+  /api/v1/sessions/{session_id}/metrics:
+    post:
+      tags: [metrics]
+      summary: Time-Series Segment Tree range query (O(log n))
+      operationId: queryMetrics
+      parameters:
+        - $ref: "#/components/parameters/SessionId"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: ../schemas/range-query-request.schema.json
+      responses:
+        "200":
+          description: Aggregated result
+          content:
+            application/json:
+              schema:
+                $ref: ../schemas/range-query-response.schema.json
+
+  /api/v1/sessions/{session_id}/alerts:
+    get:
+      tags: [alerts]
+      summary: List physiological alerts for a session, ordered by severity (Max-Heap)
+      operationId: listAlerts
+      parameters:
+        - $ref: "#/components/parameters/SessionId"
+      responses:
+        "200":
+          description: Ordered alerts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../schemas/alert.schema.json
+
+  /api/v1/sessions/{session_id}/prescriptions:
+    post:
+      tags: [prescriptions]
+      summary: Generate an adapted routine (core -> reasoning)
+      operationId: createPrescription
+      parameters:
+        - $ref: "#/components/parameters/SessionId"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [programmed_routine]
+              properties:
+                programmed_routine:
+                  type: array
+                  items:
+                    type: object
+                    required: [exercise, series, reps, weight_kg]
+                    properties:
+                      exercise: { type: string }
+                      series: { type: integer, minimum: 0 }
+                      reps: { type: integer, minimum: 0 }
+                      weight_kg: { type: number, minimum: 0 }
+      responses:
+        "201":
+          description: Adapted routine generated
+          content:
+            application/json:
+              schema:
+                $ref: ../schemas/adapted-routine.schema.json
+
+  /api/v1/prescriptions/{prescription_id}:
+    get:
+      tags: [prescriptions]
+      summary: Get a stored prescription
+      operationId: getPrescription
+      parameters:
+        - name: prescription_id
+          in: path
+          required: true
+          schema:
+            $ref: ../schemas/common.schema.json#/$defs/Uuid
+      responses:
+        "200":
+          description: Prescription found
+          content:
+            application/json:
+              schema:
+                $ref: ../schemas/adapted-routine.schema.json
+        "404":
+          $ref: "#/components/responses/NotFound"
+
+components:
+  parameters:
+    SessionId:
+      name: session_id
+      in: path
+      required: true
+      schema:
+        $ref: ../schemas/common.schema.json#/$defs/Uuid
+  responses:
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            type: object
+            required: [detail]
+            properties:
+              detail: { type: string }
