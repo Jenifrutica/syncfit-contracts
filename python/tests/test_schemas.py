@@ -36,6 +36,9 @@ EXAMPLE_TO_SCHEMA = {
     "range-query-request.json": "range-query-request.schema.json",
     "range-query-response.json": "range-query-response.schema.json",
     "state-graph.json": "state-graph.schema.json",
+    "exercise.json": "exercise.schema.json",
+    "routine-request.json": "routine-request.schema.json",
+    "routine-response.json": "routine-response.schema.json",
 }
 
 
@@ -51,8 +54,20 @@ def test_examples_validate_against_schemas(registry, example_name, schema_name):
     assert not errors, "\n".join(e.message for e in errors)
 
 
+def test_catalog_validates_against_schema(registry):
+    from jsonschema import Draft202012Validator
+
+    catalog_path = REPO_ROOT / "python" / "syncfit_contracts" / "catalog" / "exercises.json"
+    schema = load_json(SCHEMAS_DIR / "exercise-catalog.schema.json")
+    instance = load_json(catalog_path)
+    validator = Draft202012Validator(schema, registry=registry)
+    errors = sorted(validator.iter_errors(instance), key=lambda e: e.path)
+    assert not errors, "\n".join(e.message for e in errors)
+
+
 def test_all_schemas_are_valid_json_schema(registry):
     from jsonschema import Draft202012Validator
 
     for schema_path in SCHEMAS_DIR.glob("*.schema.json"):
         Draft202012Validator.check_schema(load_json(schema_path))
+

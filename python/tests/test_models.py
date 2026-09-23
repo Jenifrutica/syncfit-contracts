@@ -9,12 +9,20 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from syncfit_contracts import (  # noqa: E402
     AdaptedRoutine,
     AIReasoningResponse,
+    Exercise,
+    MuscleGroup,
     PhysiologicalAlert,
     PhysiologicalStateGraph,
     RangeQueryRequest,
     RangeQueryResponse,
+    RoutineRequest,
+    RoutineResponse,
     TelemetryFrame,
     WsEnvelope,
+    exercises_for_groups,
+    get_exercise,
+    load_exercises,
+    localize,
 )
 
 EXAMPLES_DIR = Path(__file__).resolve().parents[2] / "examples"
@@ -44,6 +52,44 @@ def test_examples_parse_with_pydantic(name, model):
     assert instance.schema_version == "1.0.0"
 
 
+def test_routine_request_and_response_parse():
+    request = RoutineRequest.model_validate(load("routine-request.json"))
+    assert request.language == "ES"
+    assert request.muscle_groups == ["GLUTES", "QUADRICEPS"]
+
+    response = RoutineResponse.model_validate(load("routine-response.json"))
+    assert response.routine[0].exercise_id == "goblet-squat"
+    assert response.routine[0].blocked is True
+
+
+def test_exercise_parses_and_requires_english():
+    exercise = Exercise.model_validate(load("exercise.json"))
+    assert exercise.id == "goblet-squat"
+    assert "GLUTES" in exercise.muscle_groups
+
+
+def test_catalog_loader_and_helpers():
+    exercises = load_exercises()
+    assert len(exercises) >= 20
+    assert get_exercise("goblet-squat") is not None
+    assert get_exercise("does-not-exist") is None
+
+    glutes = exercises_for_groups([MuscleGroup.GLUTES])
+    assert len(glutes) >= 3
+    assert all("GLUTES" in [str(g) for g in e.muscle_groups] for e in glutes)
+
+    low_impact = exercises_for_groups(["QUADRICEPS"], impact="LOW")
+    assert all(str(e.impact) == "LOW" for e in low_impact)
+
+
+def test_localize_falls_back_to_english():
+    exercise = get_exercise("goblet-squat")
+    assert exercise is not None
+    assert localize(exercise.name, "ES") == "Sentadilla goblet"
+    assert localize(exercise.name, "ZH") == "高脚杯深蹲"
+    assert localize(exercise.name, "FR") == "Goblet squat"  # unknown -> English
+
+
 def test_k_load_range_is_enforced():
     from pydantic import ValidationError
 
@@ -60,3 +106,4 @@ def test_unknown_fields_are_rejected():
     payload["unexpected"] = True
     with pytest.raises(ValidationError):
         PhysiologicalAlert.model_validate(payload)
+
