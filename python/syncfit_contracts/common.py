@@ -53,6 +53,58 @@ class AlertSeverity(str, Enum):
     CRITICAL = "CRITICAL"
 
 
+class Language(str, Enum):
+    """Output/UI language. English is the default; more may be added."""
+
+    EN = "EN"
+    ES = "ES"
+    ZH = "ZH"
+
+
+class ExerciseImpact(str, Enum):
+    LOW = "LOW"
+    MEDIUM = "MEDIUM"
+    HIGH = "HIGH"
+
+
+class MuscleGroup(str, Enum):
+    """Target muscle groups: isolated, region, or movement pattern."""
+
+    GLUTES = "GLUTES"
+    QUADRICEPS = "QUADRICEPS"
+    HAMSTRINGS = "HAMSTRINGS"
+    CALVES = "CALVES"
+    ADDUCTORS = "ADDUCTORS"
+    ABDUCTORS = "ABDUCTORS"
+    ABS = "ABS"
+    OBLIQUES = "OBLIQUES"
+    LOWER_BACK = "LOWER_BACK"
+    UPPER_BACK = "UPPER_BACK"
+    BACK = "BACK"
+    LATS = "LATS"
+    CHEST = "CHEST"
+    SHOULDERS = "SHOULDERS"
+    BICEPS = "BICEPS"
+    TRICEPS = "TRICEPS"
+    FOREARMS = "FOREARMS"
+    ARMS = "ARMS"
+    FULL_LEG = "FULL_LEG"
+    CORE = "CORE"
+    UPPER_BODY = "UPPER_BODY"
+    LOWER_BODY = "LOWER_BODY"
+    FULL_BODY = "FULL_BODY"
+    PUSH = "PUSH"
+    PULL = "PULL"
+
+
+class LocalizedText(BaseModel):
+    """Text localized by language code; English is required, others optional."""
+
+    model_config = ConfigDict(extra="allow")
+
+    en: str
+
+
 class BaseContractModel(BaseModel):
     """Base model: rejects unknown fields to keep the contract strict."""
 
@@ -77,6 +129,25 @@ class ExerciseAdaptation(BaseContractModel):
     series_adapted: int = Field(ge=0, le=20)
     reps_adapted: int = Field(ge=0, le=100)
     weight_suggested_kg: float = Field(ge=0)
+    exercise_id: str | None = None
+    muscle_groups: list[MuscleGroup] = Field(default_factory=list)
+    impact: ExerciseImpact | None = None
+    description: LocalizedText | None = None
+    image_url: str | None = None
+    media_url: str | None = None
+
+
+class Exercise(BaseContractModel):
+    """Catalog entry: an exercise with localized text and free-use media."""
+
+    id: str
+    name: LocalizedText
+    muscle_groups: list[MuscleGroup] = Field(min_length=1)
+    equipment: str
+    impact: ExerciseImpact
+    description: LocalizedText
+    image_url: str
+    media_url: str | None = None
 
 
 class PhysiologicalState(BaseContractModel):
@@ -107,9 +178,15 @@ __all__ = [
     "InferredPhase",
     "FatigueLevel",
     "AlertSeverity",
+    "Language",
+    "ExerciseImpact",
+    "MuscleGroup",
+    "LocalizedText",
     "BaseContractModel",
     "Biomarkers",
     "ExerciseAdaptation",
+    "Exercise",
     "PhysiologicalState",
     "StateTransition",
 ]
+

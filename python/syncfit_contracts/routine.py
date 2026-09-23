@@ -4,7 +4,16 @@ from __future__ import annotations
 
 from pydantic import Field
 
-from .common import BaseContractModel, ExerciseAdaptation, FatigueLevel, InferredPhase
+from .common import (
+    BaseContractModel,
+    ExerciseAdaptation,
+    FatigueLevel,
+    InferredPhase,
+    Language,
+    Modality,
+    MuscleGroup,
+)
+from .telemetry import TelemetryFrame
 from .version import SCHEMA_VERSION
 
 
@@ -20,4 +29,32 @@ class AdaptedRoutine(BaseContractModel):
     adapted_routine: list[ExerciseAdaptation] = Field(default_factory=list)
 
 
-__all__ = ["AdaptedRoutine"]
+class RoutineRequest(BaseContractModel):
+    """Request to generate a routine for one or more muscle groups."""
+
+    schema_version: str = SCHEMA_VERSION
+    session_id: str | None = None
+    muscle_groups: list[MuscleGroup] = Field(min_length=1, max_length=4)
+    language: Language = Language.EN
+    modality: Modality | None = None
+    day_or_week: int | None = Field(default=None, ge=1, le=42)
+    telemetry: TelemetryFrame | None = None
+    exercises_per_group: int | None = Field(default=None, ge=1, le=8)
+
+
+class RoutineResponse(BaseContractModel):
+    """Adapted routine for the selected muscle groups."""
+
+    schema_version: str = SCHEMA_VERSION
+    session_id: str | None = None
+    language: Language = Language.EN
+    muscle_groups: list[MuscleGroup] = Field(min_length=1)
+    phase_inferred: InferredPhase | None = None
+    fatigue_level: FatigueLevel | None = None
+    k_load_multiplier: float | None = Field(default=None, ge=0.70, le=1.05)
+    alerts: list[str] = Field(default_factory=list)
+    routine: list[ExerciseAdaptation] = Field(default_factory=list)
+
+
+__all__ = ["AdaptedRoutine", "RoutineRequest", "RoutineResponse"]
+

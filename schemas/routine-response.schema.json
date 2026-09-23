@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/routine-response.schema.json",
+  "title": "RoutineResponse",
+  "description": "Adapted routine for the selected muscle groups, with localized exercises and safe adjustments.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "language", "muscle_groups", "routine"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/SchemaVersion" },
+    "session_id": { "$ref": "common.schema.json#/$defs/Uuid" },
+    "language": { "$ref": "common.schema.json#/$defs/Language" },
+    "muscle_groups": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "common.schema.json#/$defs/MuscleGroup" }
+    },
+    "phase_inferred": { "$ref": "common.schema.json#/$defs/InferredPhase" },
+    "fatigue_level": { "$ref": "common.schema.json#/$defs/FatigueLevel" },
+    "k_load_multiplier": {
+      "type": "number",
+      "minimum": 0.7,
+      "maximum": 1.05
+    },
+    "alerts": { "type": "array", "items": { "type": "string" } },
+    "routine": {
+      "type": "array",
+      "items": { "$ref": "common.schema.json#/$defs/ExerciseAdaptation" }
+    }
+  }
+}

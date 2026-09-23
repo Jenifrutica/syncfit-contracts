@@ -6,10 +6,14 @@ import { describe, expect, it } from "vitest";
 import {
   AdaptedRoutine,
   AIReasoningResponse,
+  Exercise,
+  LocalizedText,
   PhysiologicalAlert,
   PhysiologicalStateGraph,
   RangeQueryRequest,
   RangeQueryResponse,
+  RoutineRequest,
+  RoutineResponse,
   TelemetryFrame,
   WsEnvelope,
 } from "../src/index.js";
@@ -32,11 +36,27 @@ const cases: Array<[string, { parse: (v: unknown) => unknown }]> = [
   ["range-query-request.json", RangeQueryRequest],
   ["range-query-response.json", RangeQueryResponse],
   ["state-graph.json", PhysiologicalStateGraph],
+  ["exercise.json", Exercise],
+  ["routine-request.json", RoutineRequest],
+  ["routine-response.json", RoutineResponse],
 ];
 
 describe("contracts validate the shared examples", () => {
   it.each(cases)("%s", (_name, schema) => {
     expect(() => schema.parse(load(_name))).not.toThrow();
+  });
+});
+
+describe("muscle groups and localization", () => {
+  it("rejects an unknown muscle group", () => {
+    const payload = load("routine-request.json") as Record<string, unknown>;
+    payload.muscle_groups = ["NOT_A_GROUP"];
+    expect(() => RoutineRequest.parse(payload)).toThrow();
+  });
+
+  it("requires English in localized text", () => {
+    expect(() => LocalizedText.parse({ es: "solo español" })).toThrow();
+    expect(() => LocalizedText.parse({ en: "ok", es: "bien", zh: "好" })).not.toThrow();
   });
 });
 
@@ -53,3 +73,4 @@ describe("strictness", () => {
     expect(() => PhysiologicalAlert.parse(payload)).toThrow();
   });
 });
+

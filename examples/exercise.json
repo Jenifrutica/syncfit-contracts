@@ -1,0 +1,14 @@
+{
+  "id": "goblet-squat",
+  "name": { "en": "Goblet squat", "es": "Sentadilla goblet", "zh": "高脚杯深蹲" },
+  "muscle_groups": ["QUADRICEPS", "GLUTES", "FULL_LEG", "LOWER_BODY"],
+  "equipment": "dumbbell",
+  "impact": "LOW",
+  "description": {
+    "en": "Hold a dumbbell at the chest and squat with a controlled tempo, keeping the torso upright.",
+    "es": "Sostén una mancuerna al pecho y haz sentadilla con tempo controlado, manteniendo el torso erguido.",
+    "zh": "胸前持哑铃，控制节奏下蹲，保持躯干直立。"
+  },
+  "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Goblet+Squat",
+  "media_url": null
+}

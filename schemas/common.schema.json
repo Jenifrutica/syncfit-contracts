@@ -108,7 +108,26 @@
         },
         "series_adapted": { "type": "integer", "minimum": 0, "maximum": 20 },
         "reps_adapted": { "type": "integer", "minimum": 0, "maximum": 100 },
-        "weight_suggested_kg": { "type": "number", "minimum": 0 }
+        "weight_suggested_kg": { "type": "number", "minimum": 0 },
+        "exercise_id": {
+          "type": "string",
+          "description": "Catalog id of the recommended exercise, when known."
+        },
+        "muscle_groups": {
+          "type": "array",
+          "description": "Muscle groups targeted by the exercise.",
+          "items": { "$ref": "#/$defs/MuscleGroup" }
+        },
+        "impact": { "$ref": "#/$defs/ExerciseImpact" },
+        "description": { "$ref": "#/$defs/LocalizedText" },
+        "image_url": {
+          "type": "string",
+          "description": "Free-use illustration of the exercise (may be a placeholder for now)."
+        },
+        "media_url": {
+          "type": ["string", "null"],
+          "description": "Reserved for demonstration videos/animations; null until available."
+        }
       }
     },
     "PhysiologicalState": {
@@ -142,6 +161,53 @@
           "description": "Optional human-readable condition guarding the transition."
         }
       }
+    },
+    "Language": {
+      "type": "string",
+      "description": "Output/UI language. More languages may be added over time.",
+      "enum": ["EN", "ES", "ZH"]
+    },
+    "LocalizedText": {
+      "type": "object",
+      "description": "Text localized by language code. English is always required; other languages are optional and extensible.",
+      "required": ["en"],
+      "additionalProperties": { "type": "string" }
+    },
+    "MuscleGroup": {
+      "type": "string",
+      "description": "Target muscle group. Includes isolated groups, full-body regions and movement patterns for combinations.",
+      "enum": [
+        "GLUTES",
+        "QUADRICEPS",
+        "HAMSTRINGS",
+        "CALVES",
+        "ADDUCTORS",
+        "ABDUCTORS",
+        "ABS",
+        "OBLIQUES",
+        "LOWER_BACK",
+        "UPPER_BACK",
+        "BACK",
+        "LATS",
+        "CHEST",
+        "SHOULDERS",
+        "BICEPS",
+        "TRICEPS",
+        "FOREARMS",
+        "ARMS",
+        "FULL_LEG",
+        "CORE",
+        "UPPER_BODY",
+        "LOWER_BODY",
+        "FULL_BODY",
+        "PUSH",
+        "PULL"
+      ]
+    },
+    "ExerciseImpact": {
+      "type": "string",
+      "description": "Joint/impact stress of an exercise, used by the biomechanical safety rules.",
+      "enum": ["LOW", "MEDIUM", "HIGH"]
     }
   }
 }

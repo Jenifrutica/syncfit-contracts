@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.1.0",
+  "session_id": "3f1b2c4d-5e6f-4a7b-8c9d-0e1f2a3b4c5d",
+  "language": "ES",
+  "muscle_groups": ["GLUTES", "QUADRICEPS"],
+  "phase_inferred": "OVULATORY",
+  "fatigue_level": "MEDIUM",
+  "k_load_multiplier": 0.9,
+  "alerts": [
+    "Fase ovulatoria: se evitan ejercicios de alto impacto."
+  ],
+  "routine": [
+    {
+      "exercise_original": "Barbell back squat",
+      "blocked": true,
+      "block_reason": "Fase ovulatoria: mayor laxitud ligamentosa.",
+      "exercise_substitute": "Sentadilla goblet",
+      "series_adapted": 3,
+      "reps_adapted": 10,
+      "weight_suggested_kg": 16.0,
+      "exercise_id": "goblet-squat",
+      "muscle_groups": ["QUADRICEPS", "GLUTES", "FULL_LEG", "LOWER_BODY"],
+      "impact": "LOW",
+      "description": {
+        "en": "Hold a dumbbell at the chest and squat with a controlled tempo.",
+        "es": "Sostén una mancuerna al pecho y haz sentadilla con tempo controlado.",
+        "zh": "胸前持哑铃，控制节奏下蹲。"
+      },
+      "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Goblet+Squat",
+      "media_url": null
+    }
+  ]
+}

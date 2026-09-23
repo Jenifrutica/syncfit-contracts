@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/exercise.schema.json",
+  "title": "Exercise",
+  "description": "Catalog entry: a single exercise with localized text and free-use media.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "muscle_groups", "equipment", "impact", "description", "image_url"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "$ref": "common.schema.json#/$defs/LocalizedText" },
+    "muscle_groups": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "common.schema.json#/$defs/MuscleGroup" }
+    },
+    "equipment": { "type": "string" },
+    "impact": { "$ref": "common.schema.json#/$defs/ExerciseImpact" },
+    "description": { "$ref": "common.schema.json#/$defs/LocalizedText" },
+    "image_url": { "type": "string" },
+    "media_url": { "type": ["string", "null"] }
+  }
+}

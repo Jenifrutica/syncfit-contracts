@@ -41,6 +41,47 @@ export type FatigueLevel = z.infer<typeof FatigueLevel>;
 export const AlertSeverity = z.enum(["INFO", "WARNING", "CRITICAL"]);
 export type AlertSeverity = z.infer<typeof AlertSeverity>;
 
+export const Language = z.enum(["EN", "ES", "ZH"]);
+export type Language = z.infer<typeof Language>;
+
+export const ExerciseImpact = z.enum(["LOW", "MEDIUM", "HIGH"]);
+export type ExerciseImpact = z.infer<typeof ExerciseImpact>;
+
+export const MuscleGroup = z.enum([
+  "GLUTES",
+  "QUADRICEPS",
+  "HAMSTRINGS",
+  "CALVES",
+  "ADDUCTORS",
+  "ABDUCTORS",
+  "ABS",
+  "OBLIQUES",
+  "LOWER_BACK",
+  "UPPER_BACK",
+  "BACK",
+  "LATS",
+  "CHEST",
+  "SHOULDERS",
+  "BICEPS",
+  "TRICEPS",
+  "FOREARMS",
+  "ARMS",
+  "FULL_LEG",
+  "CORE",
+  "UPPER_BODY",
+  "LOWER_BODY",
+  "FULL_BODY",
+  "PUSH",
+  "PULL",
+]);
+export type MuscleGroup = z.infer<typeof MuscleGroup>;
+
+/** Text localized by language code; English required, others optional. */
+export const LocalizedText = z
+  .object({ en: z.string() })
+  .catchall(z.string());
+export type LocalizedText = z.infer<typeof LocalizedText>;
+
 export const Biomarkers = z
   .object({
     delta_temperature_c: z.number().min(-2).max(2),
@@ -59,9 +100,29 @@ export const ExerciseAdaptation = z
     series_adapted: z.number().int().min(0).max(20),
     reps_adapted: z.number().int().min(0).max(100),
     weight_suggested_kg: z.number().min(0),
+    exercise_id: z.string().optional(),
+    muscle_groups: z.array(MuscleGroup).optional(),
+    impact: ExerciseImpact.optional(),
+    description: LocalizedText.optional(),
+    image_url: z.string().optional(),
+    media_url: z.string().nullable().optional(),
   })
   .strict();
 export type ExerciseAdaptation = z.infer<typeof ExerciseAdaptation>;
+
+export const Exercise = z
+  .object({
+    id: z.string(),
+    name: LocalizedText,
+    muscle_groups: z.array(MuscleGroup).min(1),
+    equipment: z.string(),
+    impact: ExerciseImpact,
+    description: LocalizedText,
+    image_url: z.string(),
+    media_url: z.string().nullable().optional(),
+  })
+  .strict();
+export type Exercise = z.infer<typeof Exercise>;
 
 export const PhysiologicalState = z
   .object({
@@ -82,3 +143,4 @@ export const StateTransition = z
   })
   .strict();
 export type StateTransition = z.infer<typeof StateTransition>;
+

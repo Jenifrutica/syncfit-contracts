@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/exercise-catalog.schema.json",
+  "title": "ExerciseCatalog",
+  "description": "The full exercise catalog.",
+  "type": "array",
+  "items": { "$ref": "exercise.schema.json" },
+  "minItems": 1
+}

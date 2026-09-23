@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/routine-request.schema.json",
+  "title": "RoutineRequest",
+  "description": "Request to generate an adapted routine for one or more muscle groups.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "muscle_groups", "language"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/SchemaVersion" },
+    "session_id": { "$ref": "common.schema.json#/$defs/Uuid" },
+    "muscle_groups": {
+      "type": "array",
+      "description": "One or more selected muscle groups (isolated, region or pattern). Combine up to four.",
+      "minItems": 1,
+      "maxItems": 4,
+      "items": { "$ref": "common.schema.json#/$defs/MuscleGroup" }
+    },
+    "language": { "$ref": "common.schema.json#/$defs/Language" },
+    "modality": { "$ref": "common.schema.json#/$defs/Modality" },
+    "day_or_week": { "type": "integer", "minimum": 1, "maximum": 42 },
+    "telemetry": { "$ref": "telemetry-frame.schema.json" },
+    "exercises_per_group": { "type": "integer", "minimum": 1, "maximum": 8 }
+  }
+}

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "syncfit-contracts"
-version = "1.0.0"
+version = "1.1.0"
 description = "Single source of truth for every interface between SyncFit Edge repositories."
 readme = "README.md"
 requires-python = ">=3.11"
@@ -20,7 +20,7 @@ dev = [
 ]
 
 [tool.setuptools]
-packages = ["syncfit_contracts"]
+packages = ["syncfit_contracts", "syncfit_contracts.catalog"]
 
 [tool.setuptools.package-data]
-syncfit_contracts = ["py.typed"]
+syncfit_contracts = ["py.typed", "catalog/*.json"]

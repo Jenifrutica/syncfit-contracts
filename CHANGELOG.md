@@ -5,6 +5,16 @@ All notable changes to the SyncFit Edge cross-repository contract are documented
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-09-23
+
+### Added
+
+- `MuscleGroup` and `Language` enums (`EN`, `ES`, `ZH`), `ExerciseImpact` and `LocalizedText`.
+- `exercise.schema.json` and `exercise-catalog.schema.json` plus the shared catalog at `python/syncfit_contracts/catalog/exercises.json` (localized names/descriptions, free-use placeholder images, `media_url` reserved for videos).
+- `routine-request.schema.json` and `routine-response.schema.json` for muscle-group-based routine generation.
+- Optional media/description/muscle-group fields on `ExerciseAdaptation` (`exercise_id`, `muscle_groups`, `impact`, `description`, `image_url`, `media_url`).
+- Catalog helpers in Python (`load_exercises`, `get_exercise`, `exercises_for_groups`, `localize`).
+
 ## [1.0.0] - 2026-09-22
 
 ### Added
