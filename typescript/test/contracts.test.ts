@@ -6,6 +6,7 @@ import { describe, expect, it } from "vitest";
 import {
   AdaptedRoutine,
   AIReasoningResponse,
+  EnergyCheckIn,
   Exercise,
   LocalizedText,
   PhysiologicalAlert,
@@ -14,7 +15,11 @@ import {
   RangeQueryResponse,
   RoutineRequest,
   RoutineResponse,
+  Supplement,
+  SupplementAdvice,
+  SupplementRequest,
   TelemetryFrame,
+  UserProfile,
   WsEnvelope,
 } from "../src/index.js";
 
@@ -39,6 +44,11 @@ const cases: Array<[string, { parse: (v: unknown) => unknown }]> = [
   ["exercise.json", Exercise],
   ["routine-request.json", RoutineRequest],
   ["routine-response.json", RoutineResponse],
+  ["user-profile.json", UserProfile],
+  ["energy-checkin.json", EnergyCheckIn],
+  ["supplement.json", Supplement],
+  ["supplement-request.json", SupplementRequest],
+  ["supplement-advice.json", SupplementAdvice],
 ];
 
 describe("contracts validate the shared examples", () => {

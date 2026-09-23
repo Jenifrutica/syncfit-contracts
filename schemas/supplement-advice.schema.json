@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/supplement-advice.schema.json",
+  "title": "SupplementAdvice",
+  "description": "Supplement recommendations for a context, with safety, dosage and macros.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "language", "items"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/SchemaVersion" },
+    "language": { "$ref": "common.schema.json#/$defs/Language" },
+    "modality": { "$ref": "common.schema.json#/$defs/Modality" },
+    "objective": { "$ref": "common.schema.json#/$defs/UserObjective" },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["supplement_id", "name", "category", "safety", "dosage", "macros", "reason"],
+        "properties": {
+          "supplement_id": { "type": "string" },
+          "name": { "$ref": "common.schema.json#/$defs/LocalizedText" },
+          "category": { "$ref": "common.schema.json#/$defs/SupplementCategory" },
+          "safety": { "$ref": "common.schema.json#/$defs/SupplementSafety" },
+          "dosage": { "$ref": "common.schema.json#/$defs/LocalizedText" },
+          "macros": { "$ref": "common.schema.json#/$defs/MacroNutrients" },
+          "reason": { "$ref": "common.schema.json#/$defs/LocalizedText" },
+          "image_url": { "type": "string" }
+        }
+      }
+    }
+  }
+}

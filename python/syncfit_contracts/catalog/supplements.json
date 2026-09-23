@@ -1,0 +1,182 @@
+[
+  {
+    "id": "folate",
+    "name": { "en": "Folate (folic acid)", "es": "Folato (ácido fólico)", "zh": "叶酸" },
+    "category": "FOLATE",
+    "dosage": { "en": "400-600 µg daily", "es": "400-600 µg al día", "zh": "每日 400-600 微克" },
+    "macros": { "protein_g": 0, "carbs_g": 0, "fat_g": 0, "kcal": 0 },
+    "objectives": ["GESTATIONAL_HEALTH", "HEALTH"],
+    "safety_general": "SAFE",
+    "safety_pregnancy": "SAFE",
+    "notes": {
+      "en": "Supports neural tube development; recommended before and during pregnancy.",
+      "es": "Apoya el desarrollo del tubo neural; recomendado antes y durante el embarazo.",
+      "zh": "支持神经管发育；孕前及孕期推荐。"
+    }
+  },
+  {
+    "id": "iron",
+    "name": { "en": "Iron", "es": "Hierro", "zh": "铁" },
+    "category": "IRON",
+    "dosage": { "en": "As prescribed, with vitamin C", "es": "Según prescripción, con vitamina C", "zh": "遵医嘱，配合维生素C" },
+    "macros": { "protein_g": 0, "carbs_g": 0, "fat_g": 0, "kcal": 0 },
+    "objectives": ["HEALTH", "PERFORMANCE"],
+    "safety_general": "SAFE",
+    "safety_pregnancy": "CAUTION",
+    "notes": {
+      "en": "Only if deficient; excess is harmful in pregnancy.",
+      "es": "Solo si hay déficit; el exceso es nocivo en el embarazo.",
+      "zh": "仅在缺乏时使用；孕期过量有害。"
+    }
+  },
+  {
+    "id": "omega3",
+    "name": { "en": "Omega-3 (EPA/DHA)", "es": "Omega-3 (EPA/DHA)", "zh": "欧米伽-3（EPA/DHA）" },
+    "category": "OMEGA3",
+    "dosage": { "en": "1-2 g EPA+DHA daily", "es": "1-2 g de EPA+DHA al día", "zh": "每日 1-2 克 EPA+DHA" },
+    "macros": { "protein_g": 0, "carbs_g": 0, "fat_g": 1, "kcal": 9 },
+    "objectives": ["HEALTH", "RECOVERY", "PERFORMANCE", "GESTATIONAL_HEALTH"],
+    "safety_general": "SAFE",
+    "safety_pregnancy": "SAFE",
+    "notes": {
+      "en": "Supports recovery and fetal brain development.",
+      "es": "Apoya la recuperación y el desarrollo cerebral fetal.",
+      "zh": "支持恢复与胎儿大脑发育。"
+    }
+  },
+  {
+    "id": "vitamin-d",
+    "name": { "en": "Vitamin D", "es": "Vitamina D", "zh": "维生素D" },
+    "category": "VITAMIN",
+    "dosage": { "en": "1000-2000 IU daily", "es": "1000-2000 UI al día", "zh": "每日 1000-2000 IU" },
+    "macros": { "protein_g": 0, "carbs_g": 0, "fat_g": 0, "kcal": 0 },
+    "objectives": ["HEALTH", "GESTATIONAL_HEALTH"],
+    "safety_general": "SAFE",
+    "safety_pregnancy": "SAFE",
+    "notes": {
+      "en": "Bone health and immunity.",
+      "es": "Salud ósea e inmunidad.",
+      "zh": "骨骼健康与免疫。"
+    }
+  },
+  {
+    "id": "calcium",
+    "name": { "en": "Calcium", "es": "Calcio", "zh": "钙" },
+    "category": "CALCIUM",
+    "dosage": { "en": "500-1000 mg daily", "es": "500-1000 mg al día", "zh": "每日 500-1000 毫克" },
+    "macros": { "protein_g": 0, "carbs_g": 0, "fat_g": 0, "kcal": 0 },
+    "objectives": ["HEALTH", "GESTATIONAL_HEALTH"],
+    "safety_general": "SAFE",
+    "safety_pregnancy": "SAFE",
+    "notes": {
+      "en": "Bone and muscle function; increased needs in pregnancy.",
+      "es": "Función ósea y muscular; necesidad aumentada en el embarazo.",
+      "zh": "骨骼与肌肉功能；孕期需求增加。"
+    }
+  },
+  {
+    "id": "magnesium",
+    "name": { "en": "Magnesium", "es": "Magnesio", "zh": "镁" },
+    "category": "MINERAL",
+    "dosage": { "en": "200-400 mg daily", "es": "200-400 mg al día", "zh": "每日 200-400 毫克" },
+    "macros": { "protein_g": 0, "carbs_g": 0, "fat_g": 0, "kcal": 0 },
+    "objectives": ["RECOVERY", "HEALTH"],
+    "safety_general": "SAFE",
+    "safety_pregnancy": "CAUTION",
+    "notes": {
+      "en": "Supports sleep and recovery; confirm with clinician in pregnancy.",
+      "es": "Apoya el sueño y la recuperación; confirmar con el clínico en el embarazo.",
+      "zh": "支持睡眠与恢复；孕期请咨询医生。"
+    }
+  },
+  {
+    "id": "whey-protein",
+    "name": { "en": "Whey protein", "es": "Proteína de suero", "zh": "乳清蛋白" },
+    "category": "PROTEIN",
+    "dosage": { "en": "1 scoop (25 g) as needed", "es": "1 medida (25 g) según necesidad", "zh": "按需 1 勺（25 克）" },
+    "macros": { "protein_g": 24, "carbs_g": 3, "fat_g": 1.5, "kcal": 120 },
+    "objectives": ["HYPERTROPHY", "STRENGTH", "RECOVERY", "GESTATIONAL_HEALTH"],
+    "safety_general": "SAFE",
+    "safety_pregnancy": "SAFE",
+    "notes": {
+      "en": "Convenient protein to reach daily needs.",
+      "es": "Proteína práctica para alcanzar las necesidades diarias.",
+      "zh": "方便补充每日蛋白质需求。"
+    }
+  },
+  {
+    "id": "creatine",
+    "name": { "en": "Creatine monohydrate", "es": "Creatina monohidratada", "zh": "一水肌酸" },
+    "category": "CREATINE",
+    "dosage": { "en": "3-5 g daily", "es": "3-5 g al día", "zh": "每日 3-5 克" },
+    "macros": { "protein_g": 0, "carbs_g": 0, "fat_g": 0, "kcal": 0 },
+    "objectives": ["STRENGTH", "HYPERTROPHY", "PERFORMANCE"],
+    "safety_general": "SAFE",
+    "safety_pregnancy": "AVOID",
+    "notes": {
+      "en": "Well studied for strength, but insufficient evidence in pregnancy.",
+      "es": "Muy estudiada para fuerza, pero evidencia insuficiente en el embarazo.",
+      "zh": "对力量有充分研究，但孕期证据不足。"
+    }
+  },
+  {
+    "id": "caffeine",
+    "name": { "en": "Caffeine", "es": "Cafeína", "zh": "咖啡因" },
+    "category": "CAFFEINE",
+    "dosage": { "en": "Up to 200 mg before training", "es": "Hasta 200 mg antes de entrenar", "zh": "训练前最多 200 毫克" },
+    "macros": { "protein_g": 0, "carbs_g": 0, "fat_g": 0, "kcal": 0 },
+    "objectives": ["PERFORMANCE", "FAT_LOSS"],
+    "safety_general": "CAUTION",
+    "safety_pregnancy": "CAUTION",
+    "notes": {
+      "en": "Limit to 200 mg/day in pregnancy; avoid late in the day.",
+      "es": "Limitar a 200 mg/día en el embarazo; evitar al final del día.",
+      "zh": "孕期限制在每日 200 毫克；避免晚间使用。"
+    }
+  },
+  {
+    "id": "preworkout",
+    "name": { "en": "Pre-workout blend", "es": "Pre-entreno", "zh": "训练前补剂" },
+    "category": "OTHER",
+    "dosage": { "en": "Avoid during pregnancy", "es": "Evitar durante el embarazo", "zh": "孕期避免" },
+    "macros": { "protein_g": 0, "carbs_g": 0, "fat_g": 0, "kcal": 0 },
+    "objectives": ["PERFORMANCE"],
+    "safety_general": "CAUTION",
+    "safety_pregnancy": "AVOID",
+    "notes": {
+      "en": "Often high in stimulants; not recommended in pregnancy.",
+      "es": "Suele tener muchos estimulantes; no recomendado en el embarazo.",
+      "zh": "通常含大量兴奋剂；孕期不推荐。"
+    }
+  },
+  {
+    "id": "collagen",
+    "name": { "en": "Collagen peptides", "es": "Péptidos de colágeno", "zh": "胶原蛋白肽" },
+    "category": "PROTEIN",
+    "dosage": { "en": "10-15 g daily", "es": "10-15 g al día", "zh": "每日 10-15 克" },
+    "macros": { "protein_g": 10, "carbs_g": 0, "fat_g": 0, "kcal": 40 },
+    "objectives": ["RECOVERY", "HEALTH"],
+    "safety_general": "SAFE",
+    "safety_pregnancy": "SAFE",
+    "notes": {
+      "en": "Supports connective tissue; useful with tendon/ligament focus.",
+      "es": "Apoya el tejido conectivo; útil con enfoque en tendón/ligamento.",
+      "zh": "支持结缔组织；适合关注肌腱/韧带。"
+    }
+  },
+  {
+    "id": "electrolytes",
+    "name": { "en": "Electrolytes", "es": "Electrolitos", "zh": "电解质" },
+    "category": "ELECTROLYTES",
+    "dosage": { "en": "As needed during/after training", "es": "Según necesidad durante/después del entreno", "zh": "训练中/后按需" },
+    "macros": { "protein_g": 0, "carbs_g": 2, "fat_g": 0, "kcal": 8 },
+    "objectives": ["PERFORMANCE", "RECOVERY", "HEALTH"],
+    "safety_general": "SAFE",
+    "safety_pregnancy": "SAFE",
+    "notes": {
+      "en": "Hydration and cramp prevention.",
+      "es": "Hidratación y prevención de calambres.",
+      "zh": "补液与预防抽筋。"
+    }
+  }
+]

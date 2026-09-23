@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/energy-checkin.schema.json",
+  "title": "EnergyCheckIn",
+  "description": "Subjective energy reported before training, tied to the modality and cycle/gestation timeline.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "timestamp", "energy_level", "modality"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/SchemaVersion" },
+    "profile_id": { "$ref": "common.schema.json#/$defs/Uuid" },
+    "session_id": { "$ref": "common.schema.json#/$defs/Uuid" },
+    "timestamp": { "$ref": "common.schema.json#/$defs/Timestamp" },
+    "energy_level": { "$ref": "common.schema.json#/$defs/EnergyLevel" },
+    "modality": { "$ref": "common.schema.json#/$defs/Modality" },
+    "day_or_week": { "type": "integer", "minimum": 1, "maximum": 42 },
+    "notes": { "type": "string" }
+  }
+}

@@ -9,6 +9,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from syncfit_contracts import (  # noqa: E402
     AdaptedRoutine,
     AIReasoningResponse,
+    EnergyCheckIn,
     Exercise,
     MuscleGroup,
     PhysiologicalAlert,
@@ -17,12 +18,20 @@ from syncfit_contracts import (  # noqa: E402
     RangeQueryResponse,
     RoutineRequest,
     RoutineResponse,
+    SetPrescription,
+    Supplement,
+    SupplementAdvice,
+    SupplementRequest,
     TelemetryFrame,
+    UserProfile,
     WsEnvelope,
     exercises_for_groups,
     get_exercise,
+    get_supplement,
     load_exercises,
+    load_supplements,
     localize,
+    supplements_for,
 )
 
 EXAMPLES_DIR = Path(__file__).resolve().parents[2] / "examples"
@@ -60,6 +69,50 @@ def test_routine_request_and_response_parse():
     response = RoutineResponse.model_validate(load("routine-response.json"))
     assert response.routine[0].exercise_id == "goblet-squat"
     assert response.routine[0].blocked is True
+
+
+def test_user_profile_and_energy_checkin():
+    profile = UserProfile.model_validate(load("user-profile.json"))
+    assert profile.height_cm == 165
+    assert profile.loads[0].exercise_id == "goblet-squat"
+
+    checkin = EnergyCheckIn.model_validate(load("energy-checkin.json"))
+    assert checkin.energy_level == "MODERATE"
+    assert checkin.day_or_week == 14
+
+
+def test_supplement_models_and_catalog():
+    supplement = Supplement.model_validate(load("supplement.json"))
+    assert supplement.safety_pregnancy == "SAFE"
+    advice = SupplementAdvice.model_validate(load("supplement-advice.json"))
+    assert advice.items[0].supplement_id == "folate"
+    assert SupplementRequest.model_validate(load("supplement-request.json")).modality == "GESTATIONAL"
+
+
+def test_supplement_catalog_helpers():
+    supplements = load_supplements()
+    assert len(supplements) >= 8
+    assert get_supplement("folate") is not None
+
+    gestational = supplements_for(modality="GESTATIONAL")
+    ids = {s.id for s in gestational}
+    assert "creatine" not in ids  # excluded as AVOID in pregnancy
+    assert "folate" in ids
+
+    hydrate = supplements_for(objective="HYPERTROPHY")
+    assert any(s.id == "whey-protein" for s in hydrate)
+
+
+def test_set_prescription_model():
+    prescription = SetPrescription(
+        type="APPROXIMATION", reps=8, weight_kg=40, rest_seconds=60, estimated_seconds=75
+    )
+    assert prescription.type == "APPROXIMATION"
+
+
+def test_activation_exercises_in_catalog():
+    activation = [e for e in load_exercises() if str(e.role) == "ACTIVATION"]
+    assert activation, "expected activation exercises in the catalog"
 
 
 def test_exercise_parses_and_requires_english():

@@ -1,6 +1,7 @@
 import { z } from "zod";
 import {
   ExerciseAdaptation,
+  EnergyLevel,
   FatigueLevel,
   InferredPhase,
   Language,
@@ -8,6 +9,7 @@ import {
   MuscleGroup,
   SCHEMA_VERSION,
   SchemaVersion,
+  UserObjective,
   Uuid,
 } from "./common.js";
 import { TelemetryFrame } from "./telemetry.js";
@@ -35,6 +37,11 @@ export const RoutineRequest = z
     day_or_week: z.number().int().min(1).max(42).optional(),
     telemetry: TelemetryFrame.optional(),
     exercises_per_group: z.number().int().min(1).max(8).optional(),
+    exercises_count: z.number().int().min(1).max(12).optional(),
+    time_budget_minutes: z.number().int().min(10).max(180).optional(),
+    energy_level: EnergyLevel.optional(),
+    objective: UserObjective.optional(),
+    include_warmup: z.boolean().optional(),
   })
   .strict();
 export type RoutineRequest = z.infer<typeof RoutineRequest>;
@@ -49,6 +56,8 @@ export const RoutineResponse = z
     fatigue_level: FatigueLevel.optional(),
     k_load_multiplier: z.number().min(0.7).max(1.05).optional(),
     alerts: z.array(z.string()),
+    total_estimated_minutes: z.number().min(0).optional(),
+    warmup: z.array(ExerciseAdaptation).optional(),
     routine: z.array(ExerciseAdaptation),
   })
   .strict();

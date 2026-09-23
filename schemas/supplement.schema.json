@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/supplement.schema.json",
+  "title": "Supplement",
+  "description": "Catalog entry for a supplement, with context-dependent safety and macros.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "category",
+    "dosage",
+    "macros",
+    "objectives",
+    "safety_general",
+    "safety_pregnancy",
+    "notes"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "$ref": "common.schema.json#/$defs/LocalizedText" },
+    "category": { "$ref": "common.schema.json#/$defs/SupplementCategory" },
+    "dosage": { "$ref": "common.schema.json#/$defs/LocalizedText" },
+    "macros": { "$ref": "common.schema.json#/$defs/MacroNutrients" },
+    "objectives": {
+      "type": "array",
+      "items": { "$ref": "common.schema.json#/$defs/UserObjective" }
+    },
+    "safety_general": { "$ref": "common.schema.json#/$defs/SupplementSafety" },
+    "safety_pregnancy": { "$ref": "common.schema.json#/$defs/SupplementSafety" },
+    "notes": { "$ref": "common.schema.json#/$defs/LocalizedText" },
+    "image_url": { "type": "string" }
+  }
+}

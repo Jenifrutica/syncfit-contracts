@@ -82,6 +82,76 @@ export const LocalizedText = z
   .catchall(z.string());
 export type LocalizedText = z.infer<typeof LocalizedText>;
 
+export const ExerciseRole = z.enum(["WARMUP", "ACTIVATION", "MAIN"]);
+export type ExerciseRole = z.infer<typeof ExerciseRole>;
+
+export const SetType = z.enum(["WARMUP", "ACTIVATION", "APPROXIMATION", "EFFECTIVE"]);
+export type SetType = z.infer<typeof SetType>;
+
+export const EnergyLevel = z.enum(["ENERGY", "MODERATE", "NO_ENERGY"]);
+export type EnergyLevel = z.infer<typeof EnergyLevel>;
+
+export const UserObjective = z.enum([
+  "STRENGTH",
+  "HYPERTROPHY",
+  "FAT_LOSS",
+  "HEALTH",
+  "RECOVERY",
+  "PERFORMANCE",
+  "GESTATIONAL_HEALTH",
+]);
+export type UserObjective = z.infer<typeof UserObjective>;
+
+export const SupplementSafety = z.enum(["SAFE", "CAUTION", "AVOID"]);
+export type SupplementSafety = z.infer<typeof SupplementSafety>;
+
+export const SupplementCategory = z.enum([
+  "VITAMIN",
+  "MINERAL",
+  "PROTEIN",
+  "OMEGA3",
+  "CAFFEINE",
+  "CREATINE",
+  "IRON",
+  "FOLATE",
+  "CALCIUM",
+  "FIBER",
+  "ELECTROLYTES",
+  "OTHER",
+]);
+export type SupplementCategory = z.infer<typeof SupplementCategory>;
+
+export const MacroNutrients = z
+  .object({
+    protein_g: z.number().min(0),
+    carbs_g: z.number().min(0),
+    fat_g: z.number().min(0),
+    kcal: z.number().min(0),
+  })
+  .strict();
+export type MacroNutrients = z.infer<typeof MacroNutrients>;
+
+export const SetPrescription = z
+  .object({
+    type: SetType,
+    reps: z.number().int().min(0).max(100),
+    weight_kg: z.number().min(0),
+    rest_seconds: z.number().int().min(0).max(600),
+    tempo: z.string().optional(),
+    estimated_seconds: z.number().int().min(0),
+  })
+  .strict();
+export type SetPrescription = z.infer<typeof SetPrescription>;
+
+export const ExerciseLoad = z
+  .object({
+    exercise_id: z.string(),
+    weight_kg: z.number().min(0),
+    reps: z.number().int().min(1).max(100).optional(),
+  })
+  .strict();
+export type ExerciseLoad = z.infer<typeof ExerciseLoad>;
+
 export const Biomarkers = z
   .object({
     delta_temperature_c: z.number().min(-2).max(2),
@@ -106,6 +176,10 @@ export const ExerciseAdaptation = z
     description: LocalizedText.optional(),
     image_url: z.string().optional(),
     media_url: z.string().nullable().optional(),
+    role: ExerciseRole.optional(),
+    rest_seconds: z.number().int().min(0).max(600).optional(),
+    estimated_seconds: z.number().int().min(0).optional(),
+    sets: z.array(SetPrescription).optional(),
   })
   .strict();
 export type ExerciseAdaptation = z.infer<typeof ExerciseAdaptation>;
@@ -120,6 +194,7 @@ export const Exercise = z
     description: LocalizedText,
     image_url: z.string(),
     media_url: z.string().nullable().optional(),
+    role: ExerciseRole.optional(),
   })
   .strict();
 export type Exercise = z.infer<typeof Exercise>;

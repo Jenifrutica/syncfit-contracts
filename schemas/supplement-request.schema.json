@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/supplement-request.schema.json",
+  "title": "SupplementRequest",
+  "description": "Request supplement advice for a context (modality, objective and gestational week).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "language", "modality"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/SchemaVersion" },
+    "language": { "$ref": "common.schema.json#/$defs/Language" },
+    "modality": { "$ref": "common.schema.json#/$defs/Modality" },
+    "objective": { "$ref": "common.schema.json#/$defs/UserObjective" },
+    "week": { "type": "integer", "minimum": 1, "maximum": 42 }
+  }
+}

@@ -6,9 +6,11 @@ import json
 from functools import lru_cache
 from importlib.resources import files
 
-from ..common import Exercise, ExerciseImpact, LocalizedText
+from ..common import Exercise, ExerciseImpact, LocalizedText, SupplementSafety
+from ..supplement import Supplement
 
 CATALOG_FILE = "exercises.json"
+SUPPLEMENT_FILE = "supplements.json"
 
 
 @lru_cache(maxsize=1)
@@ -17,6 +19,38 @@ def load_exercises() -> tuple[Exercise, ...]:
     raw = (files(__package__) / CATALOG_FILE).read_text(encoding="utf-8")
     data = json.loads(raw)
     return tuple(Exercise.model_validate(item) for item in data)
+
+
+@lru_cache(maxsize=1)
+def load_supplements() -> tuple[Supplement, ...]:
+    """Load and validate the supplement catalog (cached)."""
+    raw = (files(__package__) / SUPPLEMENT_FILE).read_text(encoding="utf-8")
+    data = json.loads(raw)
+    return tuple(Supplement.model_validate(item) for item in data)
+
+
+def get_supplement(supplement_id: str) -> Supplement | None:
+    for supplement in load_supplements():
+        if supplement.id == supplement_id:
+            return supplement
+    return None
+
+
+def supplements_for(
+    objective: object | None = None,
+    modality: object | None = None,
+) -> list[Supplement]:
+    """Filter supplements by objective; exclude AVOID ones for pregnancy."""
+    result = list(load_supplements())
+    if objective is not None:
+        wanted = _value(objective)
+        result = [
+            s for s in result if wanted in {_value(o) for o in s.objectives}
+        ]
+    if modality is not None and _value(modality) == "GESTATIONAL":
+        result = [s for s in result if _value(s.safety_pregnancy) != "AVOID"]
+    return result
+
 
 
 def get_exercise(exercise_id: str) -> Exercise | None:
@@ -62,8 +96,12 @@ def localize(text: LocalizedText | dict[str, str] | None, language: str) -> str:
 
 __all__ = [
     "CATALOG_FILE",
+    "SUPPLEMENT_FILE",
     "load_exercises",
+    "load_supplements",
     "get_exercise",
+    "get_supplement",
     "exercises_for_groups",
+    "supplements_for",
     "localize",
 ]

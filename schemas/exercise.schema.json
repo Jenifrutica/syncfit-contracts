@@ -17,6 +17,7 @@
     "equipment": { "type": "string" },
     "impact": { "$ref": "common.schema.json#/$defs/ExerciseImpact" },
     "description": { "$ref": "common.schema.json#/$defs/LocalizedText" },
+    "role": { "$ref": "common.schema.json#/$defs/ExerciseRole" },
     "image_url": { "type": "string" },
     "media_url": { "type": ["string", "null"] }
   }
