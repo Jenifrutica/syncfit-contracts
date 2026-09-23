@@ -348,5 +348,95 @@
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Triceps+Pushdown",
     "media_url": null
+  },
+  {
+    "id": "glute-activation-band",
+    "name": { "en": "Band glute activation", "es": "Activación de glúteo con banda", "zh": "弹力带臀肌激活" },
+    "muscle_groups": ["GLUTES", "LOWER_BODY", "FULL_LEG"],
+    "equipment": "band",
+    "impact": "LOW",
+    "role": "ACTIVATION",
+    "description": {
+      "en": "Banded hip abduction/extension to activate the glutes before loading.",
+      "es": "Abducción/extensión de cadera con banda para activar el glúteo antes de cargar.",
+      "zh": "用弹力带做髋外展/伸展，在负重前激活臀肌。"
+    },
+    "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Glute+Activation",
+    "media_url": null
+  },
+  {
+    "id": "hip-mobility-flow",
+    "name": { "en": "Hip mobility flow", "es": "Movilidad de cadera", "zh": "髋关节灵活性" },
+    "muscle_groups": ["FULL_LEG", "LOWER_BODY", "GLUTES"],
+    "equipment": "none",
+    "impact": "LOW",
+    "role": "WARMUP",
+    "description": {
+      "en": "Dynamic hip mobility to prepare the lower body.",
+      "es": "Movilidad dinámica de cadera para preparar el tren inferior.",
+      "zh": "动态髋关节灵活性训练，热身下肢。"
+    },
+    "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Hip+Mobility",
+    "media_url": null
+  },
+  {
+    "id": "arm-circles",
+    "name": { "en": "Arm circles", "es": "Círculos de brazos", "zh": "手臂绕环" },
+    "muscle_groups": ["SHOULDERS", "UPPER_BODY", "PUSH", "PULL"],
+    "equipment": "none",
+    "impact": "LOW",
+    "role": "WARMUP",
+    "description": {
+      "en": "Shoulder warm-up with controlled arm circles.",
+      "es": "Calentamiento de hombro con círculos de brazos controlados.",
+      "zh": "手臂绕环热身肩部。"
+    },
+    "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Arm+Circles",
+    "media_url": null
+  },
+  {
+    "id": "cat-cow",
+    "name": { "en": "Cat-cow", "es": "Gato-camello", "zh": "猫牛式" },
+    "muscle_groups": ["CORE", "BACK", "LOWER_BACK", "UPPER_BACK"],
+    "equipment": "none",
+    "impact": "LOW",
+    "role": "WARMUP",
+    "description": {
+      "en": "Spinal mobility to warm up the core and back.",
+      "es": "Movilidad espinal para calentar core y espalda.",
+      "zh": "脊柱灵活性，热身核心与背部。"
+    },
+    "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Cat+Cow",
+    "media_url": null
+  },
+  {
+    "id": "scapular-retraction",
+    "name": { "en": "Scapular retraction", "es": "Retracción escapular", "zh": "肩胛后缩" },
+    "muscle_groups": ["BACK", "UPPER_BACK", "LATS", "PULL", "UPPER_BODY"],
+    "equipment": "band",
+    "impact": "LOW",
+    "role": "ACTIVATION",
+    "description": {
+      "en": "Activate the scapular stabilizers before pulling movements.",
+      "es": "Activa los estabilizadores escapulares antes de los tirones.",
+      "zh": "在拉类动作前激活肩胛稳定肌。"
+    },
+    "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Scapular+Retraction",
+    "media_url": null
+  },
+  {
+    "id": "bird-dog",
+    "name": { "en": "Bird dog", "es": "Bird dog", "zh": "鸟狗式" },
+    "muscle_groups": ["CORE", "ABS", "LOWER_BACK"],
+    "equipment": "none",
+    "impact": "LOW",
+    "role": "ACTIVATION",
+    "description": {
+      "en": "Core and lower-back activation with contralateral limb raises.",
+      "es": "Activación de core y espalda baja con elevación de extremidades contralaterales.",
+      "zh": "对侧肢体抬起的核心与下背激活。"
+    },
+    "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Bird+Dog",
+    "media_url": null
   }
 ]

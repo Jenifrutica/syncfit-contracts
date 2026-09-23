@@ -105,6 +105,56 @@ class LocalizedText(BaseModel):
     en: str
 
 
+class ExerciseRole(str, Enum):
+    WARMUP = "WARMUP"
+    ACTIVATION = "ACTIVATION"
+    MAIN = "MAIN"
+
+
+class SetType(str, Enum):
+    WARMUP = "WARMUP"
+    ACTIVATION = "ACTIVATION"
+    APPROXIMATION = "APPROXIMATION"
+    EFFECTIVE = "EFFECTIVE"
+
+
+class EnergyLevel(str, Enum):
+    ENERGY = "ENERGY"
+    MODERATE = "MODERATE"
+    NO_ENERGY = "NO_ENERGY"
+
+
+class UserObjective(str, Enum):
+    STRENGTH = "STRENGTH"
+    HYPERTROPHY = "HYPERTROPHY"
+    FAT_LOSS = "FAT_LOSS"
+    HEALTH = "HEALTH"
+    RECOVERY = "RECOVERY"
+    PERFORMANCE = "PERFORMANCE"
+    GESTATIONAL_HEALTH = "GESTATIONAL_HEALTH"
+
+
+class SupplementSafety(str, Enum):
+    SAFE = "SAFE"
+    CAUTION = "CAUTION"
+    AVOID = "AVOID"
+
+
+class SupplementCategory(str, Enum):
+    VITAMIN = "VITAMIN"
+    MINERAL = "MINERAL"
+    PROTEIN = "PROTEIN"
+    OMEGA3 = "OMEGA3"
+    CAFFEINE = "CAFFEINE"
+    CREATINE = "CREATINE"
+    IRON = "IRON"
+    FOLATE = "FOLATE"
+    CALCIUM = "CALCIUM"
+    FIBER = "FIBER"
+    ELECTROLYTES = "ELECTROLYTES"
+    OTHER = "OTHER"
+
+
 class BaseContractModel(BaseModel):
     """Base model: rejects unknown fields to keep the contract strict."""
 
@@ -117,6 +167,34 @@ class Biomarkers(BaseContractModel):
     delta_temperature_c: float = Field(ge=-2.0, le=2.0)
     rmssd_hrv_ms: float = Field(ge=0, le=300)
     isometric_force_loss_pct: float = Field(ge=0, le=100)
+
+
+class MacroNutrients(BaseContractModel):
+    """Macronutrient content of a supplement serving."""
+
+    protein_g: float = Field(ge=0)
+    carbs_g: float = Field(ge=0)
+    fat_g: float = Field(ge=0)
+    kcal: float = Field(ge=0)
+
+
+class SetPrescription(BaseContractModel):
+    """A single set with type, load, rest and estimated duration."""
+
+    type: SetType
+    reps: int = Field(ge=0, le=100)
+    weight_kg: float = Field(ge=0)
+    rest_seconds: int = Field(ge=0, le=600)
+    tempo: str | None = None
+    estimated_seconds: int = Field(ge=0)
+
+
+class ExerciseLoad(BaseContractModel):
+    """A load the athlete normally lifts for an exercise (baseline)."""
+
+    exercise_id: str
+    weight_kg: float = Field(ge=0)
+    reps: int | None = Field(default=None, ge=1, le=100)
 
 
 class ExerciseAdaptation(BaseContractModel):
@@ -135,6 +213,10 @@ class ExerciseAdaptation(BaseContractModel):
     description: LocalizedText | None = None
     image_url: str | None = None
     media_url: str | None = None
+    role: ExerciseRole | None = None
+    rest_seconds: int | None = Field(default=None, ge=0, le=600)
+    estimated_seconds: int | None = Field(default=None, ge=0)
+    sets: list[SetPrescription] = Field(default_factory=list)
 
 
 class Exercise(BaseContractModel):
@@ -148,6 +230,7 @@ class Exercise(BaseContractModel):
     description: LocalizedText
     image_url: str
     media_url: str | None = None
+    role: ExerciseRole = ExerciseRole.MAIN
 
 
 class PhysiologicalState(BaseContractModel):
@@ -182,8 +265,17 @@ __all__ = [
     "ExerciseImpact",
     "MuscleGroup",
     "LocalizedText",
+    "ExerciseRole",
+    "SetType",
+    "EnergyLevel",
+    "UserObjective",
+    "SupplementSafety",
+    "SupplementCategory",
     "BaseContractModel",
     "Biomarkers",
+    "MacroNutrients",
+    "SetPrescription",
+    "ExerciseLoad",
     "ExerciseAdaptation",
     "Exercise",
     "PhysiologicalState",

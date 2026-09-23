@@ -39,6 +39,11 @@ EXAMPLE_TO_SCHEMA = {
     "exercise.json": "exercise.schema.json",
     "routine-request.json": "routine-request.schema.json",
     "routine-response.json": "routine-response.schema.json",
+    "user-profile.json": "user-profile.schema.json",
+    "energy-checkin.json": "energy-checkin.schema.json",
+    "supplement.json": "supplement.schema.json",
+    "supplement-request.json": "supplement-request.schema.json",
+    "supplement-advice.json": "supplement-advice.schema.json",
 }
 
 
@@ -54,11 +59,18 @@ def test_examples_validate_against_schemas(registry, example_name, schema_name):
     assert not errors, "\n".join(e.message for e in errors)
 
 
-def test_catalog_validates_against_schema(registry):
+@pytest.mark.parametrize(
+    "catalog_file,schema_name",
+    [
+        ("exercises.json", "exercise-catalog.schema.json"),
+        ("supplements.json", "supplement-catalog.schema.json"),
+    ],
+)
+def test_catalogs_validate_against_schemas(registry, catalog_file, schema_name):
     from jsonschema import Draft202012Validator
 
-    catalog_path = REPO_ROOT / "python" / "syncfit_contracts" / "catalog" / "exercises.json"
-    schema = load_json(SCHEMAS_DIR / "exercise-catalog.schema.json")
+    catalog_path = REPO_ROOT / "python" / "syncfit_contracts" / "catalog" / catalog_file
+    schema = load_json(SCHEMAS_DIR / schema_name)
     instance = load_json(catalog_path)
     validator = Draft202012Validator(schema, registry=registry)
     errors = sorted(validator.iter_errors(instance), key=lambda e: e.path)

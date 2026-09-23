@@ -20,6 +20,21 @@
     "modality": { "$ref": "common.schema.json#/$defs/Modality" },
     "day_or_week": { "type": "integer", "minimum": 1, "maximum": 42 },
     "telemetry": { "$ref": "telemetry-frame.schema.json" },
-    "exercises_per_group": { "type": "integer", "minimum": 1, "maximum": 8 }
+    "exercises_per_group": { "type": "integer", "minimum": 1, "maximum": 8 },
+    "exercises_count": {
+      "type": "integer",
+      "description": "Preferred number of main exercises (recommended default 5).",
+      "minimum": 1,
+      "maximum": 12
+    },
+    "time_budget_minutes": {
+      "type": "integer",
+      "description": "If set, the routine (including rests and warm-up) is adapted to fit.",
+      "minimum": 10,
+      "maximum": 180
+    },
+    "energy_level": { "$ref": "common.schema.json#/$defs/EnergyLevel" },
+    "objective": { "$ref": "common.schema.json#/$defs/UserObjective" },
+    "include_warmup": { "type": "boolean" }
   }
 }

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/user-profile.schema.json",
+  "title": "UserProfile",
+  "description": "Athlete profile with anthropometrics, objective and baseline loads per exercise. Guests use ephemeral profiles; registered users keep history.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "profile_id", "display_name", "language"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/SchemaVersion" },
+    "profile_id": { "$ref": "common.schema.json#/$defs/Uuid" },
+    "display_name": { "type": "string", "minLength": 1 },
+    "language": { "$ref": "common.schema.json#/$defs/Language" },
+    "is_guest": { "type": "boolean" },
+    "height_cm": { "type": "number", "minimum": 80, "maximum": 250 },
+    "weight_kg": { "type": "number", "minimum": 20, "maximum": 300 },
+    "age": { "type": "integer", "minimum": 10, "maximum": 100 },
+    "objective": { "$ref": "common.schema.json#/$defs/UserObjective" },
+    "modality": { "$ref": "common.schema.json#/$defs/Modality" },
+    "loads": {
+      "type": "array",
+      "description": "Baseline loads the athlete normally lifts.",
+      "items": { "$ref": "common.schema.json#/$defs/ExerciseLoad" }
+    }
+  }
+}

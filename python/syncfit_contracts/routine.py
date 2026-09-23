@@ -6,12 +6,14 @@ from pydantic import Field
 
 from .common import (
     BaseContractModel,
+    EnergyLevel,
     ExerciseAdaptation,
     FatigueLevel,
     InferredPhase,
     Language,
     Modality,
     MuscleGroup,
+    UserObjective,
 )
 from .telemetry import TelemetryFrame
 from .version import SCHEMA_VERSION
@@ -40,6 +42,11 @@ class RoutineRequest(BaseContractModel):
     day_or_week: int | None = Field(default=None, ge=1, le=42)
     telemetry: TelemetryFrame | None = None
     exercises_per_group: int | None = Field(default=None, ge=1, le=8)
+    exercises_count: int | None = Field(default=None, ge=1, le=12)
+    time_budget_minutes: int | None = Field(default=None, ge=10, le=180)
+    energy_level: EnergyLevel | None = None
+    objective: UserObjective | None = None
+    include_warmup: bool = True
 
 
 class RoutineResponse(BaseContractModel):
@@ -53,6 +60,8 @@ class RoutineResponse(BaseContractModel):
     fatigue_level: FatigueLevel | None = None
     k_load_multiplier: float | None = Field(default=None, ge=0.70, le=1.05)
     alerts: list[str] = Field(default_factory=list)
+    total_estimated_minutes: float | None = Field(default=None, ge=0)
+    warmup: list[ExerciseAdaptation] = Field(default_factory=list)
     routine: list[ExerciseAdaptation] = Field(default_factory=list)
 
 

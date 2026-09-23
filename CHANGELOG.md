@@ -5,6 +5,17 @@ All notable changes to the SyncFit Edge cross-repository contract are documented
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-09-23
+
+### Added
+
+- Timing and set structure: `SetType`, `SetPrescription`, `ExerciseRole`; `ExerciseAdaptation` now carries `sets` (warm-up/activation/approximation/effective), `rest_seconds`, `estimated_seconds` and `role`.
+- Routine timing: `exercises_count`, `time_budget_minutes`, `energy_level`, `objective`, `include_warmup` on the request; `total_estimated_minutes` and `warmup` on the response.
+- `EnergyLevel`, `UserObjective`, `ExerciseLoad`, `UserProfile` and `EnergyCheckIn` (guest or registered accounts with baseline loads).
+- Supplements: `Supplement`, `SupplementRequest`, `SupplementAdvice` plus the localized supplement catalog with pregnancy safety, dosage and macros (`supplements.json`).
+- 6 warm-up/activation exercises (e.g. band glute activation, cat-cow, bird dog).
+- Schemas, fixtures and tests (Python + TypeScript).
+
 ## [1.1.0] - 2026-09-23
 
 ### Added

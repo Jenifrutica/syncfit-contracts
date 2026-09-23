@@ -1,0 +1,15 @@
+{
+  "id": "folate",
+  "name": { "en": "Folate (folic acid)", "es": "Folato (ácido fólico)", "zh": "叶酸" },
+  "category": "FOLATE",
+  "dosage": { "en": "400-600 µg daily", "es": "400-600 µg al día", "zh": "每日 400-600 微克" },
+  "macros": { "protein_g": 0, "carbs_g": 0, "fat_g": 0, "kcal": 0 },
+  "objectives": ["GESTATIONAL_HEALTH", "HEALTH"],
+  "safety_general": "SAFE",
+  "safety_pregnancy": "SAFE",
+  "notes": {
+    "en": "Supports neural tube development; recommended before and during pregnancy.",
+    "es": "Apoya el desarrollo del tubo neural; recomendado antes y durante el embarazo.",
+    "zh": "支持神经管发育；孕前及孕期推荐。"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.2.0",
+  "language": "ES",
+  "modality": "GESTATIONAL",
+  "objective": "GESTATIONAL_HEALTH",
+  "items": [
+    {
+      "supplement_id": "folate",
+      "name": { "en": "Folate (folic acid)", "es": "Folato (ácido fólico)", "zh": "叶酸" },
+      "category": "FOLATE",
+      "safety": "SAFE",
+      "dosage": { "en": "400-600 µg daily", "es": "400-600 µg al día", "zh": "每日 400-600 微克" },
+      "macros": { "protein_g": 0, "carbs_g": 0, "fat_g": 0, "kcal": 0 },
+      "reason": {
+        "en": "Recommended in pregnancy.",
+        "es": "Recomendado en el embarazo.",
+        "zh": "孕期推荐。"
+      }
+    }
+  ]
+}

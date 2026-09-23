@@ -9,25 +9,37 @@ from .alert import AlertCode, PhysiologicalAlert
 from .catalog import (
     exercises_for_groups,
     get_exercise,
+    get_supplement,
     load_exercises,
+    load_supplements,
     localize,
+    supplements_for,
 )
 from .common import (
     AlertSeverity,
     Biomarkers,
     CyclePhase,
+    EnergyLevel,
     Exercise,
     ExerciseAdaptation,
     ExerciseImpact,
+    ExerciseLoad,
+    ExerciseRole,
     FatigueLevel,
     InferredPhase,
     Language,
     LocalizedText,
+    MacroNutrients,
     Modality,
     MuscleGroup,
     PhysiologicalState,
+    SetPrescription,
+    SetType,
     StateTransition,
+    SupplementCategory,
+    SupplementSafety,
     Trimester,
+    UserObjective,
 )
 from .range_query import (
     Aggregation,
@@ -37,7 +49,14 @@ from .range_query import (
 )
 from .routine import AdaptedRoutine, RoutineRequest, RoutineResponse
 from .state_graph import PhysiologicalStateGraph
+from .supplement import (
+    Supplement,
+    SupplementAdvice,
+    SupplementAdviceItem,
+    SupplementRequest,
+)
 from .telemetry import PpgWindow, TelemetryFrame
+from .user import EnergyCheckIn, UserProfile
 from .version import SCHEMA_VERSION
 from .ws import WsEnvelope, WsMessageType
 
@@ -56,10 +75,15 @@ __all__ = [
     "Exercise",
     "ExerciseAdaptation",
     "ExerciseImpact",
+    "ExerciseLoad",
+    "ExerciseRole",
+    "EnergyLevel",
+    "EnergyCheckIn",
     "FatigueLevel",
     "InferredPhase",
     "Language",
     "LocalizedText",
+    "MacroNutrients",
     "Metric",
     "Modality",
     "MuscleGroup",
@@ -71,13 +95,26 @@ __all__ = [
     "RangeQueryResponse",
     "RoutineRequest",
     "RoutineResponse",
+    "SetPrescription",
+    "SetType",
     "StateTransition",
+    "Supplement",
+    "SupplementAdvice",
+    "SupplementAdviceItem",
+    "SupplementCategory",
+    "SupplementRequest",
+    "SupplementSafety",
     "TelemetryFrame",
     "Trimester",
+    "UserObjective",
+    "UserProfile",
     "WsEnvelope",
     "WsMessageType",
     "load_exercises",
+    "load_supplements",
     "get_exercise",
+    "get_supplement",
     "exercises_for_groups",
+    "supplements_for",
     "localize",
 ]

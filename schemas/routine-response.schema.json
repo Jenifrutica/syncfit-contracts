@@ -23,6 +23,16 @@
       "maximum": 1.05
     },
     "alerts": { "type": "array", "items": { "type": "string" } },
+    "total_estimated_minutes": {
+      "type": "number",
+      "description": "Total estimated duration including warm-up, sets and rests.",
+      "minimum": 0
+    },
+    "warmup": {
+      "type": "array",
+      "description": "Warm-up / muscle activation block.",
+      "items": { "$ref": "common.schema.json#/$defs/ExerciseAdaptation" }
+    },
     "routine": {
       "type": "array",
       "items": { "$ref": "common.schema.json#/$defs/ExerciseAdaptation" }

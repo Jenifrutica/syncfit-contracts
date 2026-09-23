@@ -127,6 +127,23 @@
         "media_url": {
           "type": ["string", "null"],
           "description": "Reserved for demonstration videos/animations; null until available."
+        },
+        "role": { "$ref": "#/$defs/ExerciseRole" },
+        "rest_seconds": {
+          "type": "integer",
+          "description": "Default rest between effective sets, in seconds.",
+          "minimum": 0,
+          "maximum": 600
+        },
+        "estimated_seconds": {
+          "type": "integer",
+          "description": "Estimated time to complete all sets of this exercise, including rests.",
+          "minimum": 0
+        },
+        "sets": {
+          "type": "array",
+          "description": "Warm-up/activation, approximation and effective sets.",
+          "items": { "$ref": "#/$defs/SetPrescription" }
         }
       }
     },
@@ -208,6 +225,92 @@
       "type": "string",
       "description": "Joint/impact stress of an exercise, used by the biomechanical safety rules.",
       "enum": ["LOW", "MEDIUM", "HIGH"]
+    },
+    "ExerciseRole": {
+      "type": "string",
+      "description": "Role of an exercise inside a routine.",
+      "enum": ["WARMUP", "ACTIVATION", "MAIN"]
+    },
+    "SetType": {
+      "type": "string",
+      "description": "Type of set: warm-up/activation, approximation, or effective working set.",
+      "enum": ["WARMUP", "ACTIVATION", "APPROXIMATION", "EFFECTIVE"]
+    },
+    "EnergyLevel": {
+      "type": "string",
+      "description": "Subjective energy reported by the athlete before training.",
+      "enum": ["ENERGY", "MODERATE", "NO_ENERGY"]
+    },
+    "UserObjective": {
+      "type": "string",
+      "description": "Training/nutrition objective selected by the athlete.",
+      "enum": [
+        "STRENGTH",
+        "HYPERTROPHY",
+        "FAT_LOSS",
+        "HEALTH",
+        "RECOVERY",
+        "PERFORMANCE",
+        "GESTATIONAL_HEALTH"
+      ]
+    },
+    "SupplementSafety": {
+      "type": "string",
+      "description": "Safety of a supplement for the current context (e.g. pregnancy).",
+      "enum": ["SAFE", "CAUTION", "AVOID"]
+    },
+    "SupplementCategory": {
+      "type": "string",
+      "enum": [
+        "VITAMIN",
+        "MINERAL",
+        "PROTEIN",
+        "OMEGA3",
+        "CAFFEINE",
+        "CREATINE",
+        "IRON",
+        "FOLATE",
+        "CALCIUM",
+        "FIBER",
+        "ELECTROLYTES",
+        "OTHER"
+      ]
+    },
+    "MacroNutrients": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["protein_g", "carbs_g", "fat_g", "kcal"],
+      "properties": {
+        "protein_g": { "type": "number", "minimum": 0 },
+        "carbs_g": { "type": "number", "minimum": 0 },
+        "fat_g": { "type": "number", "minimum": 0 },
+        "kcal": { "type": "number", "minimum": 0 }
+      }
+    },
+    "SetPrescription": {
+      "type": "object",
+      "description": "A single set with type, load, rest and estimated duration.",
+      "additionalProperties": false,
+      "required": ["type", "reps", "weight_kg", "rest_seconds", "estimated_seconds"],
+      "properties": {
+        "type": { "$ref": "#/$defs/SetType" },
+        "reps": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "weight_kg": { "type": "number", "minimum": 0 },
+        "rest_seconds": { "type": "integer", "minimum": 0, "maximum": 600 },
+        "tempo": { "type": "string" },
+        "estimated_seconds": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "ExerciseLoad": {
+      "type": "object",
+      "description": "A load the athlete normally lifts for an exercise (baseline).",
+      "additionalProperties": false,
+      "required": ["exercise_id", "weight_kg"],
+      "properties": {
+        "exercise_id": { "type": "string" },
+        "weight_kg": { "type": "number", "minimum": 0 },
+        "reps": { "type": "integer", "minimum": 1, "maximum": 100 }
+      }
     }
   }
 }
