@@ -537,5 +537,519 @@
       "zh": "高位/低位滑轮，胸部大范围。"
     },
     "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Cable+Crossover"
+  },
+  {
+    "id": "power-rack",
+    "name": {
+      "en": "Power rack",
+      "es": "Rack de potencia",
+      "zh": "力量架"
+    },
+    "type": "FREE_WEIGHT",
+    "weight_factor": 1.0,
+    "unit": "KG",
+    "exercises": [
+      "back-squat",
+      "flat-bench-press",
+      "overhead-press",
+      "bent-over-row"
+    ],
+    "notes": {
+      "en": "Barbell work with safety pins.",
+      "es": "Trabajo con barra y seguros.",
+      "zh": "带保护杆的杠铃训练。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Power+Rack"
+  },
+  {
+    "id": "squat-rack",
+    "name": {
+      "en": "Squat rack",
+      "es": "Rack de sentadilla",
+      "zh": "深蹲架"
+    },
+    "type": "FREE_WEIGHT",
+    "weight_factor": 1.0,
+    "unit": "KG",
+    "exercises": [
+      "back-squat",
+      "smith-squat"
+    ],
+    "notes": {
+      "en": "Free-weight squat station.",
+      "es": "Estación de sentadilla libre.",
+      "zh": "自由深蹲位。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Squat+Rack"
+  },
+  {
+    "id": "leg-press-45",
+    "name": {
+      "en": "45-degree leg press",
+      "es": "Prensa 45 grados",
+      "zh": "45度腿举"
+    },
+    "type": "MACHINE",
+    "weight_factor": 1.6,
+    "unit": "PLATES",
+    "exercises": [
+      "leg-press"
+    ],
+    "notes": {
+      "en": "Sled leg press; effective load much higher.",
+      "es": "Prensa inclinada; carga efectiva mayor.",
+      "zh": "斜式腿举，有效负荷更高。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Leg+Press+45"
+  },
+  {
+    "id": "vertical-leg-press",
+    "name": {
+      "en": "Vertical leg press",
+      "es": "Prensa vertical",
+      "zh": "垂直腿举"
+    },
+    "type": "MACHINE",
+    "weight_factor": 1.5,
+    "unit": "PLATES",
+    "exercises": [
+      "leg-press"
+    ],
+    "notes": {
+      "en": "Vertical sled; deep range.",
+      "es": "Prensa vertical; rango profundo.",
+      "zh": "垂直腿举，幅度深。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Vertical+Leg+Press"
+  },
+  {
+    "id": "seated-leg-curl",
+    "name": {
+      "en": "Seated leg curl",
+      "es": "Curl femoral sentado",
+      "zh": "坐姿腿弯举"
+    },
+    "type": "MACHINE",
+    "weight_factor": 0.8,
+    "unit": "PLATES",
+    "exercises": [
+      "leg-curl"
+    ],
+    "notes": {
+      "en": "Seated hamstring isolation.",
+      "es": "Aislamiento de isquios sentada.",
+      "zh": "坐姿腘绳肌孤立。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Seated+Leg+Curl"
+  },
+  {
+    "id": "prone-leg-curl",
+    "name": {
+      "en": "Prone leg curl",
+      "es": "Curl femoral boca abajo",
+      "zh": "俯卧腿弯举"
+    },
+    "type": "MACHINE",
+    "weight_factor": 0.8,
+    "unit": "PLATES",
+    "exercises": [
+      "leg-curl"
+    ],
+    "notes": {
+      "en": "Prone hamstring isolation.",
+      "es": "Aislamiento de isquios prono.",
+      "zh": "俯卧腘绳肌孤立。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Prone+Leg+Curl"
+  },
+  {
+    "id": "standing-calf-machine",
+    "name": {
+      "en": "Standing calf raise machine",
+      "es": "Maquina de gemelos de pie",
+      "zh": "站姿提踵机"
+    },
+    "type": "MACHINE",
+    "weight_factor": 1.2,
+    "unit": "PLATES",
+    "exercises": [
+      "calf-raise"
+    ],
+    "notes": {
+      "en": "Standing calf raise.",
+      "es": "Gemelos de pie.",
+      "zh": "站姿提踵。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Standing+Calf"
+  },
+  {
+    "id": "seated-calf-machine",
+    "name": {
+      "en": "Seated calf raise machine",
+      "es": "Maquina de gemelos sentado",
+      "zh": "坐姿提踵机"
+    },
+    "type": "MACHINE",
+    "weight_factor": 1.0,
+    "unit": "PLATES",
+    "exercises": [
+      "calf-raise"
+    ],
+    "notes": {
+      "en": "Seated calf raise (soleus).",
+      "es": "Gemelos sentado (sóleo).",
+      "zh": "坐姿提踵（比目鱼肌）。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Seated+Calf"
+  },
+  {
+    "id": "back-extension-bench",
+    "name": {
+      "en": "Back extension bench",
+      "es": "Banco de extension de espalda",
+      "zh": "背伸凳"
+    },
+    "type": "MACHINE",
+    "weight_factor": 1.0,
+    "unit": "BODYWEIGHT",
+    "exercises": [
+      "glute-ham-raise"
+    ],
+    "notes": {
+      "en": "45-degree back extension.",
+      "es": "Extensión de espalda a 45°.",
+      "zh": "45度背伸。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Back+Extension"
+  },
+  {
+    "id": "ab-crunch-machine",
+    "name": {
+      "en": "Ab crunch machine",
+      "es": "Maquina de abdominales",
+      "zh": "卷腹机"
+    },
+    "type": "MACHINE",
+    "weight_factor": 0.7,
+    "unit": "PLATES",
+    "exercises": [
+      "plank"
+    ],
+    "notes": {
+      "en": "Seated crunch machine.",
+      "es": "Máquina de crunch sentado.",
+      "zh": "坐姿卷腹机。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Ab+Crunch"
+  },
+  {
+    "id": "rotary-torso",
+    "name": {
+      "en": "Rotary torso machine",
+      "es": "Maquina de rotacion de torso",
+      "zh": "旋转躯干机"
+    },
+    "type": "MACHINE",
+    "weight_factor": 0.6,
+    "unit": "PLATES",
+    "exercises": [
+      "side-plank"
+    ],
+    "notes": {
+      "en": "Oblique rotation.",
+      "es": "Rotación de oblicuos.",
+      "zh": "腹斜肌旋转。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Rotary+Torso"
+  },
+  {
+    "id": "incline-press-machine",
+    "name": {
+      "en": "Incline chest press machine",
+      "es": "Maquina de press inclinado",
+      "zh": "上斜推胸机"
+    },
+    "type": "MACHINE",
+    "weight_factor": 0.9,
+    "unit": "PLATES",
+    "exercises": [
+      "incline-bench-press",
+      "chest-fly"
+    ],
+    "notes": {
+      "en": "Incline press; supine-free chest.",
+      "es": "Press inclinado; pecho sin supino.",
+      "zh": "上斜推胸，无需仰卧。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Incline+Press"
+  },
+  {
+    "id": "high-row-machine",
+    "name": {
+      "en": "High row machine",
+      "es": "Maquina de remo alto",
+      "zh": "高位划船机"
+    },
+    "type": "MACHINE",
+    "weight_factor": 1.0,
+    "unit": "PLATES",
+    "exercises": [
+      "seated-cable-row",
+      "lat-pulldown"
+    ],
+    "notes": {
+      "en": "Iso-lateral high row.",
+      "es": "Remo alto iso-lateral.",
+      "zh": "等侧高位划船。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=High+Row"
+  },
+  {
+    "id": "low-row-machine",
+    "name": {
+      "en": "Low row machine",
+      "es": "Maquina de remo bajo",
+      "zh": "低位划船机"
+    },
+    "type": "MACHINE",
+    "weight_factor": 1.0,
+    "unit": "PLATES",
+    "exercises": [
+      "seated-cable-row",
+      "bent-over-row"
+    ],
+    "notes": {
+      "en": "Chest-supported low row.",
+      "es": "Remo bajo con apoyo.",
+      "zh": "胸靠低位划船。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Low+Row"
+  },
+  {
+    "id": "t-bar-row",
+    "name": {
+      "en": "T-bar row",
+      "es": "Remo en T",
+      "zh": "T杠划船"
+    },
+    "type": "FREE_WEIGHT",
+    "weight_factor": 1.0,
+    "unit": "PLATES",
+    "exercises": [
+      "bent-over-row"
+    ],
+    "notes": {
+      "en": "Landmine T-bar row.",
+      "es": "Remo en T con landmine.",
+      "zh": "T杠划船。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=T+Bar+Row"
+  },
+  {
+    "id": "landmine-station",
+    "name": {
+      "en": "Landmine station",
+      "es": "Estacion landmine",
+      "zh": "地雷管站"
+    },
+    "type": "FREE_WEIGHT",
+    "weight_factor": 1.0,
+    "unit": "KG",
+    "exercises": [
+      "overhead-press",
+      "bent-over-row"
+    ],
+    "notes": {
+      "en": "Landmine press/row/rotation.",
+      "es": "Press/remo/rotación landmine.",
+      "zh": "地雷管推/拉/旋转。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Landmine"
+  },
+  {
+    "id": "lat-pulldown-grip-bar",
+    "name": {
+      "en": "Lat pulldown (wide/close/neutral grips)",
+      "es": "Jalon (agarres ancho/cerrado/neutro)",
+      "zh": "下拉（宽/窄/中立握）"
+    },
+    "type": "MACHINE",
+    "weight_factor": 1.1,
+    "unit": "PLATES",
+    "exercises": [
+      "lat-pulldown",
+      "assisted-pull-up"
+    ],
+    "notes": {
+      "en": "Change grips: wide, close, neutral.",
+      "es": "Cambia agarres: ancho, cerrado, neutro.",
+      "zh": "更换握法：宽、窄、中立。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Lat+Pulldown+Grips"
+  },
+  {
+    "id": "seated-dip-machine",
+    "name": {
+      "en": "Seated dip / assisted dip machine",
+      "es": "Maquina de fondos (asistida)",
+      "zh": "坐姿/辅助臂屈伸机"
+    },
+    "type": "ASSISTED",
+    "weight_factor": 1.0,
+    "unit": "BODYWEIGHT",
+    "exercises": [
+      "assisted-dip",
+      "dip"
+    ],
+    "notes": {
+      "en": "Assisted dip; weight is the assistance.",
+      "es": "Fondos asistidos; el peso es asistencia.",
+      "zh": "辅助臂屈伸，重量为助力。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Seated+Dip"
+  },
+  {
+    "id": "lateral-raise-machine",
+    "name": {
+      "en": "Lateral raise machine",
+      "es": "Maquina de elevacion lateral",
+      "zh": "侧平举机"
+    },
+    "type": "MACHINE",
+    "weight_factor": 0.7,
+    "unit": "PLATES",
+    "exercises": [
+      "lateral-raise"
+    ],
+    "notes": {
+      "en": "Shoulder lateral raise machine.",
+      "es": "Máquina de elevación lateral.",
+      "zh": "肩部侧平举机。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Lateral+Raise+Machine"
+  },
+  {
+    "id": "rear-delt-machine",
+    "name": {
+      "en": "Rear delt machine",
+      "es": "Maquina de deltoides posterior",
+      "zh": "后束机"
+    },
+    "type": "MACHINE",
+    "weight_factor": 0.6,
+    "unit": "PLATES",
+    "exercises": [
+      "bent-over-row",
+      "lateral-raise"
+    ],
+    "notes": {
+      "en": "Reverse fly for rear delts.",
+      "es": "Apertura inversa para deltoides posterior.",
+      "zh": "反向飞鸟，后束。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Rear+Delt"
+  },
+  {
+    "id": "bicep-curl-machine",
+    "name": {
+      "en": "Biceps curl machine",
+      "es": "Maquina de curl de biceps",
+      "zh": "弯举机"
+    },
+    "type": "MACHINE",
+    "weight_factor": 0.8,
+    "unit": "PLATES",
+    "exercises": [
+      "biceps-curl",
+      "preacher-curl"
+    ],
+    "notes": {
+      "en": "Machine biceps curl.",
+      "es": "Curl de bíceps en máquina.",
+      "zh": "器械弯举。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Bicep+Curl+Machine"
+  },
+  {
+    "id": "tricep-extension-machine",
+    "name": {
+      "en": "Triceps extension machine",
+      "es": "Maquina de extension de triceps",
+      "zh": "臂屈伸机"
+    },
+    "type": "MACHINE",
+    "weight_factor": 0.8,
+    "unit": "PLATES",
+    "exercises": [
+      "triceps-pushdown"
+    ],
+    "notes": {
+      "en": "Machine triceps extension.",
+      "es": "Extensión de tríceps en máquina.",
+      "zh": "器械臂屈伸。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Tricep+Extension"
+  },
+  {
+    "id": "glute-kickback-machine",
+    "name": {
+      "en": "Glute kickback machine",
+      "es": "Maquina de patada de gluteo",
+      "zh": "后踢臀机"
+    },
+    "type": "MACHINE",
+    "weight_factor": 0.8,
+    "unit": "PLATES",
+    "exercises": [
+      "glute-kickback"
+    ],
+    "notes": {
+      "en": "Standing glute kickback.",
+      "es": "Patada de glúteo de pie.",
+      "zh": "站姿后踢臀。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Glute+Kickback"
+  },
+  {
+    "id": "roman-chair",
+    "name": {
+      "en": "Roman chair (hyperextension)",
+      "es": "Silla romana (hiperextension)",
+      "zh": "罗马椅"
+    },
+    "type": "MACHINE",
+    "weight_factor": 1.0,
+    "unit": "BODYWEIGHT",
+    "exercises": [
+      "glute-ham-raise"
+    ],
+    "notes": {
+      "en": "Hyperextension for lower back/glutes.",
+      "es": "Hiperextensión para espalda baja/glúteo.",
+      "zh": "下背/臀肌背伸。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Roman+Chair"
+  },
+  {
+    "id": "cable-rope-grip",
+    "name": {
+      "en": "Cable grips (rope / bar / D-handle)",
+      "es": "Agarres de polea (cuerda / barra / asa D)",
+      "zh": "绳索握把（绳/杆/D柄）"
+    },
+    "type": "CABLE",
+    "weight_factor": 0.6,
+    "unit": "PLATES",
+    "exercises": [
+      "triceps-pushdown",
+      "biceps-curl",
+      "cable-lateral-raise"
+    ],
+    "notes": {
+      "en": "Swap attachments to vary the stimulus.",
+      "es": "Cambia accesorios para variar el estímulo.",
+      "zh": "更换配件改变刺激。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Cable+Grips"
   }
 ]
