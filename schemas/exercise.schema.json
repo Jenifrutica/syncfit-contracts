@@ -18,6 +18,8 @@
     "equipment_type": { "$ref": "common.schema.json#/$defs/EquipmentType" },
     "impact": { "$ref": "common.schema.json#/$defs/ExerciseImpact" },
     "description": { "$ref": "common.schema.json#/$defs/LocalizedText" },
+    "how_to": { "$ref": "common.schema.json#/$defs/LocalizedText" },
+    "tips": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/LocalizedText" } },
     "role": { "$ref": "common.schema.json#/$defs/ExerciseRole" },
     "image_url": { "type": "string" },
     "media_url": { "type": ["string", "null"] }

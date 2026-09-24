@@ -263,6 +263,8 @@ class ExerciseAdaptation(BaseContractModel):
     muscle_groups: list[MuscleGroup] = Field(default_factory=list)
     impact: ExerciseImpact | None = None
     description: LocalizedText | None = None
+    how_to: LocalizedText | None = None
+    tips: list[LocalizedText] = Field(default_factory=list)
     image_url: str | None = None
     media_url: str | None = None
     role: ExerciseRole | None = None
@@ -280,6 +282,8 @@ class Exercise(BaseContractModel):
     equipment: str
     impact: ExerciseImpact
     description: LocalizedText
+    how_to: LocalizedText | None = None
+    tips: list[LocalizedText] = Field(default_factory=list)
     image_url: str
     media_url: str | None = None
     role: ExerciseRole = ExerciseRole.MAIN

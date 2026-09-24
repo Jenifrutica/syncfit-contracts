@@ -1,8 +1,17 @@
 [
   {
     "id": "goblet-squat",
-    "name": { "en": "Goblet squat", "es": "Sentadilla goblet", "zh": "高脚杯深蹲" },
-    "muscle_groups": ["QUADRICEPS", "GLUTES", "FULL_LEG", "LOWER_BODY"],
+    "name": {
+      "en": "Goblet squat",
+      "es": "Sentadilla goblet",
+      "zh": "高脚杯深蹲"
+    },
+    "muscle_groups": [
+      "QUADRICEPS",
+      "GLUTES",
+      "FULL_LEG",
+      "LOWER_BODY"
+    ],
     "equipment": "dumbbell",
     "impact": "LOW",
     "description": {
@@ -11,12 +20,28 @@
       "zh": "胸前持哑铃，控制节奏下蹲，保持躯干直立。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Goblet+Squat",
-    "media_url": null
+    "media_url": null,
+    "tips": [
+      {
+        "en": "Keep the elbows inside the knees.",
+        "es": "Codos dentro de las rodillas.",
+        "zh": "肘部在膝内。"
+      }
+    ]
   },
   {
     "id": "back-squat",
-    "name": { "en": "Barbell back squat", "es": "Sentadilla trasera con barra", "zh": "杠铃后蹲" },
-    "muscle_groups": ["QUADRICEPS", "GLUTES", "FULL_LEG", "LOWER_BODY"],
+    "name": {
+      "en": "Barbell back squat",
+      "es": "Sentadilla trasera con barra",
+      "zh": "杠铃后蹲"
+    },
+    "muscle_groups": [
+      "QUADRICEPS",
+      "GLUTES",
+      "FULL_LEG",
+      "LOWER_BODY"
+    ],
     "equipment": "barbell",
     "impact": "HIGH",
     "description": {
@@ -25,12 +50,34 @@
       "zh": "大重量自由深蹲，轴向负荷高；排卵期与孕晚期避免。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Back+Squat",
-    "media_url": null
+    "media_url": null,
+    "tips": [
+      {
+        "en": "Brace the core before descending.",
+        "es": "Activa el core antes de bajar.",
+        "zh": "下蹲前收紧核心。"
+      },
+      {
+        "en": "Avoid heavy loads in the ovulatory phase.",
+        "es": "Evita cargas altas en fase ovulatoria.",
+        "zh": "排卵期避免大重量。"
+      }
+    ]
   },
   {
     "id": "box-jumps",
-    "name": { "en": "Plyometric box jumps", "es": "Saltos pliométricos al cajón", "zh": "跳箱训练" },
-    "muscle_groups": ["QUADRICEPS", "GLUTES", "FULL_LEG", "LOWER_BODY", "FULL_BODY"],
+    "name": {
+      "en": "Plyometric box jumps",
+      "es": "Saltos pliométricos al cajón",
+      "zh": "跳箱训练"
+    },
+    "muscle_groups": [
+      "QUADRICEPS",
+      "GLUTES",
+      "FULL_LEG",
+      "LOWER_BODY",
+      "FULL_BODY"
+    ],
     "equipment": "box",
     "impact": "HIGH",
     "description": {
@@ -43,8 +90,17 @@
   },
   {
     "id": "romanian-deadlift",
-    "name": { "en": "Romanian deadlift", "es": "Peso muerto rumano", "zh": "罗马尼亚硬拉" },
-    "muscle_groups": ["HAMSTRINGS", "GLUTES", "LOWER_BACK", "LOWER_BODY"],
+    "name": {
+      "en": "Romanian deadlift",
+      "es": "Peso muerto rumano",
+      "zh": "罗马尼亚硬拉"
+    },
+    "muscle_groups": [
+      "HAMSTRINGS",
+      "GLUTES",
+      "LOWER_BACK",
+      "LOWER_BODY"
+    ],
     "equipment": "barbell",
     "impact": "MEDIUM",
     "description": {
@@ -53,12 +109,26 @@
       "zh": "髋关节铰链，强调腘绳肌与臀肌，保持脊柱中立。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Romanian+Deadlift",
-    "media_url": null
+    "media_url": null,
+    "tips": [
+      {
+        "en": "Hinge at the hips, not the spine.",
+        "es": "Bisagra de cadera, no de columna.",
+        "zh": "髋部铰链，而非脊柱。"
+      }
+    ]
   },
   {
     "id": "hip-thrust",
-    "name": { "en": "Barbell hip thrust", "es": "Empuje de cadera con barra", "zh": "杠铃臀推" },
-    "muscle_groups": ["GLUTES", "LOWER_BODY"],
+    "name": {
+      "en": "Barbell hip thrust",
+      "es": "Empuje de cadera con barra",
+      "zh": "杠铃臀推"
+    },
+    "muscle_groups": [
+      "GLUTES",
+      "LOWER_BODY"
+    ],
     "equipment": "barbell",
     "impact": "LOW",
     "description": {
@@ -67,12 +137,26 @@
       "zh": "背部靠凳的髋伸展，孤立臀肌，关节压力低。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Hip+Thrust",
-    "media_url": null
+    "media_url": null,
+    "tips": [
+      {
+        "en": "Tuck the chin and hold 1 second at the top.",
+        "es": "Mentón al pecho y sostén 1 segundo arriba.",
+        "zh": "下巴微收，顶端停1秒。"
+      }
+    ]
   },
   {
     "id": "glute-bridge",
-    "name": { "en": "Glute bridge", "es": "Puente de glúteo", "zh": "臀桥" },
-    "muscle_groups": ["GLUTES", "LOWER_BODY"],
+    "name": {
+      "en": "Glute bridge",
+      "es": "Puente de glúteo",
+      "zh": "臀桥"
+    },
+    "muscle_groups": [
+      "GLUTES",
+      "LOWER_BODY"
+    ],
     "equipment": "none",
     "impact": "LOW",
     "description": {
@@ -85,8 +169,17 @@
   },
   {
     "id": "walking-lunge",
-    "name": { "en": "Walking lunge", "es": "Zancada caminando", "zh": "行走弓步" },
-    "muscle_groups": ["QUADRICEPS", "GLUTES", "FULL_LEG", "LOWER_BODY"],
+    "name": {
+      "en": "Walking lunge",
+      "es": "Zancada caminando",
+      "zh": "行走弓步"
+    },
+    "muscle_groups": [
+      "QUADRICEPS",
+      "GLUTES",
+      "FULL_LEG",
+      "LOWER_BODY"
+    ],
     "equipment": "dumbbell",
     "impact": "MEDIUM",
     "description": {
@@ -99,8 +192,17 @@
   },
   {
     "id": "step-ups",
-    "name": { "en": "Controlled step-ups", "es": "Step-ups controlados", "zh": "控制式登台阶" },
-    "muscle_groups": ["QUADRICEPS", "GLUTES", "FULL_LEG", "LOWER_BODY"],
+    "name": {
+      "en": "Controlled step-ups",
+      "es": "Step-ups controlados",
+      "zh": "控制式登台阶"
+    },
+    "muscle_groups": [
+      "QUADRICEPS",
+      "GLUTES",
+      "FULL_LEG",
+      "LOWER_BODY"
+    ],
     "equipment": "box",
     "impact": "LOW",
     "description": {
@@ -113,8 +215,15 @@
   },
   {
     "id": "leg-extension",
-    "name": { "en": "Leg extension", "es": "Extensión de cuádriceps", "zh": "腿屈伸" },
-    "muscle_groups": ["QUADRICEPS", "FULL_LEG"],
+    "name": {
+      "en": "Leg extension",
+      "es": "Extensión de cuádriceps",
+      "zh": "腿屈伸"
+    },
+    "muscle_groups": [
+      "QUADRICEPS",
+      "FULL_LEG"
+    ],
     "equipment": "machine",
     "impact": "LOW",
     "description": {
@@ -127,8 +236,15 @@
   },
   {
     "id": "leg-curl",
-    "name": { "en": "Leg curl", "es": "Curl femoral", "zh": "腿弯举" },
-    "muscle_groups": ["HAMSTRINGS", "FULL_LEG"],
+    "name": {
+      "en": "Leg curl",
+      "es": "Curl femoral",
+      "zh": "腿弯举"
+    },
+    "muscle_groups": [
+      "HAMSTRINGS",
+      "FULL_LEG"
+    ],
     "equipment": "machine",
     "impact": "LOW",
     "description": {
@@ -141,8 +257,16 @@
   },
   {
     "id": "calf-raise",
-    "name": { "en": "Standing calf raise", "es": "Elevación de talones", "zh": "站姿提踵" },
-    "muscle_groups": ["CALVES", "FULL_LEG", "LOWER_BODY"],
+    "name": {
+      "en": "Standing calf raise",
+      "es": "Elevación de talones",
+      "zh": "站姿提踵"
+    },
+    "muscle_groups": [
+      "CALVES",
+      "FULL_LEG",
+      "LOWER_BODY"
+    ],
     "equipment": "none",
     "impact": "LOW",
     "description": {
@@ -155,8 +279,16 @@
   },
   {
     "id": "glute-kickback",
-    "name": { "en": "Cable glute kickback", "es": "Patada de glúteo en polea", "zh": "绳索后踢腿" },
-    "muscle_groups": ["GLUTES", "ABDUCTORS", "LOWER_BODY"],
+    "name": {
+      "en": "Cable glute kickback",
+      "es": "Patada de glúteo en polea",
+      "zh": "绳索后踢腿"
+    },
+    "muscle_groups": [
+      "GLUTES",
+      "ABDUCTORS",
+      "LOWER_BODY"
+    ],
     "equipment": "cable",
     "impact": "LOW",
     "description": {
@@ -169,8 +301,15 @@
   },
   {
     "id": "plank",
-    "name": { "en": "Front plank", "es": "Plancha frontal", "zh": "平板支撑" },
-    "muscle_groups": ["ABS", "CORE"],
+    "name": {
+      "en": "Front plank",
+      "es": "Plancha frontal",
+      "zh": "平板支撑"
+    },
+    "muscle_groups": [
+      "ABS",
+      "CORE"
+    ],
     "equipment": "none",
     "impact": "LOW",
     "description": {
@@ -183,8 +322,15 @@
   },
   {
     "id": "dead-bug",
-    "name": { "en": "Dead bug", "es": "Dead bug", "zh": "死虫式" },
-    "muscle_groups": ["ABS", "CORE"],
+    "name": {
+      "en": "Dead bug",
+      "es": "Dead bug",
+      "zh": "死虫式"
+    },
+    "muscle_groups": [
+      "ABS",
+      "CORE"
+    ],
     "equipment": "none",
     "impact": "LOW",
     "description": {
@@ -197,8 +343,15 @@
   },
   {
     "id": "side-plank",
-    "name": { "en": "Side plank", "es": "Plancha lateral", "zh": "侧平板支撑" },
-    "muscle_groups": ["OBLIQUES", "CORE"],
+    "name": {
+      "en": "Side plank",
+      "es": "Plancha lateral",
+      "zh": "侧平板支撑"
+    },
+    "muscle_groups": [
+      "OBLIQUES",
+      "CORE"
+    ],
     "equipment": "none",
     "impact": "LOW",
     "description": {
@@ -211,8 +364,15 @@
   },
   {
     "id": "hanging-leg-raise",
-    "name": { "en": "Hanging leg raise", "es": "Elevación de piernas colgada", "zh": "悬垂举腿" },
-    "muscle_groups": ["ABS", "CORE"],
+    "name": {
+      "en": "Hanging leg raise",
+      "es": "Elevación de piernas colgada",
+      "zh": "悬垂举腿"
+    },
+    "muscle_groups": [
+      "ABS",
+      "CORE"
+    ],
     "equipment": "bar",
     "impact": "MEDIUM",
     "description": {
@@ -225,8 +385,18 @@
   },
   {
     "id": "lat-pulldown",
-    "name": { "en": "Lat pulldown", "es": "Jalón al pecho", "zh": "高位下拉" },
-    "muscle_groups": ["LATS", "UPPER_BACK", "BACK", "PULL", "UPPER_BODY"],
+    "name": {
+      "en": "Lat pulldown",
+      "es": "Jalón al pecho",
+      "zh": "高位下拉"
+    },
+    "muscle_groups": [
+      "LATS",
+      "UPPER_BACK",
+      "BACK",
+      "PULL",
+      "UPPER_BODY"
+    ],
     "equipment": "cable",
     "impact": "LOW",
     "description": {
@@ -235,12 +405,29 @@
       "zh": "垂直拉类动作，发展背阔肌与上背。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Lat+Pulldown",
-    "media_url": null
+    "media_url": null,
+    "tips": [
+      {
+        "en": "Drive the elbows down, not the hands.",
+        "es": "Lleva los codos abajo, no las manos.",
+        "zh": "用肘部下压，而非手。"
+      }
+    ]
   },
   {
     "id": "bent-over-row",
-    "name": { "en": "Bent-over row", "es": "Remo inclinado", "zh": "俯身划船" },
-    "muscle_groups": ["UPPER_BACK", "LATS", "BACK", "PULL", "UPPER_BODY"],
+    "name": {
+      "en": "Bent-over row",
+      "es": "Remo inclinado",
+      "zh": "俯身划船"
+    },
+    "muscle_groups": [
+      "UPPER_BACK",
+      "LATS",
+      "BACK",
+      "PULL",
+      "UPPER_BODY"
+    ],
     "equipment": "barbell",
     "impact": "MEDIUM",
     "description": {
@@ -253,8 +440,17 @@
   },
   {
     "id": "incline-bench-press",
-    "name": { "en": "Incline bench press", "es": "Press de banca inclinado", "zh": "上斜卧推" },
-    "muscle_groups": ["CHEST", "SHOULDERS", "PUSH", "UPPER_BODY"],
+    "name": {
+      "en": "Incline bench press",
+      "es": "Press de banca inclinado",
+      "zh": "上斜卧推"
+    },
+    "muscle_groups": [
+      "CHEST",
+      "SHOULDERS",
+      "PUSH",
+      "UPPER_BODY"
+    ],
     "equipment": "barbell",
     "impact": "LOW",
     "description": {
@@ -267,8 +463,16 @@
   },
   {
     "id": "flat-bench-press",
-    "name": { "en": "Flat barbell bench press", "es": "Press de banca plano", "zh": "平板杠铃卧推" },
-    "muscle_groups": ["CHEST", "PUSH", "UPPER_BODY"],
+    "name": {
+      "en": "Flat barbell bench press",
+      "es": "Press de banca plano",
+      "zh": "平板杠铃卧推"
+    },
+    "muscle_groups": [
+      "CHEST",
+      "PUSH",
+      "UPPER_BODY"
+    ],
     "equipment": "barbell",
     "impact": "MEDIUM",
     "description": {
@@ -281,8 +485,16 @@
   },
   {
     "id": "overhead-press",
-    "name": { "en": "Dumbbell overhead press", "es": "Press militar con mancuernas", "zh": "哑铃推举" },
-    "muscle_groups": ["SHOULDERS", "PUSH", "UPPER_BODY"],
+    "name": {
+      "en": "Dumbbell overhead press",
+      "es": "Press militar con mancuernas",
+      "zh": "哑铃推举"
+    },
+    "muscle_groups": [
+      "SHOULDERS",
+      "PUSH",
+      "UPPER_BODY"
+    ],
     "equipment": "dumbbell",
     "impact": "MEDIUM",
     "description": {
@@ -295,8 +507,14 @@
   },
   {
     "id": "lateral-raise",
-    "name": { "en": "Lateral raise", "es": "Elevación lateral", "zh": "侧平举" },
-    "muscle_groups": ["SHOULDERS"],
+    "name": {
+      "en": "Lateral raise",
+      "es": "Elevación lateral",
+      "zh": "侧平举"
+    },
+    "muscle_groups": [
+      "SHOULDERS"
+    ],
     "equipment": "dumbbell",
     "impact": "LOW",
     "description": {
@@ -309,8 +527,15 @@
   },
   {
     "id": "biceps-curl",
-    "name": { "en": "Dumbbell biceps curl", "es": "Curl de bíceps con mancuernas", "zh": "哑铃弯举" },
-    "muscle_groups": ["BICEPS", "ARMS"],
+    "name": {
+      "en": "Dumbbell biceps curl",
+      "es": "Curl de bíceps con mancuernas",
+      "zh": "哑铃弯举"
+    },
+    "muscle_groups": [
+      "BICEPS",
+      "ARMS"
+    ],
     "equipment": "dumbbell",
     "impact": "LOW",
     "description": {
@@ -323,8 +548,16 @@
   },
   {
     "id": "hammer-curl",
-    "name": { "en": "Hammer curl", "es": "Curl martillo", "zh": "锤式弯举" },
-    "muscle_groups": ["BICEPS", "FOREARMS", "ARMS"],
+    "name": {
+      "en": "Hammer curl",
+      "es": "Curl martillo",
+      "zh": "锤式弯举"
+    },
+    "muscle_groups": [
+      "BICEPS",
+      "FOREARMS",
+      "ARMS"
+    ],
     "equipment": "dumbbell",
     "impact": "LOW",
     "description": {
@@ -337,8 +570,15 @@
   },
   {
     "id": "triceps-pushdown",
-    "name": { "en": "Triceps pushdown", "es": "Extensión de tríceps en polea", "zh": "绳索下压" },
-    "muscle_groups": ["TRICEPS", "ARMS"],
+    "name": {
+      "en": "Triceps pushdown",
+      "es": "Extensión de tríceps en polea",
+      "zh": "绳索下压"
+    },
+    "muscle_groups": [
+      "TRICEPS",
+      "ARMS"
+    ],
     "equipment": "cable",
     "impact": "LOW",
     "description": {
@@ -351,8 +591,16 @@
   },
   {
     "id": "glute-activation-band",
-    "name": { "en": "Band glute activation", "es": "Activación de glúteo con banda", "zh": "弹力带臀肌激活" },
-    "muscle_groups": ["GLUTES", "LOWER_BODY", "FULL_LEG"],
+    "name": {
+      "en": "Band glute activation",
+      "es": "Activación de glúteo con banda",
+      "zh": "弹力带臀肌激活"
+    },
+    "muscle_groups": [
+      "GLUTES",
+      "LOWER_BODY",
+      "FULL_LEG"
+    ],
     "equipment": "band",
     "impact": "LOW",
     "role": "ACTIVATION",
@@ -366,8 +614,16 @@
   },
   {
     "id": "hip-mobility-flow",
-    "name": { "en": "Hip mobility flow", "es": "Movilidad de cadera", "zh": "髋关节灵活性" },
-    "muscle_groups": ["FULL_LEG", "LOWER_BODY", "GLUTES"],
+    "name": {
+      "en": "Hip mobility flow",
+      "es": "Movilidad de cadera",
+      "zh": "髋关节灵活性"
+    },
+    "muscle_groups": [
+      "FULL_LEG",
+      "LOWER_BODY",
+      "GLUTES"
+    ],
     "equipment": "none",
     "impact": "LOW",
     "role": "WARMUP",
@@ -381,8 +637,17 @@
   },
   {
     "id": "arm-circles",
-    "name": { "en": "Arm circles", "es": "Círculos de brazos", "zh": "手臂绕环" },
-    "muscle_groups": ["SHOULDERS", "UPPER_BODY", "PUSH", "PULL"],
+    "name": {
+      "en": "Arm circles",
+      "es": "Círculos de brazos",
+      "zh": "手臂绕环"
+    },
+    "muscle_groups": [
+      "SHOULDERS",
+      "UPPER_BODY",
+      "PUSH",
+      "PULL"
+    ],
     "equipment": "none",
     "impact": "LOW",
     "role": "WARMUP",
@@ -396,8 +661,17 @@
   },
   {
     "id": "cat-cow",
-    "name": { "en": "Cat-cow", "es": "Gato-camello", "zh": "猫牛式" },
-    "muscle_groups": ["CORE", "BACK", "LOWER_BACK", "UPPER_BACK"],
+    "name": {
+      "en": "Cat-cow",
+      "es": "Gato-camello",
+      "zh": "猫牛式"
+    },
+    "muscle_groups": [
+      "CORE",
+      "BACK",
+      "LOWER_BACK",
+      "UPPER_BACK"
+    ],
     "equipment": "none",
     "impact": "LOW",
     "role": "WARMUP",
@@ -411,8 +685,18 @@
   },
   {
     "id": "scapular-retraction",
-    "name": { "en": "Scapular retraction", "es": "Retracción escapular", "zh": "肩胛后缩" },
-    "muscle_groups": ["BACK", "UPPER_BACK", "LATS", "PULL", "UPPER_BODY"],
+    "name": {
+      "en": "Scapular retraction",
+      "es": "Retracción escapular",
+      "zh": "肩胛后缩"
+    },
+    "muscle_groups": [
+      "BACK",
+      "UPPER_BACK",
+      "LATS",
+      "PULL",
+      "UPPER_BODY"
+    ],
     "equipment": "band",
     "impact": "LOW",
     "role": "ACTIVATION",
@@ -426,8 +710,16 @@
   },
   {
     "id": "bird-dog",
-    "name": { "en": "Bird dog", "es": "Bird dog", "zh": "鸟狗式" },
-    "muscle_groups": ["CORE", "ABS", "LOWER_BACK"],
+    "name": {
+      "en": "Bird dog",
+      "es": "Bird dog",
+      "zh": "鸟狗式"
+    },
+    "muscle_groups": [
+      "CORE",
+      "ABS",
+      "LOWER_BACK"
+    ],
     "equipment": "none",
     "impact": "LOW",
     "role": "ACTIVATION",
@@ -441,8 +733,18 @@
   },
   {
     "id": "assisted-pull-up",
-    "name": { "en": "Assisted pull-up", "es": "Dominada asistida", "zh": "辅助引体向上" },
-    "muscle_groups": ["LATS", "UPPER_BACK", "BACK", "PULL", "UPPER_BODY"],
+    "name": {
+      "en": "Assisted pull-up",
+      "es": "Dominada asistida",
+      "zh": "辅助引体向上"
+    },
+    "muscle_groups": [
+      "LATS",
+      "UPPER_BACK",
+      "BACK",
+      "PULL",
+      "UPPER_BODY"
+    ],
     "equipment": "assisted machine",
     "equipment_type": "ASSISTED",
     "impact": "LOW",
@@ -457,8 +759,18 @@
   },
   {
     "id": "assisted-chin-up",
-    "name": { "en": "Assisted chin-up", "es": "Dominada supina asistida", "zh": "辅助反握引体" },
-    "muscle_groups": ["BICEPS", "LATS", "BACK", "PULL", "UPPER_BODY"],
+    "name": {
+      "en": "Assisted chin-up",
+      "es": "Dominada supina asistida",
+      "zh": "辅助反握引体"
+    },
+    "muscle_groups": [
+      "BICEPS",
+      "LATS",
+      "BACK",
+      "PULL",
+      "UPPER_BODY"
+    ],
     "equipment": "assisted machine",
     "equipment_type": "ASSISTED",
     "impact": "LOW",
@@ -473,8 +785,17 @@
   },
   {
     "id": "assisted-dip",
-    "name": { "en": "Assisted dip", "es": "Fondos asistidos", "zh": "辅助双杠臂屈伸" },
-    "muscle_groups": ["TRICEPS", "CHEST", "PUSH", "UPPER_BODY"],
+    "name": {
+      "en": "Assisted dip",
+      "es": "Fondos asistidos",
+      "zh": "辅助双杠臂屈伸"
+    },
+    "muscle_groups": [
+      "TRICEPS",
+      "CHEST",
+      "PUSH",
+      "UPPER_BODY"
+    ],
     "equipment": "assisted machine",
     "equipment_type": "ASSISTED",
     "impact": "LOW",
@@ -489,8 +810,17 @@
   },
   {
     "id": "smith-squat",
-    "name": { "en": "Smith machine squat", "es": "Sentadilla en Smith", "zh": "史密斯深蹲" },
-    "muscle_groups": ["QUADRICEPS", "GLUTES", "FULL_LEG", "LOWER_BODY"],
+    "name": {
+      "en": "Smith machine squat",
+      "es": "Sentadilla en Smith",
+      "zh": "史密斯深蹲"
+    },
+    "muscle_groups": [
+      "QUADRICEPS",
+      "GLUTES",
+      "FULL_LEG",
+      "LOWER_BODY"
+    ],
     "equipment": "smith",
     "equipment_type": "SMITH",
     "impact": "LOW",
@@ -505,8 +835,15 @@
   },
   {
     "id": "smith-hip-thrust",
-    "name": { "en": "Smith machine hip thrust", "es": "Hip thrust en Smith", "zh": "史密斯臀推" },
-    "muscle_groups": ["GLUTES", "LOWER_BODY"],
+    "name": {
+      "en": "Smith machine hip thrust",
+      "es": "Hip thrust en Smith",
+      "zh": "史密斯臀推"
+    },
+    "muscle_groups": [
+      "GLUTES",
+      "LOWER_BODY"
+    ],
     "equipment": "smith",
     "equipment_type": "SMITH",
     "impact": "LOW",
@@ -521,8 +858,17 @@
   },
   {
     "id": "hack-squat",
-    "name": { "en": "Hack squat", "es": "Hack squat", "zh": "哈克深蹲" },
-    "muscle_groups": ["QUADRICEPS", "GLUTES", "FULL_LEG", "LOWER_BODY"],
+    "name": {
+      "en": "Hack squat",
+      "es": "Hack squat",
+      "zh": "哈克深蹲"
+    },
+    "muscle_groups": [
+      "QUADRICEPS",
+      "GLUTES",
+      "FULL_LEG",
+      "LOWER_BODY"
+    ],
     "equipment": "machine",
     "equipment_type": "MACHINE",
     "impact": "MEDIUM",
@@ -537,8 +883,17 @@
   },
   {
     "id": "leg-press",
-    "name": { "en": "Leg press", "es": "Prensa de piernas", "zh": "腿举" },
-    "muscle_groups": ["QUADRICEPS", "GLUTES", "FULL_LEG", "LOWER_BODY"],
+    "name": {
+      "en": "Leg press",
+      "es": "Prensa de piernas",
+      "zh": "腿举"
+    },
+    "muscle_groups": [
+      "QUADRICEPS",
+      "GLUTES",
+      "FULL_LEG",
+      "LOWER_BODY"
+    ],
     "equipment": "machine",
     "equipment_type": "MACHINE",
     "impact": "LOW",
@@ -553,8 +908,15 @@
   },
   {
     "id": "hip-thrust-machine",
-    "name": { "en": "Machine hip thrust", "es": "Hip thrust en máquina", "zh": "器械臀推" },
-    "muscle_groups": ["GLUTES", "LOWER_BODY"],
+    "name": {
+      "en": "Machine hip thrust",
+      "es": "Hip thrust en máquina",
+      "zh": "器械臀推"
+    },
+    "muscle_groups": [
+      "GLUTES",
+      "LOWER_BODY"
+    ],
     "equipment": "machine",
     "equipment_type": "MACHINE",
     "impact": "LOW",
@@ -569,8 +931,16 @@
   },
   {
     "id": "chest-fly",
-    "name": { "en": "Machine chest fly", "es": "Aperturas en máquina", "zh": "器械夹胸" },
-    "muscle_groups": ["CHEST", "PUSH", "UPPER_BODY"],
+    "name": {
+      "en": "Machine chest fly",
+      "es": "Aperturas en máquina",
+      "zh": "器械夹胸"
+    },
+    "muscle_groups": [
+      "CHEST",
+      "PUSH",
+      "UPPER_BODY"
+    ],
     "equipment": "machine",
     "equipment_type": "MACHINE",
     "impact": "LOW",
@@ -585,8 +955,16 @@
   },
   {
     "id": "cable-chest-fly",
-    "name": { "en": "Cable chest fly", "es": "Aperturas en polea", "zh": "绳索夹胸" },
-    "muscle_groups": ["CHEST", "PUSH", "UPPER_BODY"],
+    "name": {
+      "en": "Cable chest fly",
+      "es": "Aperturas en polea",
+      "zh": "绳索夹胸"
+    },
+    "muscle_groups": [
+      "CHEST",
+      "PUSH",
+      "UPPER_BODY"
+    ],
     "equipment": "cable",
     "equipment_type": "CABLE",
     "impact": "LOW",
@@ -601,8 +979,15 @@
   },
   {
     "id": "cable-lateral-raise",
-    "name": { "en": "Cable lateral raise", "es": "Elevación lateral en polea", "zh": "绳索侧平举" },
-    "muscle_groups": ["SHOULDERS", "UPPER_BODY"],
+    "name": {
+      "en": "Cable lateral raise",
+      "es": "Elevación lateral en polea",
+      "zh": "绳索侧平举"
+    },
+    "muscle_groups": [
+      "SHOULDERS",
+      "UPPER_BODY"
+    ],
     "equipment": "cable",
     "equipment_type": "CABLE",
     "impact": "LOW",
@@ -617,8 +1002,18 @@
   },
   {
     "id": "pull-up",
-    "name": { "en": "Pull-up", "es": "Dominada", "zh": "引体向上" },
-    "muscle_groups": ["LATS", "UPPER_BACK", "BACK", "PULL", "UPPER_BODY"],
+    "name": {
+      "en": "Pull-up",
+      "es": "Dominada",
+      "zh": "引体向上"
+    },
+    "muscle_groups": [
+      "LATS",
+      "UPPER_BACK",
+      "BACK",
+      "PULL",
+      "UPPER_BODY"
+    ],
     "equipment": "bar",
     "equipment_type": "BODYWEIGHT",
     "impact": "MEDIUM",
@@ -633,8 +1028,17 @@
   },
   {
     "id": "dip",
-    "name": { "en": "Parallel-bar dip", "es": "Fondos en paralelas", "zh": "双杠臂屈伸" },
-    "muscle_groups": ["TRICEPS", "CHEST", "PUSH", "UPPER_BODY"],
+    "name": {
+      "en": "Parallel-bar dip",
+      "es": "Fondos en paralelas",
+      "zh": "双杠臂屈伸"
+    },
+    "muscle_groups": [
+      "TRICEPS",
+      "CHEST",
+      "PUSH",
+      "UPPER_BODY"
+    ],
     "equipment": "bars",
     "equipment_type": "BODYWEIGHT",
     "impact": "MEDIUM",
@@ -645,6 +1049,313 @@
       "zh": "自身体重臂屈伸，锻炼肱三头肌与胸部。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Dip",
+    "media_url": null
+  },
+  {
+    "id": "belt-squat",
+    "name": {
+      "en": "Belt squat",
+      "es": "Sentadilla con cinturon",
+      "zh": "腰带深蹲"
+    },
+    "muscle_groups": [
+      "QUADRICEPS",
+      "GLUTES",
+      "FULL_LEG",
+      "LOWER_BODY"
+    ],
+    "equipment": "belt squat machine",
+    "equipment_type": "MACHINE",
+    "impact": "MEDIUM",
+    "role": "MAIN",
+    "how_to": {
+      "en": "Stand on the platform, hook the belt at the hips and squat down, pushing through the whole foot.",
+      "es": "Párate en la plataforma, engancha el cinturón en la cadera y baja empujando con todo el pie.",
+      "zh": "站上平台，将腰带挂于髋部，用全脚掌下蹲。"
+    },
+    "tips": [
+      {
+        "en": "Great for the quads without spinal load.",
+        "es": "Ideal para cuádriceps sin carga espinal.",
+        "zh": "适合股四头肌且无脊柱负荷。"
+      },
+      {
+        "en": "Control the descent to 2 seconds.",
+        "es": "Controla la bajada en 2 segundos.",
+        "zh": "下放控制2秒。"
+      }
+    ],
+    "description": {
+      "en": "Stand on the platform, hook the belt at the hips and squat down, pushing through the whole foot.",
+      "es": "Párate en la plataforma, engancha el cinturón en la cadera y baja empujando con todo el pie.",
+      "zh": "站上平台，将腰带挂于髋部，用全脚掌下蹲。"
+    },
+    "image_url": "https://placehold.co/600x400/be185d/ffffff?text=Belt+Squat",
+    "media_url": null
+  },
+  {
+    "id": "pendulum-squat",
+    "name": {
+      "en": "Pendulum squat",
+      "es": "Sentadilla pendular",
+      "zh": "钟摆深蹲"
+    },
+    "muscle_groups": [
+      "QUADRICEPS",
+      "GLUTES",
+      "FULL_LEG",
+      "LOWER_BODY"
+    ],
+    "equipment": "pendulum machine",
+    "equipment_type": "MACHINE",
+    "impact": "MEDIUM",
+    "role": "MAIN",
+    "how_to": {
+      "en": "Sit into the pendulum machine and squat along the guided arc, keeping the back flat.",
+      "es": "Colócate en la máquina pendular y baja siguiendo el arco guiado con la espalda plana.",
+      "zh": "坐上钟摆机，沿导向弧线深蹲，保持背部平直。"
+    },
+    "tips": [
+      {
+        "en": "Deep stretch on the quads at the bottom.",
+        "es": "Fuerte estiramiento de cuádriceps abajo.",
+        "zh": "底部股四头肌拉伸感强。"
+      },
+      {
+        "en": "Push evenly through both feet.",
+        "es": "Empuja por igual con ambos pies.",
+        "zh": "双脚均匀发力。"
+      }
+    ],
+    "description": {
+      "en": "Sit into the pendulum machine and squat along the guided arc, keeping the back flat.",
+      "es": "Colócate en la máquina pendular y baja siguiendo el arco guiado con la espalda plana.",
+      "zh": "坐上钟摆机，沿导向弧线深蹲，保持背部平直。"
+    },
+    "image_url": "https://placehold.co/600x400/be185d/ffffff?text=Pendulum+Squat",
+    "media_url": null
+  },
+  {
+    "id": "v-squat",
+    "name": {
+      "en": "V-squat machine",
+      "es": "Sentadilla en maquina V",
+      "zh": "V型深蹲机"
+    },
+    "muscle_groups": [
+      "QUADRICEPS",
+      "GLUTES",
+      "FULL_LEG",
+      "LOWER_BODY"
+    ],
+    "equipment": "v-squat machine",
+    "equipment_type": "MACHINE",
+    "impact": "MEDIUM",
+    "role": "MAIN",
+    "how_to": {
+      "en": "Squat in the V-squat machine with the torso supported; control the range.",
+      "es": "Haz sentadilla en la máquina V con el torso apoyado; controla el rango.",
+      "zh": "在V型深蹲机中背部支撑下蹲，控制幅度。"
+    },
+    "tips": [
+      {
+        "en": "Guided path, good substitute for the free squat.",
+        "es": "Trayectoria guiada, buen sustituto de la libre.",
+        "zh": "轨迹导向，自由深蹲的替代。"
+      }
+    ],
+    "description": {
+      "en": "Squat in the V-squat machine with the torso supported; control the range.",
+      "es": "Haz sentadilla en la máquina V con el torso apoyado; controla el rango.",
+      "zh": "在V型深蹲机中背部支撑下蹲，控制幅度。"
+    },
+    "image_url": "https://placehold.co/600x400/be185d/ffffff?text=V+Squat",
+    "media_url": null
+  },
+  {
+    "id": "hip-abduction",
+    "name": {
+      "en": "Seated hip abduction",
+      "es": "Abduccion de cadera sentada",
+      "zh": "坐姿髋外展"
+    },
+    "muscle_groups": [
+      "ABDUCTORS",
+      "GLUTES",
+      "LOWER_BODY"
+    ],
+    "equipment": "machine",
+    "equipment_type": "MACHINE",
+    "impact": "LOW",
+    "role": "MAIN",
+    "how_to": {
+      "en": "Sit and press the pads outward, squeezing the glutes at the end of each rep.",
+      "es": "Sentada, empuja las almohadillas hacia afuera apretando el glúteo al final.",
+      "zh": "坐姿向外推，每次末端收紧臀肌。"
+    },
+    "tips": [
+      {
+        "en": "Pause 1 second at the end range.",
+        "es": "Pausa 1 segundo al final.",
+        "zh": "末端停顿1秒。"
+      }
+    ],
+    "description": {
+      "en": "Sit and press the pads outward, squeezing the glutes at the end of each rep.",
+      "es": "Sentada, empuja las almohadillas hacia afuera apretando el glúteo al final.",
+      "zh": "坐姿向外推，每次末端收紧臀肌。"
+    },
+    "image_url": "https://placehold.co/600x400/be185d/ffffff?text=Hip+Abduction",
+    "media_url": null
+  },
+  {
+    "id": "hip-adduction",
+    "name": {
+      "en": "Seated hip adduction",
+      "es": "Aduccion de cadera sentada",
+      "zh": "坐姿髋内收"
+    },
+    "muscle_groups": [
+      "ADDUCTORS",
+      "LOWER_BODY"
+    ],
+    "equipment": "machine",
+    "equipment_type": "MACHINE",
+    "impact": "LOW",
+    "role": "MAIN",
+    "how_to": {
+      "en": "Sit and bring the pads together, squeezing the inner thighs.",
+      "es": "Sentada, junta las almohadillas apretando la cara interna del muslo.",
+      "zh": "坐姿合拢，收紧大腿内侧。"
+    },
+    "tips": [
+      {
+        "en": "Do not use momentum.",
+        "es": "No uses impulso.",
+        "zh": "不要借助惯性。"
+      }
+    ],
+    "description": {
+      "en": "Sit and bring the pads together, squeezing the inner thighs.",
+      "es": "Sentada, junta las almohadillas apretando la cara interna del muslo.",
+      "zh": "坐姿合拢，收紧大腿内侧。"
+    },
+    "image_url": "https://placehold.co/600x400/be185d/ffffff?text=Hip+Adduction",
+    "media_url": null
+  },
+  {
+    "id": "seated-cable-row",
+    "name": {
+      "en": "Seated cable row",
+      "es": "Remo sentado en polea",
+      "zh": "坐姿绳索划船"
+    },
+    "muscle_groups": [
+      "UPPER_BACK",
+      "LATS",
+      "BACK",
+      "PULL",
+      "UPPER_BODY"
+    ],
+    "equipment": "cable",
+    "equipment_type": "CABLE",
+    "impact": "MEDIUM",
+    "role": "MAIN",
+    "how_to": {
+      "en": "Sit tall, pull the handle to the navel and squeeze the shoulder blades together.",
+      "es": "Siéntate erguida, lleva el maneral al ombligo y junta las escápulas.",
+      "zh": "坐直，将把手拉向腹部，并夹紧肩胛。"
+    },
+    "tips": [
+      {
+        "en": "Keep the chest up and avoid leaning back fast.",
+        "es": "Pecho arriba y evita inclinarte rápido atrás.",
+        "zh": "挺胸，避免快速后仰。"
+      },
+      {
+        "en": "Different grips change the emphasis; neutral grip hits the mid back.",
+        "es": "Distintos agarres cambian el énfasis; agarre neutro trabaja la espalda media.",
+        "zh": "不同握法侧重不同；中立握侧重中背。"
+      }
+    ],
+    "description": {
+      "en": "Sit tall, pull the handle to the navel and squeeze the shoulder blades together.",
+      "es": "Siéntate erguida, lleva el maneral al ombligo y junta las escápulas.",
+      "zh": "坐直，将把手拉向腹部，并夹紧肩胛。"
+    },
+    "image_url": "https://placehold.co/600x400/be185d/ffffff?text=Seated+Cable+Row",
+    "media_url": null
+  },
+  {
+    "id": "machine-shoulder-press",
+    "name": {
+      "en": "Machine shoulder press",
+      "es": "Press de hombros en maquina",
+      "zh": "器械肩推"
+    },
+    "muscle_groups": [
+      "SHOULDERS",
+      "PUSH",
+      "UPPER_BODY"
+    ],
+    "equipment": "machine",
+    "equipment_type": "MACHINE",
+    "impact": "MEDIUM",
+    "role": "MAIN",
+    "how_to": {
+      "en": "Sit with the back supported and press the handles overhead without locking hard.",
+      "es": "Sentada con espalda apoyada, empuja los manerales arriba sin bloquear fuerte.",
+      "zh": "背部支撑下将把手向上推，不要猛锁肘。"
+    },
+    "tips": [
+      {
+        "en": "Keep ribs down to protect the low back.",
+        "es": "Costillas abajo para proteger la espalda.",
+        "zh": "收肋保护下背。"
+      }
+    ],
+    "description": {
+      "en": "Sit with the back supported and press the handles overhead without locking hard.",
+      "es": "Sentada con espalda apoyada, empuja los manerales arriba sin bloquear fuerte.",
+      "zh": "背部支撑下将把手向上推，不要猛锁肘。"
+    },
+    "image_url": "https://placehold.co/600x400/be185d/ffffff?text=Machine+Shoulder+Press",
+    "media_url": null
+  },
+  {
+    "id": "glute-ham-raise",
+    "name": {
+      "en": "Glute-ham raise",
+      "es": "Curl gluteo-isquio",
+      "zh": "臀腘训练"
+    },
+    "muscle_groups": [
+      "HAMSTRINGS",
+      "GLUTES",
+      "LOWER_BODY"
+    ],
+    "equipment": "GHD",
+    "equipment_type": "MACHINE",
+    "impact": "MEDIUM",
+    "role": "MAIN",
+    "how_to": {
+      "en": "On the GHD, lower the torso with control and pull yourself up using the hamstrings and glutes.",
+      "es": "En el GHD, baja el torso controlado y súbete con isquios y glúteo.",
+      "zh": "在GHD上控制下放，用腘绳肌与臀肌拉起。"
+    },
+    "tips": [
+      {
+        "en": "Advanced; regress to the back extension if needed.",
+        "es": "Avanzado; regresa a la extensión si es necesario.",
+        "zh": "进阶动作；必要时退阶。"
+      }
+    ],
+    "description": {
+      "en": "On the GHD, lower the torso with control and pull yourself up using the hamstrings and glutes.",
+      "es": "En el GHD, baja el torso controlado y súbete con isquios y glúteo.",
+      "zh": "在GHD上控制下放，用腘绳肌与臀肌拉起。"
+    },
+    "image_url": "https://placehold.co/600x400/be185d/ffffff?text=Glute+Ham+Raise",
     "media_url": null
   }
 ]

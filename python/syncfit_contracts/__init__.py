@@ -69,7 +69,7 @@ from .supplement import (
     SupplementRequest,
 )
 from .telemetry import PpgWindow, TelemetryFrame
-from .user import EnergyCheckIn, UserProfile
+from .user import EnergyCheckIn, SupplementMacro, UserProfile
 from .version import SCHEMA_VERSION
 from .ws import WsEnvelope, WsMessageType
 
@@ -134,6 +134,7 @@ __all__ = [
     "Trimester",
     "UserObjective",
     "UserProfile",
+    "SupplementMacro",
     "WsEnvelope",
     "WsMessageType",
     "load_exercises",

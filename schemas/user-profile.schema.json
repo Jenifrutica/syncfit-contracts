@@ -31,6 +31,19 @@
       "items": { "type": "string" }
     },
     "weight_unit": { "$ref": "common.schema.json#/$defs/WeightUnit" },
+    "supplement_macros": {
+      "type": "array",
+      "description": "User-entered nutrition facts for their current supplements.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["supplement_id", "macros"],
+        "properties": {
+          "supplement_id": { "type": "string" },
+          "macros": { "$ref": "common.schema.json#/$defs/MacroNutrients" }
+        }
+      }
+    },
     "photo_url": { "type": "string" },
     "weekly_training_goal": {
       "type": "integer",

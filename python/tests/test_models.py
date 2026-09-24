@@ -120,7 +120,7 @@ def test_activation_exercises_in_catalog():
 
 def test_machine_catalog_and_helpers():
     machines = load_machines()
-    assert len(machines) >= 10
+    assert len(machines) >= 24
     leg_press = get_machine("leg-press")
     assert leg_press is not None and leg_press.weight_factor > 1
     assisted = get_machine("assisted-pullup-machine")
@@ -131,8 +131,10 @@ def test_machine_catalog_and_helpers():
 
 def test_more_exercises_including_assisted_and_machines():
     ids = {e.id for e in load_exercises()}
-    for expected in ("assisted-pull-up", "assisted-dip", "hack-squat", "leg-press", "pull-up", "dip"):
+    for expected in ("assisted-pull-up", "assisted-dip", "hack-squat", "leg-press", "pull-up", "dip", "belt-squat", "pendulum-squat", "hip-abduction", "seated-cable-row"):
         assert expected in ids
+    belt = get_exercise("belt-squat")
+    assert belt is not None and belt.how_to is not None and belt.tips
     leg_press = get_exercise("leg-press")
     assert leg_press is not None and str(leg_press.equipment_type) == "MACHINE"
 

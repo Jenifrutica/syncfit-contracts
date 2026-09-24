@@ -5,6 +5,14 @@ All notable changes to the SyncFit Edge cross-repository contract are documented
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.0] - 2026-09-24
+
+### Added
+
+- `how_to` and `tips` on exercises and adaptations (movement detail).
+- `supplement_macros` on `UserProfile` (user-entered nutrition facts).
+- 14 more machines (belt squat, pendulum, V-squat, glute drive, hip abduction/adduction, seated row, shoulder press, pec deck, preacher, GHD, functional trainer, cable crossover) and 8 more exercises.
+
 ## [1.5.0] - 2026-09-24
 
 ### Added
