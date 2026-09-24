@@ -30,6 +30,8 @@ export const UserProfile = z
     modality: Modality.optional(),
     available_machines: z.array(z.string()).optional(),
     symptoms: z.array(z.string()).optional(),
+    pain_levels: z.record(z.number().int().min(1).max(10)).optional(),
+    symptom_notes: z.string().optional(),
     current_supplements: z.array(z.string()).optional(),
     supplement_macros: z
       .array(z.object({ supplement_id: z.string(), macros: MacroNutrients }).strict())

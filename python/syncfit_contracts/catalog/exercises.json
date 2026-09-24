@@ -1633,5 +1633,227 @@
     },
     "image_url": "https://placehold.co/600x400/be185d/ffffff?text=Glute+Ham+Raise",
     "media_url": null
+  },
+  {
+    "id": "db-bulgarian-split-squat",
+    "name": {
+      "en": "Dumbbell Bulgarian split squat",
+      "es": "Sentadilla bulgara con mancuernas",
+      "zh": "哑铃保加利亚分腿蹲"
+    },
+    "muscle_groups": [
+      "QUADRICEPS",
+      "GLUTES",
+      "FULL_LEG",
+      "LOWER_BODY"
+    ],
+    "equipment": "dumbbell",
+    "equipment_type": "FREE_WEIGHT",
+    "impact": "MEDIUM",
+    "role": "MAIN",
+    "how_to": {
+      "en": "Rear foot elevated, lower under control on one leg.",
+      "es": "Pie trasero elevado, baja controlado a una pierna.",
+      "zh": "后脚抬高，单腿控制下蹲。"
+    },
+    "tips": [
+      {
+        "en": "Knee-friendly if the stance is not too long.",
+        "es": "Amigable con rodilla si el paso no es muy largo.",
+        "zh": "步幅不过大时对膝友好。"
+      }
+    ],
+    "description": {
+      "en": "Rear foot elevated, lower under control on one leg.",
+      "es": "Pie trasero elevado, baja controlado a una pierna.",
+      "zh": "后脚抬高，单腿控制下蹲。"
+    },
+    "image_url": "https://placehold.co/600x400/be185d/ffffff?text=DB+Bulgarian",
+    "media_url": null
+  },
+  {
+    "id": "db-deadlift",
+    "name": {
+      "en": "Dumbbell deadlift",
+      "es": "Peso muerto con mancuernas",
+      "zh": "哑铃硬拉"
+    },
+    "muscle_groups": [
+      "HAMSTRINGS",
+      "GLUTES",
+      "LOWER_BACK",
+      "LOWER_BODY"
+    ],
+    "equipment": "dumbbell",
+    "equipment_type": "FREE_WEIGHT",
+    "impact": "MEDIUM",
+    "role": "MAIN",
+    "how_to": {
+      "en": "Hinge with dumbbells at the sides, neutral spine.",
+      "es": "Bisagra con mancuernas a los lados, columna neutra.",
+      "zh": "双手持哑铃髋铰链，脊柱中立。"
+    },
+    "tips": [
+      {
+        "en": "Less spinal load than a barbell.",
+        "es": "Menos carga espinal que la barra.",
+        "zh": "比杠铃脊柱负荷小。"
+      }
+    ],
+    "description": {
+      "en": "Hinge with dumbbells at the sides, neutral spine.",
+      "es": "Bisagra con mancuernas a los lados, columna neutra.",
+      "zh": "双手持哑铃髋铰链，脊柱中立。"
+    },
+    "image_url": "https://placehold.co/600x400/be185d/ffffff?text=DB+Deadlift",
+    "media_url": null
+  },
+  {
+    "id": "db-rdl",
+    "name": {
+      "en": "Dumbbell Romanian deadlift",
+      "es": "Peso muerto rumano con mancuernas",
+      "zh": "哑铃罗马尼亚硬拉"
+    },
+    "muscle_groups": [
+      "HAMSTRINGS",
+      "GLUTES",
+      "LOWER_BACK",
+      "LOWER_BODY"
+    ],
+    "equipment": "dumbbell",
+    "equipment_type": "FREE_WEIGHT",
+    "impact": "MEDIUM",
+    "role": "MAIN",
+    "how_to": {
+      "en": "Knees slightly bent, push the hips back.",
+      "es": "Rodillas algo flexionadas, lleva la cadera atrás.",
+      "zh": "膝微屈，髋部后推。"
+    },
+    "tips": [
+      {
+        "en": "Great hamstring stretch.",
+        "es": "Gran estiramiento de isquios.",
+        "zh": "腘绳肌拉伸感强。"
+      }
+    ],
+    "description": {
+      "en": "Knees slightly bent, push the hips back.",
+      "es": "Rodillas algo flexionadas, lleva la cadera atrás.",
+      "zh": "膝微屈，髋部后推。"
+    },
+    "image_url": "https://placehold.co/600x400/be185d/ffffff?text=DB+RDL",
+    "media_url": null
+  },
+  {
+    "id": "db-row",
+    "name": {
+      "en": "One-arm dumbbell row",
+      "es": "Remo a una mano con mancuerna",
+      "zh": "单臂哑铃划船"
+    },
+    "muscle_groups": [
+      "UPPER_BACK",
+      "LATS",
+      "BACK",
+      "PULL",
+      "UPPER_BODY"
+    ],
+    "equipment": "dumbbell",
+    "equipment_type": "FREE_WEIGHT",
+    "impact": "MEDIUM",
+    "role": "MAIN",
+    "how_to": {
+      "en": "Support on a bench and pull the dumbbell to the hip.",
+      "es": "Apóyate en banco y lleva la mancuerna a la cadera.",
+      "zh": "撑凳，将哑铃拉向髋部。"
+    },
+    "tips": [
+      {
+        "en": "Neutral grip, mid-back focus.",
+        "es": "Agarre neutro, foco espalda media.",
+        "zh": "中立握，侧重中背。"
+      }
+    ],
+    "description": {
+      "en": "Support on a bench and pull the dumbbell to the hip.",
+      "es": "Apóyate en banco y lleva la mancuerna a la cadera.",
+      "zh": "撑凳，将哑铃拉向髋部。"
+    },
+    "image_url": "https://placehold.co/600x400/be185d/ffffff?text=DB+Row",
+    "media_url": null
+  },
+  {
+    "id": "db-thruster",
+    "name": {
+      "en": "Dumbbell thruster",
+      "es": "Thruster con mancuernas",
+      "zh": "哑铃推进"
+    },
+    "muscle_groups": [
+      "QUADRICEPS",
+      "SHOULDERS",
+      "FULL_BODY",
+      "PUSH"
+    ],
+    "equipment": "dumbbell",
+    "equipment_type": "FREE_WEIGHT",
+    "impact": "HIGH",
+    "role": "MAIN",
+    "how_to": {
+      "en": "Squat then press overhead in one motion.",
+      "es": "Sentadilla y press sobre la cabeza en un movimiento.",
+      "zh": "下蹲后一体化上推。"
+    },
+    "tips": [
+      {
+        "en": "Metabolic; avoid in ovulatory/advanced pregnancy.",
+        "es": "Metabólico; evitar en ovulatoria/embarazo avanzado.",
+        "zh": "代谢型；排卵期/孕晚期避免。"
+      }
+    ],
+    "description": {
+      "en": "Squat then press overhead in one motion.",
+      "es": "Sentadilla y press sobre la cabeza en un movimiento.",
+      "zh": "下蹲后一体化上推。"
+    },
+    "image_url": "https://placehold.co/600x400/be185d/ffffff?text=DB+Thruster",
+    "media_url": null
+  },
+  {
+    "id": "cable-glute-kickback-2",
+    "name": {
+      "en": "Cable glute kickback (strap)",
+      "es": "Patada de gluteo en polea (tobillera)",
+      "zh": "绳索后踢臀（踝带）"
+    },
+    "muscle_groups": [
+      "GLUTES",
+      "ABDUCTORS",
+      "LOWER_BODY"
+    ],
+    "equipment": "cable",
+    "equipment_type": "CABLE",
+    "impact": "LOW",
+    "role": "MAIN",
+    "how_to": {
+      "en": "Ankle strap, extend the hip back and squeeze.",
+      "es": "Con tobillera, extiende la cadera atrás y aprieta.",
+      "zh": "使用踝带向后伸髋并收紧。"
+    },
+    "tips": [
+      {
+        "en": "Pause at the top.",
+        "es": "Pausa arriba.",
+        "zh": "顶端停顿。"
+      }
+    ],
+    "description": {
+      "en": "Ankle strap, extend the hip back and squeeze.",
+      "es": "Con tobillera, extiende la cadera atrás y aprieta.",
+      "zh": "使用踝带向后伸髋并收紧。"
+    },
+    "image_url": "https://placehold.co/600x400/be185d/ffffff?text=Cable+Kickback",
+    "media_url": null
   }
 ]

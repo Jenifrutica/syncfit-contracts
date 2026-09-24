@@ -44,6 +44,8 @@ class UserProfile(BaseContractModel):
     modality: Modality | None = None
     available_machines: list[str] = Field(default_factory=list)
     symptoms: list[str] = Field(default_factory=list)
+    pain_levels: dict[str, int] = Field(default_factory=dict)
+    symptom_notes: str | None = None
     current_supplements: list[str] = Field(default_factory=list)
     supplement_macros: list[SupplementMacro] = Field(default_factory=list)
     weight_unit: str | None = None
