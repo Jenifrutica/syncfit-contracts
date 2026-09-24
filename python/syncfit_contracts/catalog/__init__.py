@@ -13,6 +13,7 @@ from ..supplement import Supplement
 CATALOG_FILE = "exercises.json"
 SUPPLEMENT_FILE = "supplements.json"
 MACHINE_FILE = "machines.json"
+SYMPTOM_FILE = "symptoms.json"
 
 
 @lru_cache(maxsize=1)
@@ -21,6 +22,20 @@ def load_machines() -> tuple[GymMachine, ...]:
     raw = (files(__package__) / MACHINE_FILE).read_text(encoding="utf-8")
     data = json.loads(raw)
     return tuple(GymMachine.model_validate(item) for item in data)
+
+
+@lru_cache(maxsize=1)
+def load_symptoms() -> tuple[dict, ...]:
+    """Load the symptom catalog (plain data)."""
+    raw = (files(__package__) / SYMPTOM_FILE).read_text(encoding="utf-8")
+    return tuple(json.loads(raw))
+
+
+def get_symptom(symptom_id: str) -> dict | None:
+    for symptom in load_symptoms():
+        if symptom["id"] == symptom_id:
+            return symptom
+    return None
 
 
 def get_machine(machine_id: str) -> GymMachine | None:
@@ -128,5 +143,7 @@ __all__ = [
     "exercises_for_groups",
     "supplements_for",
     "machines_for_exercise",
+    "load_symptoms",
+    "get_symptom",
     "localize",
 ]

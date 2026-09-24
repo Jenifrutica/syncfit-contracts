@@ -25,6 +25,11 @@
       "description": "Machine ids available in the athlete's gym.",
       "items": { "type": "string" }
     },
+    "symptoms": {
+      "type": "array",
+      "description": "Symptom ids (cramps, low_back_pain, knee_pain, contractions, dilation).",
+      "items": { "type": "string" }
+    },
     "current_supplements": {
       "type": "array",
       "description": "Supplement ids the athlete currently takes (their stack).",

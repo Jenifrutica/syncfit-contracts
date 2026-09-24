@@ -29,6 +29,7 @@ export const UserProfile = z
     goal_phase: GoalPhase.optional(),
     modality: Modality.optional(),
     available_machines: z.array(z.string()).optional(),
+    symptoms: z.array(z.string()).optional(),
     current_supplements: z.array(z.string()).optional(),
     supplement_macros: z
       .array(z.object({ supplement_id: z.string(), macros: MacroNutrients }).strict())
