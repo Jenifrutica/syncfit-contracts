@@ -6,8 +6,10 @@ import { describe, expect, it } from "vitest";
 import {
   AdaptedRoutine,
   AIReasoningResponse,
+  CycleCalendar,
   EnergyCheckIn,
   Exercise,
+  GymMachine,
   LocalizedText,
   PhysiologicalAlert,
   PhysiologicalStateGraph,
@@ -49,6 +51,8 @@ const cases: Array<[string, { parse: (v: unknown) => unknown }]> = [
   ["supplement.json", Supplement],
   ["supplement-request.json", SupplementRequest],
   ["supplement-advice.json", SupplementAdvice],
+  ["gym-machine.json", GymMachine],
+  ["cycle-calendar.json", CycleCalendar],
 ];
 
 describe("contracts validate the shared examples", () => {

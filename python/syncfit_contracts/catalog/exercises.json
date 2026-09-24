@@ -438,5 +438,213 @@
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Bird+Dog",
     "media_url": null
+  },
+  {
+    "id": "assisted-pull-up",
+    "name": { "en": "Assisted pull-up", "es": "Dominada asistida", "zh": "辅助引体向上" },
+    "muscle_groups": ["LATS", "UPPER_BACK", "BACK", "PULL", "UPPER_BODY"],
+    "equipment": "assisted machine",
+    "equipment_type": "ASSISTED",
+    "impact": "LOW",
+    "role": "MAIN",
+    "description": {
+      "en": "Vertical pull with machine assistance; the selected weight is the assistance.",
+      "es": "Tracción vertical con asistencia; el peso seleccionado es la asistencia.",
+      "zh": "借助器械的垂直拉；所选重量为助力。"
+    },
+    "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Assisted+Pullup",
+    "media_url": null
+  },
+  {
+    "id": "assisted-chin-up",
+    "name": { "en": "Assisted chin-up", "es": "Dominada supina asistida", "zh": "辅助反握引体" },
+    "muscle_groups": ["BICEPS", "LATS", "BACK", "PULL", "UPPER_BODY"],
+    "equipment": "assisted machine",
+    "equipment_type": "ASSISTED",
+    "impact": "LOW",
+    "role": "MAIN",
+    "description": {
+      "en": "Supinated grip pull with assistance, targeting the biceps and lats.",
+      "es": "Tracción con agarre supino y asistencia, enfocada en bíceps y dorsales.",
+      "zh": "反握助力拉，针对肱二头肌与背阔肌。"
+    },
+    "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Assisted+Chinup",
+    "media_url": null
+  },
+  {
+    "id": "assisted-dip",
+    "name": { "en": "Assisted dip", "es": "Fondos asistidos", "zh": "辅助双杠臂屈伸" },
+    "muscle_groups": ["TRICEPS", "CHEST", "PUSH", "UPPER_BODY"],
+    "equipment": "assisted machine",
+    "equipment_type": "ASSISTED",
+    "impact": "LOW",
+    "role": "MAIN",
+    "description": {
+      "en": "Assisted parallel-bar dip for the triceps and chest.",
+      "es": "Fondos en paralelas con asistencia para tríceps y pecho.",
+      "zh": "助力双杠臂屈伸，锻炼肱三头肌与胸部。"
+    },
+    "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Assisted+Dip",
+    "media_url": null
+  },
+  {
+    "id": "smith-squat",
+    "name": { "en": "Smith machine squat", "es": "Sentadilla en Smith", "zh": "史密斯深蹲" },
+    "muscle_groups": ["QUADRICEPS", "GLUTES", "FULL_LEG", "LOWER_BODY"],
+    "equipment": "smith",
+    "equipment_type": "SMITH",
+    "impact": "LOW",
+    "role": "MAIN",
+    "description": {
+      "en": "Guided-bar squat; stable and lower-impact than the free barbell version.",
+      "es": "Sentadilla en barra guiada; estable y de menor impacto que la barra libre.",
+      "zh": "导向杠深蹲，比自由杠铃更稳定、冲击更小。"
+    },
+    "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Smith+Squat",
+    "media_url": null
+  },
+  {
+    "id": "smith-hip-thrust",
+    "name": { "en": "Smith machine hip thrust", "es": "Hip thrust en Smith", "zh": "史密斯臀推" },
+    "muscle_groups": ["GLUTES", "LOWER_BODY"],
+    "equipment": "smith",
+    "equipment_type": "SMITH",
+    "impact": "LOW",
+    "role": "MAIN",
+    "description": {
+      "en": "Glute-focused hip thrust on the guided bar.",
+      "es": "Hip thrust enfocado en glúteo con barra guiada.",
+      "zh": "导向杠臀推，针对臀肌。"
+    },
+    "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Smith+Hip+Thrust",
+    "media_url": null
+  },
+  {
+    "id": "hack-squat",
+    "name": { "en": "Hack squat", "es": "Hack squat", "zh": "哈克深蹲" },
+    "muscle_groups": ["QUADRICEPS", "GLUTES", "FULL_LEG", "LOWER_BODY"],
+    "equipment": "machine",
+    "equipment_type": "MACHINE",
+    "impact": "MEDIUM",
+    "role": "MAIN",
+    "description": {
+      "en": "Machine squat with fixed torso; heavier but guided.",
+      "es": "Sentadilla en máquina con torso fijo; más pesada pero guiada.",
+      "zh": "躯干固定的器械深蹲，更重但有导向。"
+    },
+    "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Hack+Squat",
+    "media_url": null
+  },
+  {
+    "id": "leg-press",
+    "name": { "en": "Leg press", "es": "Prensa de piernas", "zh": "腿举" },
+    "muscle_groups": ["QUADRICEPS", "GLUTES", "FULL_LEG", "LOWER_BODY"],
+    "equipment": "machine",
+    "equipment_type": "MACHINE",
+    "impact": "LOW",
+    "role": "MAIN",
+    "description": {
+      "en": "Horizontal/angled press; effective load is higher than it looks.",
+      "es": "Prensa horizontal/inclinada; la carga efectiva es mayor de lo que parece.",
+      "zh": "水平/斜面蹬腿，实际负荷比看上去更大。"
+    },
+    "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Leg+Press",
+    "media_url": null
+  },
+  {
+    "id": "hip-thrust-machine",
+    "name": { "en": "Machine hip thrust", "es": "Hip thrust en máquina", "zh": "器械臀推" },
+    "muscle_groups": ["GLUTES", "LOWER_BODY"],
+    "equipment": "machine",
+    "equipment_type": "MACHINE",
+    "impact": "LOW",
+    "role": "MAIN",
+    "description": {
+      "en": "Plate-loaded hip thrust station; glute isolation with stable support.",
+      "es": "Estación de hip thrust con placas; aísla glúteo con soporte estable.",
+      "zh": "配重片臀推机，稳定支撑下孤立臀肌。"
+    },
+    "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Machine+Hip+Thrust",
+    "media_url": null
+  },
+  {
+    "id": "chest-fly",
+    "name": { "en": "Machine chest fly", "es": "Aperturas en máquina", "zh": "器械夹胸" },
+    "muscle_groups": ["CHEST", "PUSH", "UPPER_BODY"],
+    "equipment": "machine",
+    "equipment_type": "MACHINE",
+    "impact": "LOW",
+    "role": "MAIN",
+    "description": {
+      "en": "Seated chest fly; supine-free alternative for the chest.",
+      "es": "Aperturas sentada; alternativa sin supino para el pecho.",
+      "zh": "坐姿夹胸；无需仰卧的胸部替代动作。"
+    },
+    "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Chest+Fly",
+    "media_url": null
+  },
+  {
+    "id": "cable-chest-fly",
+    "name": { "en": "Cable chest fly", "es": "Aperturas en polea", "zh": "绳索夹胸" },
+    "muscle_groups": ["CHEST", "PUSH", "UPPER_BODY"],
+    "equipment": "cable",
+    "equipment_type": "CABLE",
+    "impact": "LOW",
+    "role": "MAIN",
+    "description": {
+      "en": "Standing cable fly; continuous tension on the chest.",
+      "es": "Aperturas en polea de pie; tensión continua en el pecho.",
+      "zh": "站姿绳索夹胸，持续张力。"
+    },
+    "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Cable+Chest+Fly",
+    "media_url": null
+  },
+  {
+    "id": "cable-lateral-raise",
+    "name": { "en": "Cable lateral raise", "es": "Elevación lateral en polea", "zh": "绳索侧平举" },
+    "muscle_groups": ["SHOULDERS", "UPPER_BODY"],
+    "equipment": "cable",
+    "equipment_type": "CABLE",
+    "impact": "LOW",
+    "role": "MAIN",
+    "description": {
+      "en": "Single-arm cable lateral raise for the middle deltoid.",
+      "es": "Elevación lateral a una mano en polea para el deltoides medio.",
+      "zh": "单臂绳索侧平举，针对三角肌中束。"
+    },
+    "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Cable+Lateral+Raise",
+    "media_url": null
+  },
+  {
+    "id": "pull-up",
+    "name": { "en": "Pull-up", "es": "Dominada", "zh": "引体向上" },
+    "muscle_groups": ["LATS", "UPPER_BACK", "BACK", "PULL", "UPPER_BODY"],
+    "equipment": "bar",
+    "equipment_type": "BODYWEIGHT",
+    "impact": "MEDIUM",
+    "role": "MAIN",
+    "description": {
+      "en": "Bodyweight vertical pull; use assistance if needed.",
+      "es": "Tracción vertical con peso corporal; usa asistencia si es necesario.",
+      "zh": "自身体重垂直拉；必要时使用助力。"
+    },
+    "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Pull+Up",
+    "media_url": null
+  },
+  {
+    "id": "dip",
+    "name": { "en": "Parallel-bar dip", "es": "Fondos en paralelas", "zh": "双杠臂屈伸" },
+    "muscle_groups": ["TRICEPS", "CHEST", "PUSH", "UPPER_BODY"],
+    "equipment": "bars",
+    "equipment_type": "BODYWEIGHT",
+    "impact": "MEDIUM",
+    "role": "MAIN",
+    "description": {
+      "en": "Bodyweight dip for the triceps and chest.",
+      "es": "Fondos con peso corporal para tríceps y pecho.",
+      "zh": "自身体重臂屈伸，锻炼肱三头肌与胸部。"
+    },
+    "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Dip",
+    "media_url": null
   }
 ]

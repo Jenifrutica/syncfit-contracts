@@ -44,6 +44,8 @@ EXAMPLE_TO_SCHEMA = {
     "supplement.json": "supplement.schema.json",
     "supplement-request.json": "supplement-request.schema.json",
     "supplement-advice.json": "supplement-advice.schema.json",
+    "gym-machine.json": "gym-machine.schema.json",
+    "cycle-calendar.json": "cycle-calendar.schema.json",
 }
 
 
@@ -64,6 +66,7 @@ def test_examples_validate_against_schemas(registry, example_name, schema_name):
     [
         ("exercises.json", "exercise-catalog.schema.json"),
         ("supplements.json", "supplement-catalog.schema.json"),
+        ("machines.json", "gym-machine-catalog.schema.json"),
     ],
 )
 def test_catalogs_validate_against_schemas(registry, catalog_file, schema_name):

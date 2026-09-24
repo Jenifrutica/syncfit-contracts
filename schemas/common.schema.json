@@ -309,8 +309,20 @@
       "properties": {
         "exercise_id": { "type": "string" },
         "weight_kg": { "type": "number", "minimum": 0 },
-        "reps": { "type": "integer", "minimum": 1, "maximum": 100 }
+        "reps": { "type": "integer", "minimum": 1, "maximum": 100 },
+        "machine_id": { "type": "string" },
+        "unit": { "type": "string", "enum": ["KG", "LB", "LEVEL", "PLATES", "BODYWEIGHT"] }
       }
+    },
+    "EquipmentType": {
+      "type": "string",
+      "description": "How an exercise is loaded: free weight, machine, smith, cable, bodyweight, assisted or band.",
+      "enum": ["FREE_WEIGHT", "MACHINE", "SMITH", "CABLE", "BODYWEIGHT", "ASSISTED", "BAND", "NONE"]
+    },
+    "GoalPhase": {
+      "type": "string",
+      "description": "Current training/nutrition goal phase; can change over time.",
+      "enum": ["VOLUME", "DEFINITION", "MAINTENANCE", "STRENGTH_FOCUS", "RECOVERY"]
     }
   }
 }

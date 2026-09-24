@@ -27,10 +27,13 @@ from syncfit_contracts import (  # noqa: E402
     WsEnvelope,
     exercises_for_groups,
     get_exercise,
+    get_machine,
     get_supplement,
     load_exercises,
+    load_machines,
     load_supplements,
     localize,
+    machines_for_exercise,
     supplements_for,
 )
 
@@ -113,6 +116,33 @@ def test_set_prescription_model():
 def test_activation_exercises_in_catalog():
     activation = [e for e in load_exercises() if str(e.role) == "ACTIVATION"]
     assert activation, "expected activation exercises in the catalog"
+
+
+def test_machine_catalog_and_helpers():
+    machines = load_machines()
+    assert len(machines) >= 10
+    leg_press = get_machine("leg-press")
+    assert leg_press is not None and leg_press.weight_factor > 1
+    assisted = get_machine("assisted-pullup-machine")
+    assert assisted is not None and assisted.unit == "BODYWEIGHT"
+    supported = machines_for_exercise("leg-press")
+    assert any(m.id == "leg-press" for m in supported)
+
+
+def test_more_exercises_including_assisted_and_machines():
+    ids = {e.id for e in load_exercises()}
+    for expected in ("assisted-pull-up", "assisted-dip", "hack-squat", "leg-press", "pull-up", "dip"):
+        assert expected in ids
+    leg_press = get_exercise("leg-press")
+    assert leg_press is not None and str(leg_press.equipment_type) == "MACHINE"
+
+
+def test_cycle_calendar_parses():
+    from syncfit_contracts import CycleCalendar
+
+    calendar = CycleCalendar.model_validate(load("cycle-calendar.json"))
+    assert calendar.month == "2026-09"
+    assert any(day.kind == "OVULATION" for day in calendar.days)
 
 
 def test_exercise_parses_and_requires_english():

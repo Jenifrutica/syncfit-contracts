@@ -6,7 +6,15 @@ from datetime import datetime
 
 from pydantic import Field
 
-from .common import BaseContractModel, EnergyLevel, ExerciseLoad, Language, Modality, UserObjective
+from .common import (
+    BaseContractModel,
+    EnergyLevel,
+    ExerciseLoad,
+    GoalPhase,
+    Language,
+    Modality,
+    UserObjective,
+)
 from .version import SCHEMA_VERSION
 
 
@@ -20,9 +28,13 @@ class UserProfile(BaseContractModel):
     is_guest: bool = False
     height_cm: float | None = Field(default=None, ge=80, le=250)
     weight_kg: float | None = Field(default=None, ge=20, le=300)
+    body_fat_pct: float | None = Field(default=None, ge=3, le=60)
+    daily_calories: int | None = Field(default=None, ge=800, le=6000)
     age: int | None = Field(default=None, ge=10, le=100)
     objective: UserObjective | None = None
+    goal_phase: GoalPhase | None = None
     modality: Modality | None = None
+    available_machines: list[str] = Field(default_factory=list)
     loads: list[ExerciseLoad] = Field(default_factory=list)
 
 

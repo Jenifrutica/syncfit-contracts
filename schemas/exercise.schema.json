@@ -15,6 +15,7 @@
       "items": { "$ref": "common.schema.json#/$defs/MuscleGroup" }
     },
     "equipment": { "type": "string" },
+    "equipment_type": { "$ref": "common.schema.json#/$defs/EquipmentType" },
     "impact": { "$ref": "common.schema.json#/$defs/ExerciseImpact" },
     "description": { "$ref": "common.schema.json#/$defs/LocalizedText" },
     "role": { "$ref": "common.schema.json#/$defs/ExerciseRole" },

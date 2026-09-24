@@ -121,6 +121,27 @@ export const SupplementCategory = z.enum([
 ]);
 export type SupplementCategory = z.infer<typeof SupplementCategory>;
 
+export const EquipmentType = z.enum([
+  "FREE_WEIGHT",
+  "MACHINE",
+  "SMITH",
+  "CABLE",
+  "BODYWEIGHT",
+  "ASSISTED",
+  "BAND",
+  "NONE",
+]);
+export type EquipmentType = z.infer<typeof EquipmentType>;
+
+export const GoalPhase = z.enum([
+  "VOLUME",
+  "DEFINITION",
+  "MAINTENANCE",
+  "STRENGTH_FOCUS",
+  "RECOVERY",
+]);
+export type GoalPhase = z.infer<typeof GoalPhase>;
+
 export const MacroNutrients = z
   .object({
     protein_g: z.number().min(0),
@@ -148,6 +169,8 @@ export const ExerciseLoad = z
     exercise_id: z.string(),
     weight_kg: z.number().min(0),
     reps: z.number().int().min(1).max(100).optional(),
+    machine_id: z.string().optional(),
+    unit: z.string().optional(),
   })
   .strict();
 export type ExerciseLoad = z.infer<typeof ExerciseLoad>;
@@ -190,6 +213,7 @@ export const Exercise = z
     name: LocalizedText,
     muscle_groups: z.array(MuscleGroup).min(1),
     equipment: z.string(),
+    equipment_type: EquipmentType.optional(),
     impact: ExerciseImpact,
     description: LocalizedText,
     image_url: z.string(),

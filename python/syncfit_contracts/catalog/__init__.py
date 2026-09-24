@@ -7,10 +7,31 @@ from functools import lru_cache
 from importlib.resources import files
 
 from ..common import Exercise, ExerciseImpact, LocalizedText, SupplementSafety
+from ..machine import GymMachine
 from ..supplement import Supplement
 
 CATALOG_FILE = "exercises.json"
 SUPPLEMENT_FILE = "supplements.json"
+MACHINE_FILE = "machines.json"
+
+
+@lru_cache(maxsize=1)
+def load_machines() -> tuple[GymMachine, ...]:
+    """Load and validate the gym machine catalog (cached)."""
+    raw = (files(__package__) / MACHINE_FILE).read_text(encoding="utf-8")
+    data = json.loads(raw)
+    return tuple(GymMachine.model_validate(item) for item in data)
+
+
+def get_machine(machine_id: str) -> GymMachine | None:
+    for machine in load_machines():
+        if machine.id == machine_id:
+            return machine
+    return None
+
+
+def machines_for_exercise(exercise_id: str) -> list[GymMachine]:
+    return [m for m in load_machines() if exercise_id in m.exercises]
 
 
 @lru_cache(maxsize=1)
@@ -97,11 +118,15 @@ def localize(text: LocalizedText | dict[str, str] | None, language: str) -> str:
 __all__ = [
     "CATALOG_FILE",
     "SUPPLEMENT_FILE",
+    "MACHINE_FILE",
     "load_exercises",
     "load_supplements",
+    "load_machines",
     "get_exercise",
     "get_supplement",
+    "get_machine",
     "exercises_for_groups",
     "supplements_for",
+    "machines_for_exercise",
     "localize",
 ]

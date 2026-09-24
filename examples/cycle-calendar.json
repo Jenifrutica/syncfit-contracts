@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.3.0",
+  "month": "2026-09",
+  "modality": "MENSTRUAL_CYCLE",
+  "days": [
+    { "date": "2026-09-14", "kind": "CYCLE", "cycle_day": 1, "phase": "MENSTRUAL", "label": { "en": "Period", "es": "Menstruacion", "zh": "月经期" } },
+    { "date": "2026-09-22", "kind": "STRENGTH", "cycle_day": 9, "phase": "FOLLICULAR", "label": { "en": "Strength day", "es": "Dia de fuerza", "zh": "力量日" } },
+    { "date": "2026-09-27", "kind": "OVULATION", "cycle_day": 14, "phase": "OVULATORY", "label": { "en": "Ovulation", "es": "Ovulacion", "zh": "排卵期" }, "note": { "en": "Low impact recommended", "es": "Se recomienda bajo impacto", "zh": "建议低冲击" } }
+  ]
+}
