@@ -174,6 +174,13 @@ class GoalPhase(str, Enum):
     RECOVERY = "RECOVERY"
 
 
+class SupplementFrequency(str, Enum):
+    DAILY = "DAILY"
+    PRE_WORKOUT = "PRE_WORKOUT"
+    POST_WORKOUT = "POST_WORKOUT"
+    AS_NEEDED = "AS_NEEDED"
+
+
 class BaseContractModel(BaseModel):
     """Base model: rejects unknown fields to keep the contract strict."""
 

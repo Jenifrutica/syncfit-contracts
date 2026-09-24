@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/supplement-intake.schema.json",
+  "title": "SupplementIntake",
+  "description": "Whether a supplement was taken on a given day (for daily reminders and streaks).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "profile_id", "supplement_id", "date", "taken"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/SchemaVersion" },
+    "profile_id": { "$ref": "common.schema.json#/$defs/Uuid" },
+    "supplement_id": { "type": "string" },
+    "date": { "type": "string", "description": "YYYY-MM-DD" },
+    "taken": { "type": "boolean" }
+  }
+}

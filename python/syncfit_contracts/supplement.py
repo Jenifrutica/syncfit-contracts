@@ -12,6 +12,7 @@ from .common import (
     MacroNutrients,
     Modality,
     SupplementCategory,
+    SupplementFrequency,
     SupplementSafety,
     UserObjective,
 )
@@ -30,7 +31,20 @@ class Supplement(BaseContractModel):
     safety_general: SupplementSafety
     safety_pregnancy: SupplementSafety
     notes: LocalizedText
+    frequency: SupplementFrequency | None = None
+    is_daily: bool = False
+    brand_examples: list[str] = Field(default_factory=list)
     image_url: str | None = None
+
+
+class SupplementIntake(BaseContractModel):
+    """Whether a supplement was taken on a given day."""
+
+    schema_version: str = SCHEMA_VERSION
+    profile_id: str
+    supplement_id: str
+    date: str
+    taken: bool
 
 
 class SupplementRequest(BaseContractModel):
@@ -74,6 +88,7 @@ class SupplementAdvice(BaseContractModel):
 
 __all__ = [
     "Supplement",
+    "SupplementIntake",
     "SupplementRequest",
     "SupplementAdvice",
     "SupplementAdviceItem",

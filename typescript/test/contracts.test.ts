@@ -19,6 +19,7 @@ import {
   RoutineResponse,
   Supplement,
   SupplementAdvice,
+  SupplementIntake,
   SupplementRequest,
   TelemetryFrame,
   UserProfile,
@@ -53,6 +54,7 @@ const cases: Array<[string, { parse: (v: unknown) => unknown }]> = [
   ["supplement-advice.json", SupplementAdvice],
   ["gym-machine.json", GymMachine],
   ["cycle-calendar.json", CycleCalendar],
+  ["supplement-intake.json", SupplementIntake],
 ];
 
 describe("contracts validate the shared examples", () => {

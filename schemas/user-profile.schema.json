@@ -25,6 +25,18 @@
       "description": "Machine ids available in the athlete's gym.",
       "items": { "type": "string" }
     },
+    "weekly_training_goal": {
+      "type": "integer",
+      "description": "Target training days per week.",
+      "minimum": 1,
+      "maximum": 7
+    },
+    "rest_days_allowance": {
+      "type": "integer",
+      "description": "Wildcard rest days allowed per week before the streak breaks.",
+      "minimum": 0,
+      "maximum": 7
+    },
     "loads": {
       "type": "array",
       "description": "Baseline loads the athlete normally lifts.",

@@ -28,6 +28,8 @@ export const UserProfile = z
     goal_phase: GoalPhase.optional(),
     modality: Modality.optional(),
     available_machines: z.array(z.string()).optional(),
+    weekly_training_goal: z.number().int().min(1).max(7).optional(),
+    rest_days_allowance: z.number().int().min(0).max(7).optional(),
     loads: z.array(ExerciseLoad).optional(),
   })
   .strict();

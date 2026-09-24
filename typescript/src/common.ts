@@ -142,6 +142,9 @@ export const GoalPhase = z.enum([
 ]);
 export type GoalPhase = z.infer<typeof GoalPhase>;
 
+export const SupplementFrequency = z.enum(["DAILY", "PRE_WORKOUT", "POST_WORKOUT", "AS_NEEDED"]);
+export type SupplementFrequency = z.infer<typeof SupplementFrequency>;
+
 export const MacroNutrients = z
   .object({
     protein_g: z.number().min(0),
