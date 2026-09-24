@@ -134,3 +134,33 @@ Python 3.11+ (Pydantic v2, jsonschema) and TypeScript (Zod, vitest).
 - [`syncfit-frontend`](../syncfit-frontend) — consumes generated TypeScript types.
 
 All code, comments, documentation and commits in this repository are written in English.
+
+## Context for a new session
+
+**What it is.** Single source of truth for every interface between SyncFit Edge
+repos. Version **1.7.0** (see `VERSION`). 9+ JSON Schemas, OpenAPI, Pydantic and
+Zod models, shared catalogs and fixtures.
+
+**Stack.** Python 3.11+ (Pydantic v2, jsonschema) + TypeScript (Zod, vitest).
+
+**Layout.** `schemas/` (JSON Schema), `openapi/openapi.yaml`, `python/syncfit_contracts/`
+(models + `catalog/` data), `typescript/src/`, `examples/` (fixtures),
+`CHANGELOG.md`, `VERSION`.
+
+**Catalogs (data).** `python/syncfit_contracts/catalog/`: `exercises.json`
+(~52 exercises, with `how_to`/`tips`), `machines.json` (~51 gym machines with
+`weight_factor`), `supplements.json` (~22, with brands/frequency/pregnancy
+safety), `symptoms.json` (cramps, low_back_pain, knee_pain, contractions,
+dilation).
+
+**Key contracts.** `TelemetryFrame`, `RoutineRequest`/`RoutineResponse`
+(exercises_count, time_budget_minutes, energy_level, symptoms, include_warmup;
+sets with rest/estimated_seconds), `UserProfile` (body comp, goal_phase,
+available_machines, current_supplements, supplement_macros, symptoms,
+weekly_training_goal, rest_days_allowance, weight_unit, photo_url),
+`SupplementIntake`, `ShareLink`/`SharedProfile`, `CycleCalendar`.
+
+**Run tests.** `pytest python/tests` and, in `typescript/`, `npm i && npm test`.
+
+**Rule.** Additive changes only; bump `VERSION` + `CHANGELOG`; add/extend
+`examples/` fixtures; keep schemas valid (tests enforce). Everything in English.
