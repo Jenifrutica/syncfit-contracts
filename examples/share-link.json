@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.5.0",
+  "token": "sh_3f1b2c4d5e6f",
+  "role": "TRAINER",
+  "label": "Mi entrenador",
+  "permissions": ["PROFILE", "ROUTINE", "CALENDAR", "SUPPLEMENTS"],
+  "active": true
+}

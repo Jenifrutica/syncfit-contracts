@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/share-link.schema.json",
+  "title": "ShareLink",
+  "description": "A shareable link that lets a guest (trainer, partner, friend...) view selected sections of the athlete's profile.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "token", "role", "permissions", "active"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/SchemaVersion" },
+    "token": { "type": "string" },
+    "role": { "$ref": "common.schema.json#/$defs/ShareRole" },
+    "label": { "type": "string" },
+    "permissions": {
+      "type": "array",
+      "items": { "$ref": "common.schema.json#/$defs/SharePermission" }
+    },
+    "active": { "type": "boolean" },
+    "created_at": { "$ref": "common.schema.json#/$defs/Timestamp" },
+    "updated_at": { "$ref": "common.schema.json#/$defs/Timestamp" }
+  }
+}

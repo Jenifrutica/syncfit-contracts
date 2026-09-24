@@ -19,6 +19,8 @@ import {
   RoutineResponse,
   Supplement,
   SupplementAdvice,
+  ShareLink,
+  SharedProfile,
   SupplementIntake,
   SupplementRequest,
   TelemetryFrame,
@@ -55,6 +57,8 @@ const cases: Array<[string, { parse: (v: unknown) => unknown }]> = [
   ["gym-machine.json", GymMachine],
   ["cycle-calendar.json", CycleCalendar],
   ["supplement-intake.json", SupplementIntake],
+  ["share-link.json", ShareLink],
+  ["shared-profile.json", SharedProfile],
 ];
 
 describe("contracts validate the shared examples", () => {

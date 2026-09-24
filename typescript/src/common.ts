@@ -145,6 +145,23 @@ export type GoalPhase = z.infer<typeof GoalPhase>;
 export const SupplementFrequency = z.enum(["DAILY", "PRE_WORKOUT", "POST_WORKOUT", "AS_NEEDED"]);
 export type SupplementFrequency = z.infer<typeof SupplementFrequency>;
 
+export const WeightUnit = z.enum(["KG", "LB"]);
+export type WeightUnit = z.infer<typeof WeightUnit>;
+
+export const ShareRole = z.enum(["TRAINER", "COACH", "PARTNER", "FRIEND", "FAMILY", "OTHER"]);
+export type ShareRole = z.infer<typeof ShareRole>;
+
+export const SharePermission = z.enum([
+  "PROFILE",
+  "ROUTINE",
+  "CALENDAR",
+  "PROGRESS",
+  "SUPPLEMENTS",
+  "MACHINES",
+  "LOADS",
+]);
+export type SharePermission = z.infer<typeof SharePermission>;
+
 export const MacroNutrients = z
   .object({
     protein_g: z.number().min(0),

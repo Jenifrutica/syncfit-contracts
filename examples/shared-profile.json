@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.5.0",
+  "owner_display_name": "Ana",
+  "owner_photo_url": null,
+  "role": "TRAINER",
+  "permissions": ["PROFILE", "ROUTINE"],
+  "profile": { "modality": "MENSTRUAL_CYCLE", "goal_phase": "VOLUME" },
+  "timeline": { "cycle_day": 14, "phase": "OVULATORY" },
+  "routine": null,
+  "calendar": null,
+  "machines": null,
+  "loads": null,
+  "supplements": null
+}

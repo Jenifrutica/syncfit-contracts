@@ -10,3 +10,4 @@ export * from "./user.js";
 export * from "./supplement.js";
 export * from "./machine.js";
 export * from "./calendar.js";
+export * from "./share.js";

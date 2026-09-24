@@ -47,6 +47,8 @@ EXAMPLE_TO_SCHEMA = {
     "gym-machine.json": "gym-machine.schema.json",
     "cycle-calendar.json": "cycle-calendar.schema.json",
     "supplement-intake.json": "supplement-intake.schema.json",
+    "share-link.json": "share-link.schema.json",
+    "shared-profile.json": "shared-profile.schema.json",
 }
 
 
