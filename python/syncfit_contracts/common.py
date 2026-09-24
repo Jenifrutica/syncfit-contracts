@@ -155,6 +155,25 @@ class SupplementCategory(str, Enum):
     OTHER = "OTHER"
 
 
+class EquipmentType(str, Enum):
+    FREE_WEIGHT = "FREE_WEIGHT"
+    MACHINE = "MACHINE"
+    SMITH = "SMITH"
+    CABLE = "CABLE"
+    BODYWEIGHT = "BODYWEIGHT"
+    ASSISTED = "ASSISTED"
+    BAND = "BAND"
+    NONE = "NONE"
+
+
+class GoalPhase(str, Enum):
+    VOLUME = "VOLUME"
+    DEFINITION = "DEFINITION"
+    MAINTENANCE = "MAINTENANCE"
+    STRENGTH_FOCUS = "STRENGTH_FOCUS"
+    RECOVERY = "RECOVERY"
+
+
 class BaseContractModel(BaseModel):
     """Base model: rejects unknown fields to keep the contract strict."""
 
@@ -195,6 +214,8 @@ class ExerciseLoad(BaseContractModel):
     exercise_id: str
     weight_kg: float = Field(ge=0)
     reps: int | None = Field(default=None, ge=1, le=100)
+    machine_id: str | None = None
+    unit: str | None = None
 
 
 class ExerciseAdaptation(BaseContractModel):
@@ -231,6 +252,7 @@ class Exercise(BaseContractModel):
     image_url: str
     media_url: str | None = None
     role: ExerciseRole = ExerciseRole.MAIN
+    equipment_type: EquipmentType | None = None
 
 
 class PhysiologicalState(BaseContractModel):

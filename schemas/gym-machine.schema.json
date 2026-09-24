@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/gym-machine.schema.json",
+  "title": "GymMachine",
+  "description": "A gym machine or station. The same movement loads differently across machines, so each has a weight factor used to estimate the user's weight.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "type", "exercises", "weight_factor", "notes"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "$ref": "common.schema.json#/$defs/LocalizedText" },
+    "type": { "$ref": "common.schema.json#/$defs/EquipmentType" },
+    "exercises": {
+      "type": "array",
+      "description": "Catalog exercise ids this machine supports.",
+      "items": { "type": "string" }
+    },
+    "weight_factor": {
+      "type": "number",
+      "description": "Multiplier applied to the free-weight estimate to suggest a machine load.",
+      "minimum": 0
+    },
+    "unit": { "type": "string", "enum": ["KG", "LB", "LEVEL", "PLATES", "BODYWEIGHT"] },
+    "notes": { "$ref": "common.schema.json#/$defs/LocalizedText" },
+    "image_url": { "type": "string" }
+  }
+}

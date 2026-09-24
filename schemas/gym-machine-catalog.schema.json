@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/gym-machine-catalog.schema.json",
+  "title": "GymMachineCatalog",
+  "type": "array",
+  "items": { "$ref": "gym-machine.schema.json" },
+  "minItems": 1
+}

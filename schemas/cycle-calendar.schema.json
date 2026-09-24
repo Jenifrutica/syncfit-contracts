@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/cycle-calendar.schema.json",
+  "title": "CycleCalendar",
+  "description": "Monthly calendar of cycle days, strength days and low-impact guidance, colored by the frontend.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "month", "days"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/SchemaVersion" },
+    "month": { "type": "string", "description": "YYYY-MM" },
+    "modality": { "$ref": "common.schema.json#/$defs/Modality" },
+    "days": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["date", "kind"],
+        "properties": {
+          "date": { "type": "string", "description": "YYYY-MM-DD" },
+          "kind": {
+            "type": "string",
+            "enum": ["CYCLE", "OVULATION", "STRENGTH", "LOW_IMPACT", "REST"]
+          },
+          "cycle_day": { "type": "integer" },
+          "phase": { "$ref": "common.schema.json#/$defs/InferredPhase" },
+          "label": { "$ref": "common.schema.json#/$defs/LocalizedText" },
+          "note": { "$ref": "common.schema.json#/$defs/LocalizedText" }
+        }
+      }
+    }
+  }
+}

@@ -14,9 +14,17 @@
     "is_guest": { "type": "boolean" },
     "height_cm": { "type": "number", "minimum": 80, "maximum": 250 },
     "weight_kg": { "type": "number", "minimum": 20, "maximum": 300 },
+    "body_fat_pct": { "type": "number", "minimum": 3, "maximum": 60 },
+    "daily_calories": { "type": "integer", "minimum": 800, "maximum": 6000 },
     "age": { "type": "integer", "minimum": 10, "maximum": 100 },
     "objective": { "$ref": "common.schema.json#/$defs/UserObjective" },
+    "goal_phase": { "$ref": "common.schema.json#/$defs/GoalPhase" },
     "modality": { "$ref": "common.schema.json#/$defs/Modality" },
+    "available_machines": {
+      "type": "array",
+      "description": "Machine ids available in the athlete's gym.",
+      "items": { "type": "string" }
+    },
     "loads": {
       "type": "array",
       "description": "Baseline loads the athlete normally lifts.",

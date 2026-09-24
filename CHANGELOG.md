@@ -5,6 +5,17 @@ All notable changes to the SyncFit Edge cross-repository contract are documented
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2026-09-24
+
+### Added
+
+- `EquipmentType` and `GoalPhase` enums; `Exercise.equipment_type`; `ExerciseLoad` machine/unit.
+- Gym machine catalog (`machines.json`) with per-machine `weight_factor` and the `gym-machine` schema.
+- `CycleCalendar` schema (cycle days, strength days, ovulation, low impact).
+- Body composition and goal fields on `UserProfile` (`body_fat_pct`, `daily_calories`, `goal_phase`, `available_machines`).
+- `daily_macros` on supplement advice plus goal/body fields on the request.
+- +13 exercises (assisted pull-up/chin-up/dip, smith/machine squat and hip thrust, hack squat, leg press, chest/cable fly, pull-up, dip).
+
 ## [1.2.0] - 2026-09-23
 
 ### Added

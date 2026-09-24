@@ -6,6 +6,7 @@ from pydantic import Field
 
 from .common import (
     BaseContractModel,
+    GoalPhase,
     Language,
     LocalizedText,
     MacroNutrients,
@@ -39,7 +40,13 @@ class SupplementRequest(BaseContractModel):
     language: Language = Language.EN
     modality: Modality
     objective: UserObjective | None = None
+    goal_phase: GoalPhase | None = None
     week: int | None = Field(default=None, ge=1, le=42)
+    weight_kg: float | None = Field(default=None, ge=20, le=300)
+    height_cm: float | None = Field(default=None, ge=80, le=250)
+    body_fat_pct: float | None = Field(default=None, ge=3, le=60)
+    age: int | None = Field(default=None, ge=10, le=100)
+    daily_calories: int | None = Field(default=None, ge=800, le=6000)
 
 
 class SupplementAdviceItem(BaseContractModel):
@@ -60,6 +67,8 @@ class SupplementAdvice(BaseContractModel):
     language: Language = Language.EN
     modality: Modality | None = None
     objective: UserObjective | None = None
+    goal_phase: GoalPhase | None = None
+    daily_macros: MacroNutrients | None = None
     items: list[SupplementAdviceItem] = Field(default_factory=list)
 
 

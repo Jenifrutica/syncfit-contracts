@@ -1,0 +1,13 @@
+{
+  "id": "leg-press",
+  "name": { "en": "Leg press", "es": "Prensa de piernas", "zh": "腿举机" },
+  "type": "MACHINE",
+  "weight_factor": 1.6,
+  "unit": "PLATES",
+  "exercises": ["leg-press"],
+  "notes": {
+    "en": "Sled angle makes the effective load higher; expect ~1.5-1.7x the free squat.",
+    "es": "El angulo de la prensa aumenta la carga efectiva.",
+    "zh": "斜率使有效负荷更高。"
+  }
+}

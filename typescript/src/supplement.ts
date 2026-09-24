@@ -1,5 +1,6 @@
 import { z } from "zod";
 import {
+  GoalPhase,
   Language,
   LocalizedText,
   MacroNutrients,
@@ -33,7 +34,13 @@ export const SupplementRequest = z
     language: Language.default("EN"),
     modality: Modality,
     objective: UserObjective.optional(),
+    goal_phase: GoalPhase.optional(),
     week: z.number().int().min(1).max(42).optional(),
+    weight_kg: z.number().min(20).max(300).optional(),
+    height_cm: z.number().min(80).max(250).optional(),
+    body_fat_pct: z.number().min(3).max(60).optional(),
+    age: z.number().int().min(10).max(100).optional(),
+    daily_calories: z.number().int().min(800).max(6000).optional(),
   })
   .strict();
 export type SupplementRequest = z.infer<typeof SupplementRequest>;
@@ -58,6 +65,8 @@ export const SupplementAdvice = z
     language: Language.default("EN"),
     modality: Modality.optional(),
     objective: UserObjective.optional(),
+    goal_phase: GoalPhase.optional(),
+    daily_macros: MacroNutrients.optional(),
     items: z.array(SupplementAdviceItem),
   })
   .strict();
