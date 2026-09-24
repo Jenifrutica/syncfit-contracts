@@ -27,7 +27,12 @@
         "es": "Codos dentro de las rodillas.",
         "zh": "肘部在膝内。"
       }
-    ]
+    ],
+    "how_to": {
+      "en": "Hold a dumbbell at the chest and squat with a controlled tempo, keeping the torso upright.",
+      "es": "Sostén una mancuerna al pecho y haz sentadilla con tempo controlado, manteniendo el torso erguido.",
+      "zh": "胸前持哑铃，控制节奏下蹲，保持躯干直立。"
+    }
   },
   {
     "id": "back-squat",
@@ -62,7 +67,12 @@
         "es": "Evita cargas altas en fase ovulatoria.",
         "zh": "排卵期避免大重量。"
       }
-    ]
+    ],
+    "how_to": {
+      "en": "Heavy free squat with axial load; avoided during the ovulatory window and advanced pregnancy.",
+      "es": "Sentadilla libre pesada con carga axial; se evita en la ventana ovulatoria y el embarazo avanzado.",
+      "zh": "大重量自由深蹲，轴向负荷高；排卵期与孕晚期避免。"
+    }
   },
   {
     "id": "box-jumps",
@@ -86,7 +96,12 @@
       "zh": "爆发式跳箱；高冲击，韧带松弛时禁用。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Box+Jumps",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Explosive jumps onto a box; high impact, contraindicated with elevated laxity.",
+      "es": "Saltos explosivos al cajón; alto impacto, contraindicados con laxitud elevada.",
+      "zh": "爆发式跳箱；高冲击，韧带松弛时禁用。"
+    }
   },
   {
     "id": "romanian-deadlift",
@@ -116,7 +131,12 @@
         "es": "Bisagra de cadera, no de columna.",
         "zh": "髋部铰链，而非脊柱。"
       }
-    ]
+    ],
+    "how_to": {
+      "en": "Hip hinge emphasizing the hamstrings and glutes with a neutral spine.",
+      "es": "Bisagra de cadera que enfatiza isquiotibiales y glúteos con columna neutra.",
+      "zh": "髋关节铰链，强调腘绳肌与臀肌，保持脊柱中立。"
+    }
   },
   {
     "id": "hip-thrust",
@@ -144,7 +164,12 @@
         "es": "Mentón al pecho y sostén 1 segundo arriba.",
         "zh": "下巴微收，顶端停1秒。"
       }
-    ]
+    ],
+    "how_to": {
+      "en": "Supine-on-bench hip extension that isolates the glutes with low joint stress.",
+      "es": "Extensión de cadera apoyada en banco que aísla glúteos con baja tensión articular.",
+      "zh": "背部靠凳的髋伸展，孤立臀肌，关节压力低。"
+    }
   },
   {
     "id": "glute-bridge",
@@ -165,7 +190,12 @@
       "zh": "地面臀桥；温和激活臀肌，适合早期阶段。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Glute+Bridge",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Floor hip bridge; gentle glute activation suitable for early stages.",
+      "es": "Puente de cadera en el suelo; activación suave de glúteo, apto para etapas iniciales.",
+      "zh": "地面臀桥；温和激活臀肌，适合早期阶段。"
+    }
   },
   {
     "id": "walking-lunge",
@@ -188,7 +218,19 @@
       "zh": "持哑铃交替前弓步；控制平衡训练。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Walking+Lunge",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Alternating forward lunges with dumbbells; controlled balance work.",
+      "es": "Zancadas alternas hacia adelante con mancuernas; trabajo de equilibrio controlado.",
+      "zh": "持哑铃交替前弓步；控制平衡训练。"
+    },
+    "tips": [
+      {
+        "en": "Keep the torso upright.",
+        "es": "Mantén el torso erguido.",
+        "zh": "保持躯干直立。"
+      }
+    ]
   },
   {
     "id": "step-ups",
@@ -211,7 +253,12 @@
       "zh": "不跳跃地登上箱子；低冲击替代跳跃训练。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Step+Ups",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Step onto a box without jumping; low-impact substitute for plyometrics.",
+      "es": "Subir al cajón sin salto; sustituto de bajo impacto para pliometría.",
+      "zh": "不跳跃地登上箱子；低冲击替代跳跃训练。"
+    }
   },
   {
     "id": "leg-extension",
@@ -232,7 +279,12 @@
       "zh": "器械膝伸展，孤立股四头肌。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Leg+Extension",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Machine knee extension isolating the quadriceps.",
+      "es": "Extensión de rodilla en máquina que aísla el cuádriceps.",
+      "zh": "器械膝伸展，孤立股四头肌。"
+    }
   },
   {
     "id": "leg-curl",
@@ -253,7 +305,12 @@
       "zh": "器械屈膝，孤立腘绳肌。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Leg+Curl",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Machine knee flexion isolating the hamstrings.",
+      "es": "Flexión de rodilla en máquina que aísla los isquiotibiales.",
+      "zh": "器械屈膝，孤立腘绳肌。"
+    }
   },
   {
     "id": "calf-raise",
@@ -275,7 +332,12 @@
       "zh": "控制地踮起脚尖训练小腿。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Calf+Raise",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Rise onto the toes with control to work the calves.",
+      "es": "Sube a la punta de los pies con control para trabajar los gemelos.",
+      "zh": "控制地踮起脚尖训练小腿。"
+    }
   },
   {
     "id": "glute-kickback",
@@ -297,7 +359,12 @@
       "zh": "绳索髋伸展，孤立臀肌与外展肌。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Glute+Kickback",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Hip extension against a cable that isolates the glutes and abductors.",
+      "es": "Extensión de cadera en polea que aísla glúteos y abductores.",
+      "zh": "绳索髋伸展，孤立臀肌与外展肌。"
+    }
   },
   {
     "id": "plank",
@@ -318,7 +385,19 @@
       "zh": "等长支撑稳定核心，孕期避免瓦氏动作。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Plank",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Isometric hold bracing the core, avoiding Valsalva in pregnancy.",
+      "es": "Sostén isométrico que activa el core, evitando Valsalva en el embarazo.",
+      "zh": "等长支撑稳定核心，孕期避免瓦氏动作。"
+    },
+    "tips": [
+      {
+        "en": "Avoid Valsalva in pregnancy.",
+        "es": "Evita Valsalva en embarazo.",
+        "zh": "孕期避免瓦氏动作。"
+      }
+    ]
   },
   {
     "id": "dead-bug",
@@ -339,7 +418,12 @@
       "zh": "仰卧核心稳定训练；对脊柱友好，冲击低。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Dead+Bug",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Supine core stability drill; spine-friendly and low impact.",
+      "es": "Ejercicio supino de estabilidad del core; amable con la columna y de bajo impacto.",
+      "zh": "仰卧核心稳定训练；对脊柱友好，冲击低。"
+    }
   },
   {
     "id": "side-plank",
@@ -360,7 +444,12 @@
       "zh": "侧向等长支撑，训练腹斜肌与核心。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Side+Plank",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Lateral isometric hold targeting the obliques and core.",
+      "es": "Sostén isométrico lateral que trabaja oblicuos y core.",
+      "zh": "侧向等长支撑，训练腹斜肌与核心。"
+    }
   },
   {
     "id": "hanging-leg-raise",
@@ -381,7 +470,12 @@
       "zh": "悬垂举腿训练下腹；需要握力与肩部稳定。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Hanging+Leg+Raise",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Hanging raise for the lower abs; requires grip and shoulder stability.",
+      "es": "Elevación colgada para abdomen inferior; requiere agarre y estabilidad de hombro.",
+      "zh": "悬垂举腿训练下腹；需要握力与肩部稳定。"
+    }
   },
   {
     "id": "lat-pulldown",
@@ -412,7 +506,12 @@
         "es": "Lleva los codos abajo, no las manos.",
         "zh": "用肘部下压，而非手。"
       }
-    ]
+    ],
+    "how_to": {
+      "en": "Vertical pull that develops the lats and upper back.",
+      "es": "Tracción vertical que desarrolla dorsales y espalda alta.",
+      "zh": "垂直拉类动作，发展背阔肌与上背。"
+    }
   },
   {
     "id": "bent-over-row",
@@ -436,7 +535,12 @@
       "zh": "水平拉类动作，增加背部厚度；保持脊柱中立。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Bent+Over+Row",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Horizontal pull for back thickness; keep a neutral spine.",
+      "es": "Tracción horizontal para el grosor de la espalda; mantén la columna neutra.",
+      "zh": "水平拉类动作，增加背部厚度；保持脊柱中立。"
+    }
   },
   {
     "id": "incline-bench-press",
@@ -459,7 +563,19 @@
       "zh": "上斜卧推；孕16周起俯卧推举的安全替代。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Incline+Press",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Incline press; safe substitute for supine pressing from week 16 of pregnancy.",
+      "es": "Press inclinado; sustituto seguro del press supino desde la semana 16.",
+      "zh": "上斜卧推；孕16周起俯卧推举的安全替代。"
+    },
+    "tips": [
+      {
+        "en": "Safe substitute for supine pressing.",
+        "es": "Sustituto seguro del supino.",
+        "zh": "仰卧推举的安全替代。"
+      }
+    ]
   },
   {
     "id": "flat-bench-press",
@@ -481,7 +597,19 @@
       "zh": "仰卧推举；孕16周起禁用（压迫腔静脉）。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Bench+Press",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Supine press; contraindicated from gestational week 16 (vena cava compression).",
+      "es": "Press en decúbito supino; contraindicado desde la semana 16 (compresión de vena cava).",
+      "zh": "仰卧推举；孕16周起禁用（压迫腔静脉）。"
+    },
+    "tips": [
+      {
+        "en": "Avoid from week 16 of pregnancy.",
+        "es": "Evitar desde la semana 16.",
+        "zh": "孕16周起避免。"
+      }
+    ]
   },
   {
     "id": "overhead-press",
@@ -503,7 +631,12 @@
       "zh": "肩部垂直推举；稳定核心以保护骨盆。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Overhead+Press",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Vertical press for the shoulders; brace the core to protect the pelvis.",
+      "es": "Press vertical para hombros; activa el core para proteger la pelvis.",
+      "zh": "肩部垂直推举；稳定核心以保护骨盆。"
+    }
   },
   {
     "id": "lateral-raise",
@@ -523,7 +656,19 @@
       "zh": "侧平举，孤立三角肌中束。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Lateral+Raise",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Lateral raise isolating the middle deltoid.",
+      "es": "Elevación lateral que aísla el deltoides medio.",
+      "zh": "侧平举，孤立三角肌中束。"
+    },
+    "tips": [
+      {
+        "en": "Slight lean, lead with the elbows.",
+        "es": "Ligera inclinación, guía con codos.",
+        "zh": "略前倾，肘部引领。"
+      }
+    ]
   },
   {
     "id": "biceps-curl",
@@ -544,7 +689,19 @@
       "zh": "屈肘动作，孤立肱二头肌。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Biceps+Curl",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Elbow flexion isolating the biceps.",
+      "es": "Flexión de codo que aísla el bíceps.",
+      "zh": "屈肘动作，孤立肱二头肌。"
+    },
+    "tips": [
+      {
+        "en": "No swinging; control both phases.",
+        "es": "Sin balanceo; controla ambas fases.",
+        "zh": "不要摆动，控制两段。"
+      }
+    ]
   },
   {
     "id": "hammer-curl",
@@ -566,7 +723,12 @@
       "zh": "中立握弯举，训练肱二头肌与前臂。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Hammer+Curl",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Neutral-grip curl working the biceps and forearms.",
+      "es": "Curl con agarre neutro que trabaja bíceps y antebrazos.",
+      "zh": "中立握弯举，训练肱二头肌与前臂。"
+    }
   },
   {
     "id": "triceps-pushdown",
@@ -587,7 +749,12 @@
       "zh": "绳索伸肘，孤立肱三头肌。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Triceps+Pushdown",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Cable elbow extension isolating the triceps.",
+      "es": "Extensión de codo en polea que aísla el tríceps.",
+      "zh": "绳索伸肘，孤立肱三头肌。"
+    }
   },
   {
     "id": "glute-activation-band",
@@ -610,7 +777,12 @@
       "zh": "用弹力带做髋外展/伸展，在负重前激活臀肌。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Glute+Activation",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Banded hip abduction/extension to activate the glutes before loading.",
+      "es": "Abducción/extensión de cadera con banda para activar el glúteo antes de cargar.",
+      "zh": "用弹力带做髋外展/伸展，在负重前激活臀肌。"
+    }
   },
   {
     "id": "hip-mobility-flow",
@@ -633,7 +805,12 @@
       "zh": "动态髋关节灵活性训练，热身下肢。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Hip+Mobility",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Dynamic hip mobility to prepare the lower body.",
+      "es": "Movilidad dinámica de cadera para preparar el tren inferior.",
+      "zh": "动态髋关节灵活性训练，热身下肢。"
+    }
   },
   {
     "id": "arm-circles",
@@ -657,7 +834,12 @@
       "zh": "手臂绕环热身肩部。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Arm+Circles",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Shoulder warm-up with controlled arm circles.",
+      "es": "Calentamiento de hombro con círculos de brazos controlados.",
+      "zh": "手臂绕环热身肩部。"
+    }
   },
   {
     "id": "cat-cow",
@@ -681,7 +863,12 @@
       "zh": "脊柱灵活性，热身核心与背部。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Cat+Cow",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Spinal mobility to warm up the core and back.",
+      "es": "Movilidad espinal para calentar core y espalda.",
+      "zh": "脊柱灵活性，热身核心与背部。"
+    }
   },
   {
     "id": "scapular-retraction",
@@ -706,7 +893,12 @@
       "zh": "在拉类动作前激活肩胛稳定肌。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Scapular+Retraction",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Activate the scapular stabilizers before pulling movements.",
+      "es": "Activa los estabilizadores escapulares antes de los tirones.",
+      "zh": "在拉类动作前激活肩胛稳定肌。"
+    }
   },
   {
     "id": "bird-dog",
@@ -729,7 +921,12 @@
       "zh": "对侧肢体抬起的核心与下背激活。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Bird+Dog",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Core and lower-back activation with contralateral limb raises.",
+      "es": "Activación de core y espalda baja con elevación de extremidades contralaterales.",
+      "zh": "对侧肢体抬起的核心与下背激活。"
+    }
   },
   {
     "id": "assisted-pull-up",
@@ -755,7 +952,12 @@
       "zh": "借助器械的垂直拉；所选重量为助力。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Assisted+Pullup",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Vertical pull with machine assistance; the selected weight is the assistance.",
+      "es": "Tracción vertical con asistencia; el peso seleccionado es la asistencia.",
+      "zh": "借助器械的垂直拉；所选重量为助力。"
+    }
   },
   {
     "id": "assisted-chin-up",
@@ -781,7 +983,12 @@
       "zh": "反握助力拉，针对肱二头肌与背阔肌。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Assisted+Chinup",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Supinated grip pull with assistance, targeting the biceps and lats.",
+      "es": "Tracción con agarre supino y asistencia, enfocada en bíceps y dorsales.",
+      "zh": "反握助力拉，针对肱二头肌与背阔肌。"
+    }
   },
   {
     "id": "assisted-dip",
@@ -806,7 +1013,12 @@
       "zh": "助力双杠臂屈伸，锻炼肱三头肌与胸部。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Assisted+Dip",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Assisted parallel-bar dip for the triceps and chest.",
+      "es": "Fondos en paralelas con asistencia para tríceps y pecho.",
+      "zh": "助力双杠臂屈伸，锻炼肱三头肌与胸部。"
+    }
   },
   {
     "id": "smith-squat",
@@ -831,7 +1043,19 @@
       "zh": "导向杠深蹲，比自由杠铃更稳定、冲击更小。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Smith+Squat",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Guided-bar squat; stable and lower-impact than the free barbell version.",
+      "es": "Sentadilla en barra guiada; estable y de menor impacto que la barra libre.",
+      "zh": "导向杠深蹲，比自由杠铃更稳定、冲击更小。"
+    },
+    "tips": [
+      {
+        "en": "Feet slightly forward for the quads.",
+        "es": "Pies un poco adelante para cuádriceps.",
+        "zh": "脚稍前移侧重股四头肌。"
+      }
+    ]
   },
   {
     "id": "smith-hip-thrust",
@@ -854,7 +1078,12 @@
       "zh": "导向杠臀推，针对臀肌。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Smith+Hip+Thrust",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Glute-focused hip thrust on the guided bar.",
+      "es": "Hip thrust enfocado en glúteo con barra guiada.",
+      "zh": "导向杠臀推，针对臀肌。"
+    }
   },
   {
     "id": "hack-squat",
@@ -879,7 +1108,12 @@
       "zh": "躯干固定的器械深蹲，更重但有导向。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Hack+Squat",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Machine squat with fixed torso; heavier but guided.",
+      "es": "Sentadilla en máquina con torso fijo; más pesada pero guiada.",
+      "zh": "躯干固定的器械深蹲，更重但有导向。"
+    }
   },
   {
     "id": "leg-press",
@@ -904,7 +1138,19 @@
       "zh": "水平/斜面蹬腿，实际负荷比看上去更大。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Leg+Press",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Horizontal/angled press; effective load is higher than it looks.",
+      "es": "Prensa horizontal/inclinada; la carga efectiva es mayor de lo que parece.",
+      "zh": "水平/斜面蹬腿，实际负荷比看上去更大。"
+    },
+    "tips": [
+      {
+        "en": "Do not lock the knees hard.",
+        "es": "No bloquees fuerte las rodillas.",
+        "zh": "不要猛烈锁膝。"
+      }
+    ]
   },
   {
     "id": "hip-thrust-machine",
@@ -927,7 +1173,12 @@
       "zh": "配重片臀推机，稳定支撑下孤立臀肌。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Machine+Hip+Thrust",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Plate-loaded hip thrust station; glute isolation with stable support.",
+      "es": "Estación de hip thrust con placas; aísla glúteo con soporte estable.",
+      "zh": "配重片臀推机，稳定支撑下孤立臀肌。"
+    }
   },
   {
     "id": "chest-fly",
@@ -951,7 +1202,12 @@
       "zh": "坐姿夹胸；无需仰卧的胸部替代动作。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Chest+Fly",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Seated chest fly; supine-free alternative for the chest.",
+      "es": "Aperturas sentada; alternativa sin supino para el pecho.",
+      "zh": "坐姿夹胸；无需仰卧的胸部替代动作。"
+    }
   },
   {
     "id": "cable-chest-fly",
@@ -975,7 +1231,12 @@
       "zh": "站姿绳索夹胸，持续张力。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Cable+Chest+Fly",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Standing cable fly; continuous tension on the chest.",
+      "es": "Aperturas en polea de pie; tensión continua en el pecho.",
+      "zh": "站姿绳索夹胸，持续张力。"
+    }
   },
   {
     "id": "cable-lateral-raise",
@@ -998,7 +1259,12 @@
       "zh": "单臂绳索侧平举，针对三角肌中束。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Cable+Lateral+Raise",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Single-arm cable lateral raise for the middle deltoid.",
+      "es": "Elevación lateral a una mano en polea para el deltoides medio.",
+      "zh": "单臂绳索侧平举，针对三角肌中束。"
+    }
   },
   {
     "id": "pull-up",
@@ -1024,7 +1290,12 @@
       "zh": "自身体重垂直拉；必要时使用助力。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Pull+Up",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Bodyweight vertical pull; use assistance if needed.",
+      "es": "Tracción vertical con peso corporal; usa asistencia si es necesario.",
+      "zh": "自身体重垂直拉；必要时使用助力。"
+    }
   },
   {
     "id": "dip",
@@ -1049,7 +1320,12 @@
       "zh": "自身体重臂屈伸，锻炼肱三头肌与胸部。"
     },
     "image_url": "https://placehold.co/600x400/0b3d5c/ffffff?text=Dip",
-    "media_url": null
+    "media_url": null,
+    "how_to": {
+      "en": "Bodyweight dip for the triceps and chest.",
+      "es": "Fondos con peso corporal para tríceps y pecho.",
+      "zh": "自身体重臂屈伸，锻炼肱三头肌与胸部。"
+    }
   },
   {
     "id": "belt-squat",
