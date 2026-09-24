@@ -181,6 +181,30 @@ class SupplementFrequency(str, Enum):
     AS_NEEDED = "AS_NEEDED"
 
 
+class WeightUnit(str, Enum):
+    KG = "KG"
+    LB = "LB"
+
+
+class ShareRole(str, Enum):
+    TRAINER = "TRAINER"
+    COACH = "COACH"
+    PARTNER = "PARTNER"
+    FRIEND = "FRIEND"
+    FAMILY = "FAMILY"
+    OTHER = "OTHER"
+
+
+class SharePermission(str, Enum):
+    PROFILE = "PROFILE"
+    ROUTINE = "ROUTINE"
+    CALENDAR = "CALENDAR"
+    PROGRESS = "PROGRESS"
+    SUPPLEMENTS = "SUPPLEMENTS"
+    MACHINES = "MACHINES"
+    LOADS = "LOADS"
+
+
 class BaseContractModel(BaseModel):
     """Base model: rejects unknown fields to keep the contract strict."""
 

@@ -35,6 +35,9 @@ class UserProfile(BaseContractModel):
     goal_phase: GoalPhase | None = None
     modality: Modality | None = None
     available_machines: list[str] = Field(default_factory=list)
+    current_supplements: list[str] = Field(default_factory=list)
+    weight_unit: str | None = None
+    photo_url: str | None = None
     weekly_training_goal: int | None = Field(default=None, ge=1, le=7)
     rest_days_allowance: int | None = Field(default=None, ge=0, le=7)
     loads: list[ExerciseLoad] = Field(default_factory=list)

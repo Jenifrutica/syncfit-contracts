@@ -25,6 +25,13 @@
       "description": "Machine ids available in the athlete's gym.",
       "items": { "type": "string" }
     },
+    "current_supplements": {
+      "type": "array",
+      "description": "Supplement ids the athlete currently takes (their stack).",
+      "items": { "type": "string" }
+    },
+    "weight_unit": { "$ref": "common.schema.json#/$defs/WeightUnit" },
+    "photo_url": { "type": "string" },
     "weekly_training_goal": {
       "type": "integer",
       "description": "Target training days per week.",

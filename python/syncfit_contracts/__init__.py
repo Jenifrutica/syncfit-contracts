@@ -43,10 +43,13 @@ from .common import (
     SetType,
     StateTransition,
     SupplementCategory,
+    SharePermission,
+    ShareRole,
     SupplementFrequency,
     SupplementSafety,
     Trimester,
     UserObjective,
+    WeightUnit,
 )
 from .machine import GymMachine
 from .range_query import (
@@ -56,6 +59,7 @@ from .range_query import (
     RangeQueryResponse,
 )
 from .routine import AdaptedRoutine, RoutineRequest, RoutineResponse
+from .share import ShareLink, SharedProfile
 from .state_graph import PhysiologicalStateGraph
 from .supplement import (
     Supplement,
@@ -112,6 +116,11 @@ __all__ = [
     "RoutineResponse",
     "SetPrescription",
     "SetType",
+    "ShareLink",
+    "SharedProfile",
+    "SharePermission",
+    "ShareRole",
+    "WeightUnit",
     "StateTransition",
     "Supplement",
     "SupplementIntake",

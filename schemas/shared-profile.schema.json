@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/shared-profile.schema.json",
+  "title": "SharedProfile",
+  "description": "Read-only view exposed to a guest through a share link. Only the permitted sections are populated.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "owner_display_name", "role", "permissions"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/SchemaVersion" },
+    "owner_display_name": { "type": "string" },
+    "owner_photo_url": { "type": ["string", "null"] },
+    "role": { "$ref": "common.schema.json#/$defs/ShareRole" },
+    "permissions": {
+      "type": "array",
+      "items": { "$ref": "common.schema.json#/$defs/SharePermission" }
+    },
+    "updated_at": { "$ref": "common.schema.json#/$defs/Timestamp" },
+    "profile": { "type": ["object", "null"] },
+    "timeline": { "type": ["object", "null"] },
+    "routine": { "type": ["object", "null"] },
+    "calendar": { "type": ["object", "null"] },
+    "machines": { "type": ["array", "null"] },
+    "loads": { "type": ["array", "null"] },
+    "supplements": { "type": ["array", "null"] }
+  }
+}

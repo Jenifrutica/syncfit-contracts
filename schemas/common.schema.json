@@ -328,6 +328,20 @@
       "type": "string",
       "description": "When a supplement is taken; DAILY ones get an intake reminder.",
       "enum": ["DAILY", "PRE_WORKOUT", "POST_WORKOUT", "AS_NEEDED"]
+    },
+    "WeightUnit": {
+      "type": "string",
+      "enum": ["KG", "LB"]
+    },
+    "ShareRole": {
+      "type": "string",
+      "description": "Who the shared profile is for.",
+      "enum": ["TRAINER", "COACH", "PARTNER", "FRIEND", "FAMILY", "OTHER"]
+    },
+    "SharePermission": {
+      "type": "string",
+      "description": "A section the guest is allowed to see.",
+      "enum": ["PROFILE", "ROUTINE", "CALENDAR", "PROGRESS", "SUPPLEMENTS", "MACHINES", "LOADS"]
     }
   }
 }
