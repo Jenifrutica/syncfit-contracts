@@ -120,6 +120,8 @@
         },
         "impact": { "$ref": "#/$defs/ExerciseImpact" },
         "description": { "$ref": "#/$defs/LocalizedText" },
+        "how_to": { "$ref": "#/$defs/LocalizedText" },
+        "tips": { "type": "array", "items": { "$ref": "#/$defs/LocalizedText" } },
         "image_url": {
           "type": "string",
           "description": "Free-use illustration of the exercise (may be a placeholder for now)."

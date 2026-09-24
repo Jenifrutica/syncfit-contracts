@@ -4,6 +4,7 @@ import {
   ExerciseLoad,
   GoalPhase,
   Language,
+  MacroNutrients,
   Modality,
   SCHEMA_VERSION,
   SchemaVersion,
@@ -29,6 +30,9 @@ export const UserProfile = z
     modality: Modality.optional(),
     available_machines: z.array(z.string()).optional(),
     current_supplements: z.array(z.string()).optional(),
+    supplement_macros: z
+      .array(z.object({ supplement_id: z.string(), macros: MacroNutrients }).strict())
+      .optional(),
     weight_unit: z.enum(["KG", "LB"]).optional(),
     photo_url: z.string().optional(),
     weekly_training_goal: z.number().int().min(1).max(7).optional(),

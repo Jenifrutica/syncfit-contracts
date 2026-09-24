@@ -12,10 +12,18 @@ from .common import (
     ExerciseLoad,
     GoalPhase,
     Language,
+    MacroNutrients,
     Modality,
     UserObjective,
 )
 from .version import SCHEMA_VERSION
+
+
+class SupplementMacro(BaseContractModel):
+    """User-entered nutrition facts for a current supplement."""
+
+    supplement_id: str
+    macros: MacroNutrients
 
 
 class UserProfile(BaseContractModel):
@@ -36,6 +44,7 @@ class UserProfile(BaseContractModel):
     modality: Modality | None = None
     available_machines: list[str] = Field(default_factory=list)
     current_supplements: list[str] = Field(default_factory=list)
+    supplement_macros: list[SupplementMacro] = Field(default_factory=list)
     weight_unit: str | None = None
     photo_url: str | None = None
     weekly_training_goal: int | None = Field(default=None, ge=1, le=7)
@@ -56,4 +65,4 @@ class EnergyCheckIn(BaseContractModel):
     notes: str | None = None
 
 
-__all__ = ["UserProfile", "EnergyCheckIn"]
+__all__ = ["UserProfile", "EnergyCheckIn", "SupplementMacro"]

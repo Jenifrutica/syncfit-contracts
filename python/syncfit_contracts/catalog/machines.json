@@ -1,11 +1,23 @@
 [
   {
     "id": "barbell-rack",
-    "name": { "en": "Barbell rack", "es": "Rack de barra", "zh": "杠铃架" },
+    "name": {
+      "en": "Barbell rack",
+      "es": "Rack de barra",
+      "zh": "杠铃架"
+    },
     "type": "FREE_WEIGHT",
     "weight_factor": 1.0,
     "unit": "KG",
-    "exercises": ["back-squat", "romanian-deadlift", "bent-over-row", "incline-bench-press", "flat-bench-press", "hip-thrust", "overhead-press"],
+    "exercises": [
+      "back-squat",
+      "romanian-deadlift",
+      "bent-over-row",
+      "incline-bench-press",
+      "flat-bench-press",
+      "hip-thrust",
+      "overhead-press"
+    ],
     "notes": {
       "en": "Reference load. Free weights use the athlete's true strength.",
       "es": "Carga de referencia. El peso libre refleja la fuerza real de la atleta.",
@@ -14,11 +26,23 @@
   },
   {
     "id": "dumbbell-rack",
-    "name": { "en": "Dumbbell rack", "es": "Rack de mancuernas", "zh": "哑铃架" },
+    "name": {
+      "en": "Dumbbell rack",
+      "es": "Rack de mancuernas",
+      "zh": "哑铃架"
+    },
     "type": "FREE_WEIGHT",
     "weight_factor": 1.0,
     "unit": "KG",
-    "exercises": ["goblet-squat", "walking-lunge", "lateral-raise", "overhead-press", "biceps-curl", "hammer-curl", "step-ups"],
+    "exercises": [
+      "goblet-squat",
+      "walking-lunge",
+      "lateral-raise",
+      "overhead-press",
+      "biceps-curl",
+      "hammer-curl",
+      "step-ups"
+    ],
     "notes": {
       "en": "Two dumbbells; the stated weight is per hand.",
       "es": "Dos mancuernas; el peso indicado es por mano.",
@@ -27,11 +51,20 @@
   },
   {
     "id": "smith-machine",
-    "name": { "en": "Smith machine", "es": "Máquina Smith", "zh": "史密斯机" },
+    "name": {
+      "en": "Smith machine",
+      "es": "Máquina Smith",
+      "zh": "史密斯机"
+    },
     "type": "SMITH",
     "weight_factor": 1.0,
     "unit": "KG",
-    "exercises": ["smith-squat", "smith-hip-thrust", "incline-bench-press", "flat-bench-press"],
+    "exercises": [
+      "smith-squat",
+      "smith-hip-thrust",
+      "incline-bench-press",
+      "flat-bench-press"
+    ],
     "notes": {
       "en": "Guided bar; similar to barbell but the bar path is fixed. Add the carriage weight if it has one.",
       "es": "Barra guiada; similar a la barra pero con trayectoria fija. Suma el peso del carro si lo tiene.",
@@ -40,11 +73,17 @@
   },
   {
     "id": "leg-press",
-    "name": { "en": "Leg press", "es": "Prensa de piernas", "zh": "腿举机" },
+    "name": {
+      "en": "Leg press",
+      "es": "Prensa de piernas",
+      "zh": "腿举机"
+    },
     "type": "MACHINE",
     "weight_factor": 1.6,
     "unit": "PLATES",
-    "exercises": ["leg-press"],
+    "exercises": [
+      "leg-press"
+    ],
     "notes": {
       "en": "Sled angle makes the effective load higher; expect ~1.5-1.7x the free-weight squat.",
       "es": "El ángulo de la prensa aumenta la carga efectiva; espera ~1.5-1.7x la sentadilla libre.",
@@ -53,11 +92,17 @@
   },
   {
     "id": "hack-squat",
-    "name": { "en": "Hack squat machine", "es": "Máquina hack squat", "zh": "哈克深蹲机" },
+    "name": {
+      "en": "Hack squat machine",
+      "es": "Máquina hack squat",
+      "zh": "哈克深蹲机"
+    },
     "type": "MACHINE",
     "weight_factor": 1.4,
     "unit": "PLATES",
-    "exercises": ["hack-squat"],
+    "exercises": [
+      "hack-squat"
+    ],
     "notes": {
       "en": "Fixed torso position; usually heavier than a free squat.",
       "es": "Posición de torso fija; suele permitir más peso que la sentadilla libre.",
@@ -66,11 +111,17 @@
   },
   {
     "id": "hip-thrust-machine",
-    "name": { "en": "Hip thrust machine", "es": "Máquina de hip thrust", "zh": "臀推机" },
+    "name": {
+      "en": "Hip thrust machine",
+      "es": "Máquina de hip thrust",
+      "zh": "臀推机"
+    },
     "type": "MACHINE",
     "weight_factor": 1.2,
     "unit": "PLATES",
-    "exercises": ["hip-thrust-machine"],
+    "exercises": [
+      "hip-thrust-machine"
+    ],
     "notes": {
       "en": "Banded/plate-loaded hip thrust station; slightly more than a barbell hip thrust.",
       "es": "Estación de hip thrust con placas; algo más que con barra.",
@@ -79,11 +130,19 @@
   },
   {
     "id": "assisted-pullup-machine",
-    "name": { "en": "Assisted pull-up machine", "es": "Máquina de dominadas asistidas", "zh": "辅助引体机" },
+    "name": {
+      "en": "Assisted pull-up machine",
+      "es": "Máquina de dominadas asistidas",
+      "zh": "辅助引体机"
+    },
     "type": "ASSISTED",
     "weight_factor": 1.0,
     "unit": "BODYWEIGHT",
-    "exercises": ["assisted-pull-up", "assisted-chin-up", "assisted-dip"],
+    "exercises": [
+      "assisted-pull-up",
+      "assisted-chin-up",
+      "assisted-dip"
+    ],
     "notes": {
       "en": "The selected weight is the ASSISTANCE, not the load. More weight = easier.",
       "es": "El peso seleccionado es la ASISTENCIA, no la carga. Más peso = más fácil.",
@@ -92,11 +151,17 @@
   },
   {
     "id": "lat-pulldown-machine",
-    "name": { "en": "Lat pulldown machine", "es": "Máquina de jalón", "zh": "高位下拉机" },
+    "name": {
+      "en": "Lat pulldown machine",
+      "es": "Máquina de jalón",
+      "zh": "高位下拉机"
+    },
     "type": "MACHINE",
     "weight_factor": 1.1,
     "unit": "PLATES",
-    "exercises": ["lat-pulldown"],
+    "exercises": [
+      "lat-pulldown"
+    ],
     "notes": {
       "en": "Plate-loaded stack; close to the effective bodyweight pull but easier.",
       "es": "Pila de placas; cercano al tirón efectivo del cuerpo pero más fácil.",
@@ -105,11 +170,20 @@
   },
   {
     "id": "cable-station",
-    "name": { "en": "Cable station", "es": "Estación de poleas", "zh": "绳索站" },
+    "name": {
+      "en": "Cable station",
+      "es": "Estación de poleas",
+      "zh": "绳索站"
+    },
     "type": "CABLE",
     "weight_factor": 0.6,
     "unit": "PLATES",
-    "exercises": ["triceps-pushdown", "glute-kickback", "cable-chest-fly", "cable-lateral-raise"],
+    "exercises": [
+      "triceps-pushdown",
+      "glute-kickback",
+      "cable-chest-fly",
+      "cable-lateral-raise"
+    ],
     "notes": {
       "en": "Pulley reduces the effective load; expect ~0.5-0.7x the free-weight value.",
       "es": "La polea reduce la carga efectiva; espera ~0.5-0.7x del valor libre.",
@@ -118,11 +192,17 @@
   },
   {
     "id": "leg-extension-machine",
-    "name": { "en": "Leg extension machine", "es": "Máquina de extensión", "zh": "腿屈伸机" },
+    "name": {
+      "en": "Leg extension machine",
+      "es": "Máquina de extensión",
+      "zh": "腿屈伸机"
+    },
     "type": "MACHINE",
     "weight_factor": 0.8,
     "unit": "PLATES",
-    "exercises": ["leg-extension"],
+    "exercises": [
+      "leg-extension"
+    ],
     "notes": {
       "en": "Isolation; usually lighter than the squat.",
       "es": "Aislamiento; suele ser más ligera que la sentadilla.",
@@ -131,11 +211,17 @@
   },
   {
     "id": "leg-curl-machine",
-    "name": { "en": "Leg curl machine", "es": "Máquina de curl femoral", "zh": "腿弯举机" },
+    "name": {
+      "en": "Leg curl machine",
+      "es": "Máquina de curl femoral",
+      "zh": "腿弯举机"
+    },
     "type": "MACHINE",
     "weight_factor": 0.8,
     "unit": "PLATES",
-    "exercises": ["leg-curl"],
+    "exercises": [
+      "leg-curl"
+    ],
     "notes": {
       "en": "Isolation for the hamstrings.",
       "es": "Aislamiento de isquiotibiales.",
@@ -144,15 +230,312 @@
   },
   {
     "id": "chest-press-machine",
-    "name": { "en": "Chest press machine", "es": "Máquina de press de pecho", "zh": "推胸机" },
+    "name": {
+      "en": "Chest press machine",
+      "es": "Máquina de press de pecho",
+      "zh": "推胸机"
+    },
     "type": "MACHINE",
     "weight_factor": 0.9,
     "unit": "PLATES",
-    "exercises": ["chest-fly"],
+    "exercises": [
+      "chest-fly"
+    ],
     "notes": {
       "en": "Seated press/fly; safe alternative when supine work is contraindicated.",
       "es": "Press/aperturas sentada; alternativa segura cuando el supino está contraindicado.",
       "zh": "坐姿推/夹胸；仰卧受限时的安全替代。"
     }
+  },
+  {
+    "id": "belt-squat-machine",
+    "name": {
+      "en": "Belt squat machine",
+      "es": "Maquina de sentadilla con cinturon",
+      "zh": "腰带深蹲机"
+    },
+    "type": "MACHINE",
+    "weight_factor": 1.5,
+    "unit": "PLATES",
+    "exercises": [
+      "belt-squat"
+    ],
+    "notes": {
+      "en": "Belt-loaded squat with no spinal compression; usually heavier than free squat.",
+      "es": "Sentadilla con cinturón sin comprimir la columna; suele ser más pesada que la libre.",
+      "zh": "腰带负重深蹲，无脊柱压缩，通常更重。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Belt+Squat+Machine"
+  },
+  {
+    "id": "pendulum-squat-machine",
+    "name": {
+      "en": "Pendulum squat machine",
+      "es": "Maquina pendular",
+      "zh": "钟摆深蹲机"
+    },
+    "type": "MACHINE",
+    "weight_factor": 1.6,
+    "unit": "PLATES",
+    "exercises": [
+      "pendulum-squat"
+    ],
+    "notes": {
+      "en": "Arc-guided squat that emphasises the quads.",
+      "es": "Sentadilla guiada en arco que enfatiza cuádriceps.",
+      "zh": "弧形导向深蹲，强调股四头肌。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Pendulum+Squat+Machine"
+  },
+  {
+    "id": "v-squat-machine",
+    "name": {
+      "en": "V-squat machine",
+      "es": "Maquina V-squat",
+      "zh": "V型深蹲机"
+    },
+    "type": "MACHINE",
+    "weight_factor": 1.5,
+    "unit": "PLATES",
+    "exercises": [
+      "v-squat",
+      "hack-squat"
+    ],
+    "notes": {
+      "en": "Guided squat with back support.",
+      "es": "Sentadilla guiada con apoyo de espalda.",
+      "zh": "背部支撑的导向深蹲。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=V+Squat+Machine"
+  },
+  {
+    "id": "glute-drive",
+    "name": {
+      "en": "Glute drive (hip thrust) machine",
+      "es": "Maquina glute drive (hip thrust)",
+      "zh": "臀推机"
+    },
+    "type": "MACHINE",
+    "weight_factor": 1.3,
+    "unit": "PLATES",
+    "exercises": [
+      "hip-thrust-machine",
+      "hip-thrust"
+    ],
+    "notes": {
+      "en": "Belt/plate hip thrust station; more than a barbell hip thrust.",
+      "es": "Estación de hip thrust con placas; más que con barra.",
+      "zh": "配重臀推机，高于杠铃臀推。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Glute+Drive"
+  },
+  {
+    "id": "smith-hip-thrust-station",
+    "name": {
+      "en": "Smith hip thrust station",
+      "es": "Estacion de hip thrust en Smith",
+      "zh": "史密斯臀推位"
+    },
+    "type": "SMITH",
+    "weight_factor": 1.1,
+    "unit": "KG",
+    "exercises": [
+      "smith-hip-thrust",
+      "hip-thrust"
+    ],
+    "notes": {
+      "en": "Guided bar hip thrust; add the carriage weight.",
+      "es": "Hip thrust con barra guiada; suma el carro.",
+      "zh": "导向杠臀推；加上配重车。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Smith+Hip+Thrust"
+  },
+  {
+    "id": "seated-hip-abduction-machine",
+    "name": {
+      "en": "Hip abduction machine",
+      "es": "Maquina de abduccion",
+      "zh": "髋外展机"
+    },
+    "type": "MACHINE",
+    "weight_factor": 0.7,
+    "unit": "PLATES",
+    "exercises": [
+      "hip-abduction",
+      "abductors"
+    ],
+    "notes": {
+      "en": "Glute medius isolation.",
+      "es": "Aislamiento del glúteo medio.",
+      "zh": "臀中肌孤立。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Hip+Abduction+Machine"
+  },
+  {
+    "id": "seated-hip-adduction-machine",
+    "name": {
+      "en": "Hip adduction machine",
+      "es": "Maquina de aduccion",
+      "zh": "髋内收机"
+    },
+    "type": "MACHINE",
+    "weight_factor": 0.7,
+    "unit": "PLATES",
+    "exercises": [
+      "hip-adduction"
+    ],
+    "notes": {
+      "en": "Inner thigh isolation.",
+      "es": "Aislamiento del aductor.",
+      "zh": "大腿内侧孤立。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Hip+Adduction+Machine"
+  },
+  {
+    "id": "seated-row-machine",
+    "name": {
+      "en": "Seated row machine",
+      "es": "Maquina de remo sentado",
+      "zh": "坐姿划船机"
+    },
+    "type": "MACHINE",
+    "weight_factor": 1.0,
+    "unit": "PLATES",
+    "exercises": [
+      "seated-cable-row",
+      "bent-over-row"
+    ],
+    "notes": {
+      "en": "Chest-supported row; neutral grip targets the mid back.",
+      "es": "Remo con apoyo de pecho; agarre neutro trabaja espalda media.",
+      "zh": "胸靠划船；中立握侧重中背。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Seated+Row+Machine"
+  },
+  {
+    "id": "shoulder-press-machine",
+    "name": {
+      "en": "Shoulder press machine",
+      "es": "Maquina de press de hombros",
+      "zh": "肩推机"
+    },
+    "type": "MACHINE",
+    "weight_factor": 0.9,
+    "unit": "PLATES",
+    "exercises": [
+      "machine-shoulder-press"
+    ],
+    "notes": {
+      "en": "Seated overhead press with back support.",
+      "es": "Press sobre la cabeza sentada con apoyo.",
+      "zh": "坐姿有背支撑的肩推。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Shoulder+Press+Machine"
+  },
+  {
+    "id": "pec-deck",
+    "name": {
+      "en": "Pec deck (chest fly machine)",
+      "es": "Pec deck (aperturas)",
+      "zh": "蝴蝶机夹胸"
+    },
+    "type": "MACHINE",
+    "weight_factor": 0.6,
+    "unit": "PLATES",
+    "exercises": [
+      "chest-fly"
+    ],
+    "notes": {
+      "en": "Chest fly machine; supine-free option.",
+      "es": "Aperturas en máquina; opción sin supino.",
+      "zh": "夹胸机；无需仰卧。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Pec+Deck"
+  },
+  {
+    "id": "preacher-curl-bench",
+    "name": {
+      "en": "Preacher curl bench",
+      "es": "Banco Scott",
+      "zh": "牧师凳弯举"
+    },
+    "type": "MACHINE",
+    "weight_factor": 0.8,
+    "unit": "PLATES",
+    "exercises": [
+      "preacher-curl",
+      "biceps-curl"
+    ],
+    "notes": {
+      "en": "Isolates the biceps with the arm supported.",
+      "es": "Aísla el bíceps con el brazo apoyado.",
+      "zh": "支撑手臂孤立肱二头肌。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Preacher+Curl"
+  },
+  {
+    "id": "glute-ham-developer",
+    "name": {
+      "en": "Glute-ham developer (GHD)",
+      "es": "Glute-ham developer (GHD)",
+      "zh": "GHD 臀腘训练器"
+    },
+    "type": "MACHINE",
+    "weight_factor": 1.0,
+    "unit": "BODYWEIGHT",
+    "exercises": [
+      "glute-ham-raise"
+    ],
+    "notes": {
+      "en": "Also serves for back extensions.",
+      "es": "También sirve para extensiones de espalda.",
+      "zh": "也可做背伸。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=GHD"
+  },
+  {
+    "id": "functional-trainer",
+    "name": {
+      "en": "Functional trainer (dual pulley)",
+      "es": "Entrenadora funcional (polea doble)",
+      "zh": "多功能滑轮"
+    },
+    "type": "CABLE",
+    "weight_factor": 0.6,
+    "unit": "PLATES",
+    "exercises": [
+      "cable-chest-fly",
+      "cable-lateral-raise",
+      "triceps-pushdown",
+      "biceps-curl",
+      "glute-kickback"
+    ],
+    "notes": {
+      "en": "Dual adjustable pulleys; many grips (rope, bar, D-handle).",
+      "es": "Poleas dobles ajustables; muchos agarres (cuerda, barra, asa D).",
+      "zh": "双可调滑轮；多种握把（绳、杆、D柄）。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Functional+Trainer"
+  },
+  {
+    "id": "cable-crossover",
+    "name": {
+      "en": "Cable crossover station",
+      "es": "Estacion de poleas cruzadas",
+      "zh": "龙门架"
+    },
+    "type": "CABLE",
+    "weight_factor": 0.6,
+    "unit": "PLATES",
+    "exercises": [
+      "cable-chest-fly",
+      "cable-lateral-raise"
+    ],
+    "notes": {
+      "en": "High/low pulleys; wide range for the chest.",
+      "es": "Poleas alta/baja; gran rango para el pecho.",
+      "zh": "高位/低位滑轮，胸部大范围。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Cable+Crossover"
   }
 ]
