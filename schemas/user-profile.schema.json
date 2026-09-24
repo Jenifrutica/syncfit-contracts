@@ -30,6 +30,12 @@
       "description": "Symptom ids (cramps, low_back_pain, knee_pain, contractions, dilation).",
       "items": { "type": "string" }
     },
+    "pain_levels": {
+      "type": "object",
+      "description": "Pain intensity 1-10 per symptom id.",
+      "additionalProperties": { "type": "integer", "minimum": 1, "maximum": 10 }
+    },
+    "symptom_notes": { "type": "string" },
     "current_supplements": {
       "type": "array",
       "description": "Supplement ids the athlete currently takes (their stack).",

@@ -1051,5 +1051,133 @@
       "zh": "更换配件改变刺激。"
     },
     "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Cable+Grips"
+  },
+  {
+    "id": "dumbbell-bench",
+    "name": {
+      "en": "Dumbbell bench",
+      "es": "Banco de mancuernas",
+      "zh": "哑铃凳"
+    },
+    "type": "FREE_WEIGHT",
+    "weight_factor": 1.0,
+    "unit": "KG",
+    "exercises": [
+      "incline-bench-press",
+      "db-row"
+    ],
+    "notes": {
+      "en": "Flat/incline bench to press or row dumbbells.",
+      "es": "Banco plano/inclinado para press o remo.",
+      "zh": "平面/上斜哑铃凳。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Dumbbell+Bench"
+  },
+  {
+    "id": "kettlebell-rack",
+    "name": {
+      "en": "Kettlebell rack",
+      "es": "Rack de kettlebells",
+      "zh": "壶铃架"
+    },
+    "type": "FREE_WEIGHT",
+    "weight_factor": 1.0,
+    "unit": "KG",
+    "exercises": [
+      "goblet-squat",
+      "db-deadlift"
+    ],
+    "notes": {
+      "en": "Kettlebells for goblet/sumo/hinge.",
+      "es": "Kettlebells para goblet/sumo/bisagra.",
+      "zh": "壶铃用于高脚杯/相扑/铰链。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Kettlebell"
+  },
+  {
+    "id": "ez-bar",
+    "name": {
+      "en": "EZ curl bar",
+      "es": "Barra Z",
+      "zh": "EZ 曲杆"
+    },
+    "type": "FREE_WEIGHT",
+    "weight_factor": 1.0,
+    "unit": "KG",
+    "exercises": [
+      "biceps-curl",
+      "triceps-pushdown"
+    ],
+    "notes": {
+      "en": "Wrist-friendly curls.",
+      "es": "Curls amigables con muñeca.",
+      "zh": "对腕友好的弯举。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=EZ+Bar"
+  },
+  {
+    "id": "trap-bar",
+    "name": {
+      "en": "Trap bar",
+      "es": "Barra hexagonal",
+      "zh": "六角杠"
+    },
+    "type": "FREE_WEIGHT",
+    "weight_factor": 1.0,
+    "unit": "KG",
+    "exercises": [
+      "db-deadlift",
+      "back-squat"
+    ],
+    "notes": {
+      "en": "Hex bar deadlift; easier on the back.",
+      "es": "Peso muerto con hex; más fácil para espalda.",
+      "zh": "六角杠硬拉，背部更友好。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Trap+Bar"
+  },
+  {
+    "id": "glute-bridge-machine",
+    "name": {
+      "en": "Glute bridge machine",
+      "es": "Maquina de puente de gluteo",
+      "zh": "臀桥机"
+    },
+    "type": "MACHINE",
+    "weight_factor": 1.1,
+    "unit": "PLATES",
+    "exercises": [
+      "hip-thrust",
+      "glute-bridge"
+    ],
+    "notes": {
+      "en": "Seated glute bridge press.",
+      "es": "Puente de glúteo sentado.",
+      "zh": "坐姿臀桥。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Glute+Bridge"
+  },
+  {
+    "id": "dumbbell-rack-set",
+    "name": {
+      "en": "Dumbbell set (2-40 kg)",
+      "es": "Set de mancuernas (2-40 kg)",
+      "zh": "哑铃组（2-40 kg）"
+    },
+    "type": "FREE_WEIGHT",
+    "weight_factor": 1.0,
+    "unit": "KG",
+    "exercises": [
+      "db-bulgarian-split-squat",
+      "db-row",
+      "db-deadlift",
+      "lateral-raise"
+    ],
+    "notes": {
+      "en": "Full range of dumbbells for free-weight variants.",
+      "es": "Rango completo de mancuernas para variantes libres.",
+      "zh": "全系列哑铃。"
+    },
+    "image_url": "https://placehold.co/640x420/be185d/ffffff?text=Dumbbell+Set"
   }
 ]
