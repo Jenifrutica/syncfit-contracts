@@ -43,6 +43,7 @@ class UserProfile(BaseContractModel):
     goal_phase: GoalPhase | None = None
     modality: Modality | None = None
     available_machines: list[str] = Field(default_factory=list)
+    symptoms: list[str] = Field(default_factory=list)
     current_supplements: list[str] = Field(default_factory=list)
     supplement_macros: list[SupplementMacro] = Field(default_factory=list)
     weight_unit: str | None = None

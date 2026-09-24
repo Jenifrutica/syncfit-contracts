@@ -38,6 +38,7 @@ class RoutineRequest(BaseContractModel):
     session_id: str | None = None
     muscle_groups: list[MuscleGroup] = Field(min_length=1, max_length=4)
     language: Language = Language.EN
+    symptoms: list[str] = Field(default_factory=list)
     modality: Modality | None = None
     day_or_week: int | None = Field(default=None, ge=1, le=42)
     telemetry: TelemetryFrame | None = None

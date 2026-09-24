@@ -33,6 +33,7 @@ export const RoutineRequest = z
     session_id: Uuid.optional(),
     muscle_groups: z.array(MuscleGroup).min(1).max(4),
     language: Language.default("EN"),
+    symptoms: z.array(z.string()).optional(),
     modality: Modality.optional(),
     day_or_week: z.number().int().min(1).max(42).optional(),
     telemetry: TelemetryFrame.optional(),

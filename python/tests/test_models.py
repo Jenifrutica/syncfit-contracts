@@ -139,6 +139,13 @@ def test_more_exercises_including_assisted_and_machines():
     assert leg_press is not None and str(leg_press.equipment_type) == "MACHINE"
 
 
+def test_symptom_catalog():
+    from syncfit_contracts import load_symptoms, get_symptom
+
+    assert len(load_symptoms()) >= 5
+    assert get_symptom("knee_pain")["impact_cap"] == "LOW"
+
+
 def test_cycle_calendar_parses():
     from syncfit_contracts import CycleCalendar
 
