@@ -323,6 +323,11 @@
       "type": "string",
       "description": "Current training/nutrition goal phase; can change over time.",
       "enum": ["VOLUME", "DEFINITION", "MAINTENANCE", "STRENGTH_FOCUS", "RECOVERY"]
+    },
+    "SupplementFrequency": {
+      "type": "string",
+      "description": "When a supplement is taken; DAILY ones get an intake reminder.",
+      "enum": ["DAILY", "PRE_WORKOUT", "POST_WORKOUT", "AS_NEEDED"]
     }
   }
 }

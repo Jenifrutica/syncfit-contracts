@@ -8,8 +8,10 @@ import {
   SCHEMA_VERSION,
   SchemaVersion,
   SupplementCategory,
+  SupplementFrequency,
   SupplementSafety,
   UserObjective,
+  Uuid,
 } from "./common.js";
 
 export const Supplement = z
@@ -23,10 +25,24 @@ export const Supplement = z
     safety_general: SupplementSafety,
     safety_pregnancy: SupplementSafety,
     notes: LocalizedText,
+    frequency: SupplementFrequency.optional(),
+    is_daily: z.boolean().optional(),
+    brand_examples: z.array(z.string()).optional(),
     image_url: z.string().optional(),
   })
   .strict();
 export type Supplement = z.infer<typeof Supplement>;
+
+export const SupplementIntake = z
+  .object({
+    schema_version: SchemaVersion.default(SCHEMA_VERSION),
+    profile_id: Uuid,
+    supplement_id: z.string(),
+    date: z.string(),
+    taken: z.boolean(),
+  })
+  .strict();
+export type SupplementIntake = z.infer<typeof SupplementIntake>;
 
 export const SupplementRequest = z
   .object({

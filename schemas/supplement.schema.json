@@ -29,6 +29,13 @@
     "safety_general": { "$ref": "common.schema.json#/$defs/SupplementSafety" },
     "safety_pregnancy": { "$ref": "common.schema.json#/$defs/SupplementSafety" },
     "notes": { "$ref": "common.schema.json#/$defs/LocalizedText" },
+    "frequency": { "$ref": "common.schema.json#/$defs/SupplementFrequency" },
+    "is_daily": { "type": "boolean" },
+    "brand_examples": {
+      "type": "array",
+      "description": "Illustrative product/brand examples for this category (not endorsements).",
+      "items": { "type": "string" }
+    },
     "image_url": { "type": "string" }
   }
 }

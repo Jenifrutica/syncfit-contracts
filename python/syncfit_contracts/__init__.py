@@ -43,6 +43,7 @@ from .common import (
     SetType,
     StateTransition,
     SupplementCategory,
+    SupplementFrequency,
     SupplementSafety,
     Trimester,
     UserObjective,
@@ -60,6 +61,7 @@ from .supplement import (
     Supplement,
     SupplementAdvice,
     SupplementAdviceItem,
+    SupplementIntake,
     SupplementRequest,
 )
 from .telemetry import PpgWindow, TelemetryFrame
@@ -112,6 +114,8 @@ __all__ = [
     "SetType",
     "StateTransition",
     "Supplement",
+    "SupplementIntake",
+    "SupplementFrequency",
     "SupplementAdvice",
     "SupplementAdviceItem",
     "SupplementCategory",
