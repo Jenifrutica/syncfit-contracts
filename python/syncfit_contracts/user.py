@@ -32,6 +32,7 @@ class UserProfile(BaseContractModel):
     schema_version: str = SCHEMA_VERSION
     profile_id: str
     display_name: str = Field(min_length=1)
+    document_id: str | None = Field(default=None, pattern=r"^[0-9]{6,15}$")
     language: Language = Language.EN
     is_guest: bool = False
     height_cm: float | None = Field(default=None, ge=80, le=250)

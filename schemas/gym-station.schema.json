@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/gym-station.schema.json",
+  "title": "GymStation",
+  "description": "A machine/station added by a gym admin (distinct from the shared catalog GymMachine). Name and purpose are plain strings entered by the admin.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "gym_id", "name", "weight_factor"],
+  "properties": {
+    "id": { "type": "string" },
+    "gym_id": { "type": "string" },
+    "name": { "$ref": "common.schema.json#/$defs/LocalizedText" },
+    "purpose": { "$ref": "common.schema.json#/$defs/LocalizedText" },
+    "exercise_ids": {
+      "type": "array",
+      "description": "Catalog exercise ids this machine covers (inferred by the AI, editable by the admin).",
+      "items": { "type": "string" }
+    },
+    "equipment_key": { "type": ["string", "null"] },
+    "equipment_type": { "type": ["string", "null"] },
+    "image_url": { "type": ["string", "null"] },
+    "weight_factor": { "type": "number", "minimum": 0 }
+  }
+}

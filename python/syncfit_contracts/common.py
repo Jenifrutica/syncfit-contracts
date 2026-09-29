@@ -271,6 +271,11 @@ class ExerciseAdaptation(BaseContractModel):
     rest_seconds: int | None = Field(default=None, ge=0, le=600)
     estimated_seconds: int | None = Field(default=None, ge=0)
     sets: list[SetPrescription] = Field(default_factory=list)
+    machine_id: str | None = None
+    machine_name: LocalizedText | None = None
+    movement_pattern: str | None = None
+    compound: bool = False
+    rationale: str | None = None
 
 
 class Exercise(BaseContractModel):
@@ -288,6 +293,10 @@ class Exercise(BaseContractModel):
     media_url: str | None = None
     role: ExerciseRole = ExerciseRole.MAIN
     equipment_type: EquipmentType | None = None
+    variant_of: str | None = None
+    movement_pattern: str | None = None
+    compound: bool = False
+    required_equipment: list[str] = Field(default_factory=list)
 
 
 class PhysiologicalState(BaseContractModel):

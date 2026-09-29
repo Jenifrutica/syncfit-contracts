@@ -191,6 +191,18 @@ def test_k_load_range_is_enforced():
         AdaptedRoutine.model_validate(payload)
 
 
+def test_joined_gym_parses():
+    from syncfit_contracts import JoinedGym
+
+    gym = JoinedGym.model_validate(load("joined-gym.json"))
+    assert gym.name == "Asgard"
+    assert gym.active is True
+    assert len(gym.machines) == 1
+    assert gym.machines[0].gym_id == gym.gym_id
+    assert gym.machines[0].name.en == "Hip thrust machine"
+    assert "hip-thrust" in gym.machines[0].exercise_ids
+
+
 def test_unknown_fields_are_rejected():
     from pydantic import ValidationError
 
@@ -199,3 +211,43 @@ def test_unknown_fields_are_rejected():
     with pytest.raises(ValidationError):
         PhysiologicalAlert.model_validate(payload)
 
+
+
+def test_exercise_variants_share_a_family():
+    from syncfit_contracts import variants_of, exercise_family
+
+    assert exercise_family("hip-thrust-machine") == "hip_thrust"
+    ids = {e.id for e in variants_of("hip-thrust-machine")}
+    assert {"hip-thrust", "smith-hip-thrust", "hip-thrust-machine"} <= ids
+    assert variants_of("goblet-squat")  # squat family has several variants
+
+
+def test_required_patterns_for_glutes():
+    from syncfit_contracts import required_patterns
+
+    patterns = required_patterns("GLUTES")
+    assert patterns[:5] == ("hinge", "lunge", "hip_thrust", "glute_kickback", "hip_abduction")
+
+
+def test_physiological_assessment_parses():
+    from syncfit_contracts import PhysiologicalAssessment
+
+    data = load("physiological-assessment.json")
+    assessment = PhysiologicalAssessment.model_validate(data)
+    assert assessment.phase_inferred == "OVULATORY"
+    assert assessment.k_load_multiplier == 0.88
+
+
+def test_exercise_required_equipment_and_filter():
+    from syncfit_contracts import get_exercise, exercises_for_equipment
+
+    assert "bench" in get_exercise("db-bulgarian-split-squat").required_equipment
+    with_bench = {e.id for e in exercises_for_equipment(["dumbbell", "bench"])}
+    assert "db-bulgarian-split-squat" in with_bench
+    assert "step-ups" in with_bench
+    without = {e.id for e in exercises_for_equipment(["machine"])}
+    assert "db-bulgarian-split-squat" not in without
+    assert "hip-thrust-machine" in without
+    # bodyweight is always available
+    bodyweight = {e.id for e in exercises_for_equipment([])}
+    assert "plank" in bodyweight

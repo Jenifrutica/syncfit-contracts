@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/joined-gym.schema.json",
+  "title": "JoinedGym",
+  "description": "A gym the athlete joined, with its machines resolved live from the admin's current inventory. `active` marks the gym used for routine/load context.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["gym_id", "name", "code", "active", "machines"],
+  "properties": {
+    "gym_id": { "type": "string" },
+    "name": { "type": "string" },
+    "code": { "type": "string" },
+    "active": { "type": "boolean" },
+    "joined_at": { "$ref": "common.schema.json#/$defs/Timestamp" },
+    "machines": {
+      "type": "array",
+      "items": { "$ref": "gym-station.schema.json" }
+    }
+  }
+}

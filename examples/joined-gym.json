@@ -1,0 +1,22 @@
+{
+  "gym_id": "gym-asgard",
+  "name": "Asgard",
+  "code": "A1B2C3",
+  "active": true,
+  "joined_at": "2026-09-24T10:00:00+00:00",
+  "machines": [
+    {
+      "id": "station-hip-thrust",
+      "gym_id": "gym-asgard",
+      "name": { "en": "Hip thrust machine", "es": "Máquina de hip thrust", "zh": "臀推机" },
+      "purpose": {
+        "en": "Glutes and hip extension",
+        "es": "Glúteos y extensión de cadera",
+        "zh": "臀部与髋伸展"
+      },
+      "exercise_ids": ["hip-thrust"],
+      "image_url": null,
+      "weight_factor": 1.4
+    }
+  ]
+}

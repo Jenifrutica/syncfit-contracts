@@ -1,17 +1,122 @@
 [
-  { "id": "cramps", "name": {"en":"Cramps","es":"Cólicos","zh":"痛经"}, "modality": "ANY",
-    "avoid_keywords": [], "impact_cap": "MEDIUM",
-    "advice": {"en":"Reduce intensity and core pressure; hydrate and use heat.","es":"Baja la intensidad y la presión intraabdominal; hidrátate y usa calor.","zh":"降低强度与腹压；补水并热敷。"} },
-  { "id": "low_back_pain", "name": {"en":"Low back pain","es":"Dolor lumbar","zh":"下背痛"}, "modality": "ANY",
-    "avoid_keywords": ["back squat","back-squat","romanian","deadlift","bent-over","good morning"], "impact_cap": "MEDIUM",
-    "advice": {"en":"Avoid axial spine loading; prefer supported/hip-hinge-free work.","es":"Evita carga axial en columna; prefiere trabajo con apoyo.","zh":"避免脊柱轴向负荷；改用有支撑动作。"} },
-  { "id": "knee_pain", "name": {"en":"Knee pain","es":"Dolor de rodilla","zh":"膝盖疼痛"}, "modality": "ANY",
-    "avoid_keywords": ["back squat","box jump","lunge","hack","leg extension","split squat"], "impact_cap": "LOW",
-    "advice": {"en":"Avoid high knee shear/impact; sumo and hip-dominant work load the knee less.","es":"Evita cizallamiento/impacto en rodilla; sumo y cadera cargan menos la rodilla.","zh":"避免膝关节剪切/冲击；相扑与髋主导动作负担更小。"} },
-  { "id": "contractions", "name": {"en":"Contractions","es":"Contracciones","zh":"宫缩"}, "modality": "GESTATIONAL",
-    "avoid_keywords": [], "impact_cap": "LOW",
-    "advice": {"en":"If you feel contractions, stop and rest; seek medical advice.","es":"Si sientes contracciones, detente y descansa; consulta a tu médico.","zh":"如出现宫缩，请停止并休息，咨询医生。"} },
-  { "id": "dilation", "name": {"en":"Dilation","es":"Dilatación","zh":"宫颈扩张"}, "modality": "GESTATIONAL",
-    "avoid_keywords": [], "impact_cap": "LOW", "block_training": true,
-    "advice": {"en":"Do not train; contact your healthcare provider.","es":"No entrenes; contacta a tu proveedor de salud.","zh":"请勿训练；联系医疗人员。"} }
+  {
+    "id": "cramps",
+    "name": {
+      "en": "Cramps",
+      "es": "Cólicos",
+      "zh": "痛经"
+    },
+    "modality": "ANY",
+    "avoid_keywords": [],
+    "impact_cap": "MEDIUM",
+    "advice": {
+      "en": "Reduce intensity and core pressure; hydrate and use heat.",
+      "es": "Baja la intensidad y la presión intraabdominal; hidrátate y usa calor.",
+      "zh": "降低强度与腹压；补水并热敷。"
+    },
+    "avoid_patterns": [
+      "plyometric"
+    ]
+  },
+  {
+    "id": "low_back_pain",
+    "name": {
+      "en": "Low back pain",
+      "es": "Dolor lumbar",
+      "zh": "下背痛"
+    },
+    "modality": "ANY",
+    "avoid_keywords": [
+      "back squat",
+      "back-squat",
+      "romanian",
+      "deadlift",
+      "bent-over",
+      "good morning"
+    ],
+    "impact_cap": "MEDIUM",
+    "advice": {
+      "en": "Avoid axial spine loading; prefer supported/hip-hinge-free work.",
+      "es": "Evita carga axial en columna; prefiere trabajo con apoyo.",
+      "zh": "避免脊柱轴向负荷；改用有支撑动作。"
+    },
+    "avoid_patterns": [
+      "hinge",
+      "row"
+    ]
+  },
+  {
+    "id": "knee_pain",
+    "name": {
+      "en": "Knee pain",
+      "es": "Dolor de rodilla",
+      "zh": "膝盖疼痛"
+    },
+    "modality": "ANY",
+    "avoid_keywords": [
+      "back squat",
+      "box jump",
+      "lunge",
+      "hack",
+      "leg extension",
+      "split squat"
+    ],
+    "impact_cap": "LOW",
+    "advice": {
+      "en": "Avoid high knee shear/impact; sumo and hip-dominant work load the knee less.",
+      "es": "Evita cizallamiento/impacto en rodilla; sumo y cadera cargan menos la rodilla.",
+      "zh": "避免膝关节剪切/冲击；相扑与髋主导动作负担更小。"
+    },
+    "avoid_patterns": [
+      "lunge",
+      "squat",
+      "leg_extension",
+      "plyometric"
+    ]
+  },
+  {
+    "id": "contractions",
+    "name": {
+      "en": "Contractions",
+      "es": "Contracciones",
+      "zh": "宫缩"
+    },
+    "modality": "GESTATIONAL",
+    "avoid_keywords": [],
+    "impact_cap": "LOW",
+    "advice": {
+      "en": "If you feel contractions, stop and rest; seek medical advice.",
+      "es": "Si sientes contracciones, detente y descansa; consulta a tu médico.",
+      "zh": "如出现宫缩，请停止并休息，咨询医生。"
+    },
+    "avoid_patterns": [
+      "plyometric",
+      "hip_thrust",
+      "hinge"
+    ]
+  },
+  {
+    "id": "dilation",
+    "name": {
+      "en": "Dilation",
+      "es": "Dilatación",
+      "zh": "宫颈扩张"
+    },
+    "modality": "GESTATIONAL",
+    "avoid_keywords": [],
+    "impact_cap": "LOW",
+    "block_training": true,
+    "advice": {
+      "en": "Do not train; contact your healthcare provider.",
+      "es": "No entrenes; contacta a tu proveedor de salud.",
+      "zh": "请勿训练；联系医疗人员。"
+    },
+    "avoid_patterns": [
+      "plyometric",
+      "hip_thrust",
+      "hinge",
+      "lunge",
+      "squat"
+    ]
+  }
 ]

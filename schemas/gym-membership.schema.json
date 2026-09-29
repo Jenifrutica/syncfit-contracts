@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/gym-membership.schema.json",
+  "title": "GymMembership",
+  "description": "Links a user profile to a gym it joined. One profile can hold many memberships (one row per gym).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["profile_id", "gym_id"],
+  "properties": {
+    "profile_id": { "type": "string" },
+    "gym_id": { "type": "string" },
+    "created_at": { "$ref": "common.schema.json#/$defs/Timestamp" }
+  }
+}

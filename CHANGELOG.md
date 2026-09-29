@@ -5,6 +5,72 @@ All notable changes to the SyncFit Edge cross-repository contract are documented
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.13.0] - 2026-09-24
+
+### Added
+
+- `Exercise.required_equipment` (equipment keys such as barbell+bench, dumbbell,
+  machine, smith), `EQUIPMENT_KEYS`, `exercises_for_equipment()` and
+  `exercise_required_equipment()` so routines are filtered by the gym's real
+  equipment (machines first, then free weights, then bodyweight).
+- `GymStation.equipment_key` / `equipment_type` for gym inventory items beyond machines.
+
+## [1.12.0] - 2026-09-24
+
+### Added
+
+- `Exercise.movement_pattern` and `Exercise.compound`: pattern coverage, duplicate
+  avoidance and compound-first ordering. Catalog populated for all exercises.
+- `required_patterns()` / `patterns_of()` / `exercises_for_pattern()` and
+  `REQUIRED_PATTERNS` (e.g. GLUTES → hinge, lunge, hip_thrust, glute_kickback, hip_abduction).
+- `PhysiologicalAssessment` (local-model state consumed by the reasoning layer).
+- `symptoms.json` gains `avoid_patterns` (e.g. knee_pain blocks lunge/squat).
+
+## [1.11.0] - 2026-09-24
+
+### Added
+
+- `Exercise.variant_of`: movement family so the UI can offer interchangeable
+  variations (e.g. `hip_thrust`: barbell, Smith, machine). Catalog populated for
+  all exercises; `variants_of()` / `exercise_family()` helpers.
+- `UserProfile.document_id`: national id (cedula), digits only.
+
+## [1.10.0] - 2026-09-24
+
+### Added
+
+- `GymStation.name`/`purpose` are now `LocalizedText` (the admin types in any
+  language; the backend fills the other locales) and gained `exercise_ids`.
+- `ExerciseAdaptation.machine_id` / `machine_name`: the routine can point to the
+  gym machine that handles an exercise (photo, weight factor).
+
+## [1.9.0] - 2026-09-24
+
+### Added
+
+- `GymMembership`, `GymStation` and `JoinedGym` schemas/models/types for the athlete side of gyms.
+  - `GymMembership`: one row per (profile, gym) link.
+  - `GymStation`: a machine added by a gym admin (distinct from the catalog `GymMachine`).
+  - `JoinedGym`: a joined gym with its machines resolved live and an `active` flag.
+- `examples/gym-station.json` and `examples/joined-gym.json` fixtures; Python/TS tests.
+
+### Fixed
+
+- TypeScript `SCHEMA_VERSION` was stuck at `1.0.0`; now aligned with the Python/schema version.
+
+## [1.8.0] - 2026-09-24
+
+### Added
+
+- `pain_levels` map (per symptom 1-10 plus `OVERALL`) and `symptom_notes` on `UserProfile`.
+
+## [1.7.0] - 2026-09-24
+
+### Added
+
+- `symptoms.json` catalog with `avoid_keywords`, `impact_cap`, localized `advice` and an
+  `block_training` absolute-contraindication flag.
+
 ## [1.6.0] - 2026-09-24
 
 ### Added

@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const SCHEMA_VERSION = "1.0.0" as const;
+export const SCHEMA_VERSION = "1.13.0" as const;
 
 export const SchemaVersion = z
   .string()
@@ -225,6 +225,11 @@ export const ExerciseAdaptation = z
     rest_seconds: z.number().int().min(0).max(600).optional(),
     estimated_seconds: z.number().int().min(0).optional(),
     sets: z.array(SetPrescription).optional(),
+    machine_id: z.string().optional(),
+    machine_name: LocalizedText.optional(),
+    movement_pattern: z.string().optional(),
+    compound: z.boolean().optional(),
+    rationale: z.string().optional(),
   })
   .strict();
 export type ExerciseAdaptation = z.infer<typeof ExerciseAdaptation>;
@@ -236,6 +241,10 @@ export const Exercise = z
     muscle_groups: z.array(MuscleGroup).min(1),
     equipment: z.string(),
     equipment_type: EquipmentType.optional(),
+    variant_of: z.string().optional(),
+    movement_pattern: z.string().optional(),
+    compound: z.boolean().optional(),
+    required_equipment: z.array(z.string()).optional(),
     impact: ExerciseImpact,
     description: LocalizedText,
     how_to: LocalizedText.optional(),

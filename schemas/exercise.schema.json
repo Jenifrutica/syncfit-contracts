@@ -16,6 +16,23 @@
     },
     "equipment": { "type": "string" },
     "equipment_type": { "$ref": "common.schema.json#/$defs/EquipmentType" },
+    "variant_of": {
+      "type": "string",
+      "description": "Movement family. Exercises sharing it are interchangeable variations (e.g. hip_thrust: barbell, Smith, machine)."
+    },
+    "movement_pattern": {
+      "type": "string",
+      "description": "Training pattern (squat, hinge, hip_thrust, lunge, row, ...). Used to cover required patterns and avoid duplicates."
+    },
+    "compound": {
+      "type": "boolean",
+      "description": "True for multi-joint exercises, which are ordered before isolation work."
+    },
+    "required_equipment": {
+      "type": "array",
+      "description": "Equipment keys the exercise needs (e.g. barbell+bench, dumbbell, machine, smith). 'none' = bodyweight.",
+      "items": { "type": "string" }
+    },
     "impact": { "$ref": "common.schema.json#/$defs/ExerciseImpact" },
     "description": { "$ref": "common.schema.json#/$defs/LocalizedText" },
     "how_to": { "$ref": "common.schema.json#/$defs/LocalizedText" },

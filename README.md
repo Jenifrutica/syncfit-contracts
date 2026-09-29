@@ -36,6 +36,31 @@ Although this repository contains no algorithms, its schemas formally describe t
 | Directed State Graph | Node and weighted-edge schema for physiological states. |
 | Time-Series Segment Tree | Range-query request/response schema (min, max, mean). |
 
+### Routine patterns and assessment (v1.12.0)
+
+- `Exercise.movement_pattern` / `compound` drive pattern coverage, duplicate
+  avoidance and compound-first ordering; `required_patterns()` / `patterns_of()` /
+  `exercises_for_pattern()` expose them.
+- `Exercise.required_equipment` + `EQUIPMENT_KEYS` / `exercises_for_equipment()` filter
+  routines by the gym's real equipment.
+- `PhysiologicalAssessment` is the local-model state consumed by DeepSeek.
+- `ExerciseAdaptation` carries `movement_pattern`, `compound` and `rationale`.
+
+### Gym membership schemas (v1.9.0)
+
+- `GymMembership` formalizes the join relation as a **unique pair**
+  `(profile_id, gym_id)` — set semantics, so joining the same gym twice is a no-op.
+- `JoinedGym` is a **hash-map-shaped view**: gyms are keyed by `gym_id` and each
+  carries a live list of `GymStation` machines plus an `active` flag.
+- `GymStation` describes a machine added by a gym admin, distinct from the shared
+  catalog `GymMachine`. Its `name`/`purpose` are `LocalizedText` (AI-translated on
+  write) and `exercise_ids` lists the catalog exercises it covers.
+- `ExerciseAdaptation.machine_id`/`machine_name` point a routine entry to the gym
+  machine that handles it (photo + weight factor).
+- `Exercise.variant_of` groups interchangeable movements (movement family);
+  `variants_of(id)` / `exercise_family(id)` expose them. `UserProfile.document_id`
+  is the national id (cedula).
+
 ## Repository layout
 
 ```

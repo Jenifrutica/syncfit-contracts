@@ -146,6 +146,26 @@
           "type": "array",
           "description": "Warm-up/activation, approximation and effective sets.",
           "items": { "$ref": "#/$defs/SetPrescription" }
+        },
+        "machine_id": {
+          "type": "string",
+          "description": "Gym station id when the exercise is performed on one of the athlete's gym machines."
+        },
+        "machine_name": {
+          "$ref": "#/$defs/LocalizedText",
+          "description": "Localized name of the gym machine handling this exercise."
+        },
+        "movement_pattern": {
+          "type": "string",
+          "description": "Training pattern this entry covers (squat, hinge, hip_thrust, ...)."
+        },
+        "compound": {
+          "type": "boolean",
+          "description": "True for multi-joint exercises (ordered first)."
+        },
+        "rationale": {
+          "type": "string",
+          "description": "Why this exercise/pattern was chosen (evidence-based)."
         }
       }
     },

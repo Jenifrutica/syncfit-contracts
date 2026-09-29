@@ -3,6 +3,7 @@
   "name": { "en": "Goblet squat", "es": "Sentadilla goblet", "zh": "高脚杯深蹲" },
   "muscle_groups": ["QUADRICEPS", "GLUTES", "FULL_LEG", "LOWER_BODY"],
   "equipment": "dumbbell",
+  "variant_of": "squat",
   "impact": "LOW",
   "description": {
     "en": "Hold a dumbbell at the chest and squat with a controlled tempo, keeping the torso upright.",

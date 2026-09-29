@@ -18,6 +18,7 @@ export const UserProfile = z
     schema_version: SchemaVersion.default(SCHEMA_VERSION),
     profile_id: Uuid,
     display_name: z.string().min(1),
+    document_id: z.string().regex(/^[0-9]{6,15}$/).optional(),
     language: Language.default("EN"),
     is_guest: z.boolean().optional(),
     height_cm: z.number().min(80).max(250).optional(),

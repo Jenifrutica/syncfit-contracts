@@ -5,9 +5,19 @@ the firmware, backend, core, reasoning layer, simulator and frontend.
 """
 
 from .ai import AIReasoningResponse
+from .assessment import PhysiologicalAssessment
 from .alert import AlertCode, PhysiologicalAlert
 from .catalog import (
+    EQUIPMENT_KEYS,
+    REQUIRED_PATTERNS,
+    exercise_family,
+    exercise_required_equipment,
+    exercises_for_equipment,
     exercises_for_groups,
+    exercises_for_pattern,
+    patterns_of,
+    required_patterns,
+    variants_of,
     get_exercise,
     get_machine,
     get_supplement,
@@ -53,6 +63,7 @@ from .common import (
     UserObjective,
     WeightUnit,
 )
+from .gym import GymMembership, GymStation, JoinedGym
 from .machine import GymMachine
 from .range_query import (
     Aggregation,
@@ -81,6 +92,7 @@ __all__ = [
     "SCHEMA_VERSION",
     "__version__",
     "AIReasoningResponse",
+    "PhysiologicalAssessment",
     "AdaptedRoutine",
     "Aggregation",
     "AlertCode",
@@ -97,6 +109,9 @@ __all__ = [
     "EnergyCheckIn",
     "GoalPhase",
     "GymMachine",
+    "GymMembership",
+    "GymStation",
+    "JoinedGym",
     "CalendarDay",
     "CalendarKind",
     "CycleCalendar",
@@ -148,6 +163,15 @@ __all__ = [
     "get_supplement",
     "get_machine",
     "exercises_for_groups",
+    "exercise_family",
+    "variants_of",
+    "REQUIRED_PATTERNS",
+    "EQUIPMENT_KEYS",
+    "patterns_of",
+    "required_patterns",
+    "exercises_for_pattern",
+    "exercise_required_equipment",
+    "exercises_for_equipment",
     "supplements_for",
     "machines_for_exercise",
     "localize",

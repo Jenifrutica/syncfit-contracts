@@ -1,6 +1,6 @@
 {
   "name": "@syncfit/contracts",
-  "version": "1.8.0",
+  "version": "1.13.0",
   "description": "Single source of truth for every interface between SyncFit Edge repositories.",
   "license": "UNLICENSED",
   "type": "module",

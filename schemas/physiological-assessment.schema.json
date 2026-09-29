@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/physiological-assessment.schema.json",
+  "title": "PhysiologicalAssessment",
+  "description": "Structured physiological state produced by the local model (syncfit-core) and consumed by the reasoning layer to design the routine.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "phase_inferred", "fatigue_level", "k_load_multiplier", "autonomic_status", "articular_risk_pct", "source"],
+  "properties": {
+    "schema_version": { "$ref": "common.schema.json#/$defs/SchemaVersion" },
+    "session_id": { "type": "string" },
+    "phase_inferred": { "$ref": "common.schema.json#/$defs/InferredPhase" },
+    "fatigue_level": { "$ref": "common.schema.json#/$defs/FatigueLevel" },
+    "k_load_multiplier": {
+      "type": "number",
+      "description": "Deterministic load multiplier from syncfit-core. Never recomputed by the reasoning layer.",
+      "minimum": 0.7,
+      "maximum": 1.05
+    },
+    "autonomic_status": {
+      "type": "string",
+      "description": "Qualitative autonomic interpretation, e.g. BALANCED, PARASYMPATHETIC_WITHDRAWAL, SYMPATHETIC_DOMINANT."
+    },
+    "articular_risk_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+    "contraindicated_patterns": {
+      "type": "array",
+      "description": "Movement patterns to avoid given symptoms/phase.",
+      "items": { "type": "string" }
+    },
+    "notes": { "type": "array", "items": { "type": "string" } },
+    "source": { "type": "string", "enum": ["core", "deepseek"] }
+  }
+}

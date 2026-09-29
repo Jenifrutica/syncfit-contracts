@@ -10,6 +10,7 @@
     "schema_version": { "$ref": "common.schema.json#/$defs/SchemaVersion" },
     "profile_id": { "$ref": "common.schema.json#/$defs/Uuid" },
     "display_name": { "type": "string", "minLength": 1 },
+    "document_id": { "type": "string", "pattern": "^[0-9]{6,15}$", "description": "National id (cedula), digits only." },
     "language": { "$ref": "common.schema.json#/$defs/Language" },
     "is_guest": { "type": "boolean" },
     "height_cm": { "type": "number", "minimum": 80, "maximum": 250 },
