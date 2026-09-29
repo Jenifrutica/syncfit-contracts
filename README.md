@@ -160,6 +160,25 @@ Python 3.11+ (Pydantic v2, jsonschema) and TypeScript (Zod, vitest).
 
 All code, comments, documentation and commits in this repository are written in English.
 
+## Handoff for the team
+
+**Role.** Single source of truth for every cross-repo interface (JSON Schemas,
+OpenAPI, Pydantic + Zod models, catalogs). Change here first when a payload
+changes; bump `VERSION` and `CHANGELOG.md`.
+
+**Run / test.** `python3 -m pytest python/tests -q` · `cd typescript && npm test`.
+
+**Entry points.** `python/syncfit_contracts/__init__.py` and
+`typescript/src/index.ts`. Key helpers for the routine engine:
+`required_patterns()`, `patterns_of()`, `exercises_for_pattern()`,
+`exercises_for_equipment()`, `variants_of()`, `localize()`.
+
+**Catalogs.** `python/syncfit_contracts/catalog/*.json` — exercises (with
+`movement_pattern`, `compound`, `required_equipment`, `variant_of`), machines,
+supplements, symptoms (`avoid_patterns`).
+
+**Consumed by.** core, simulator, ai-reasoning, backend, frontend.
+
 ## Context for a new session
 
 **What it is.** Single source of truth for every interface between SyncFit Edge
