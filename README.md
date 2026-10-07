@@ -208,3 +208,11 @@ weekly_training_goal, rest_days_allowance, weight_unit, photo_url),
 
 **Rule.** Additive changes only; bump `VERSION` + `CHANGELOG`; add/extend
 `examples/` fixtures; keep schemas valid (tests enforce). Everything in English.
+
+## Roadmap · Qué falta (español)
+
+> Estado: **implementado** (contratos, esquemas, catálogos y tests).
+
+- (Opcional) Esquema/validador para `symptoms.json` (hoy sin schema).
+- (Opcional) Ampliar OpenAPI a perfiles, suplementos, calendario y compartición.
+- (Opcional) Revisar estrictitud entre Pydantic/Zod/JSON Schema (UUID, requeridos).
