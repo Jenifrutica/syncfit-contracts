@@ -73,6 +73,7 @@ def test_examples_validate_against_schemas(registry, example_name, schema_name):
         ("exercises.json", "exercise-catalog.schema.json"),
         ("supplements.json", "supplement-catalog.schema.json"),
         ("machines.json", "gym-machine-catalog.schema.json"),
+        ("symptoms.json", "symptom-catalog.schema.json"),
     ],
 )
 def test_catalogs_validate_against_schemas(registry, catalog_file, schema_name):
