@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://syncfit.edge/schemas/symptom.schema.json",
+  "title": "Symptom",
+  "description": "Catalog entry for a declared symptom and the training limits it sets.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "modality", "avoid_keywords", "impact_cap", "advice", "avoid_patterns"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+    "name": { "$ref": "common.schema.json#/$defs/LocalizedText" },
+    "modality": {
+      "type": "string",
+      "description": "ANY or the only modality where the symptom applies.",
+      "enum": ["ANY", "MENSTRUAL_CYCLE", "GESTATIONAL"]
+    },
+    "avoid_keywords": { "type": "array", "items": { "type": "string" } },
+    "impact_cap": { "$ref": "common.schema.json#/$defs/ExerciseImpact" },
+    "advice": { "$ref": "common.schema.json#/$defs/LocalizedText" },
+    "avoid_patterns": { "type": "array", "items": { "type": "string" } },
+    "block_training": {
+      "type": "boolean",
+      "description": "Absolute contraindication: no training is prescribed."
+    }
+  }
+}
