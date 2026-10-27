@@ -121,6 +121,18 @@
         "impact": { "$ref": "#/$defs/ExerciseImpact" },
         "description": { "$ref": "#/$defs/LocalizedText" },
         "how_to": { "$ref": "#/$defs/LocalizedText" },
+        "setup": {
+          "$ref": "#/$defs/LocalizedText",
+          "description": "How to set up: body position, equipment/bar placement, feet, grip and range."
+        },
+        "pregnancy_tip": {
+          "$ref": "#/$defs/LocalizedText",
+          "description": "Pregnancy-specific adjustment or caution for this exercise."
+        },
+        "supine": {
+          "type": "boolean",
+          "description": "True when the exercise is performed lying face-up."
+        },
         "tips": { "type": "array", "items": { "$ref": "#/$defs/LocalizedText" } },
         "image_url": {
           "type": "string",

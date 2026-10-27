@@ -36,6 +36,18 @@
     "impact": { "$ref": "common.schema.json#/$defs/ExerciseImpact" },
     "description": { "$ref": "common.schema.json#/$defs/LocalizedText" },
     "how_to": { "$ref": "common.schema.json#/$defs/LocalizedText" },
+    "setup": {
+      "$ref": "common.schema.json#/$defs/LocalizedText",
+      "description": "How to set up: body position, equipment/bar placement, feet, grip and range."
+    },
+    "pregnancy_tip": {
+      "$ref": "common.schema.json#/$defs/LocalizedText",
+      "description": "Pregnancy-specific adjustment or caution for this exercise."
+    },
+    "supine": {
+      "type": "boolean",
+      "description": "True when the exercise is performed lying face-up (blocked from gestational week 16)."
+    },
     "tips": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/LocalizedText" } },
     "role": { "$ref": "common.schema.json#/$defs/ExerciseRole" },
     "image_url": { "type": "string" },

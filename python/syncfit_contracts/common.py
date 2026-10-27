@@ -264,6 +264,9 @@ class ExerciseAdaptation(BaseContractModel):
     impact: ExerciseImpact | None = None
     description: LocalizedText | None = None
     how_to: LocalizedText | None = None
+    setup: LocalizedText | None = None
+    pregnancy_tip: LocalizedText | None = None
+    supine: bool = False
     tips: list[LocalizedText] = Field(default_factory=list)
     image_url: str | None = None
     media_url: str | None = None
@@ -288,6 +291,9 @@ class Exercise(BaseContractModel):
     impact: ExerciseImpact
     description: LocalizedText
     how_to: LocalizedText | None = None
+    setup: LocalizedText | None = None
+    pregnancy_tip: LocalizedText | None = None
+    supine: bool = False
     tips: list[LocalizedText] = Field(default_factory=list)
     image_url: str
     media_url: str | None = None

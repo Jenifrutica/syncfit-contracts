@@ -38,7 +38,18 @@
     "compound": true,
     "required_equipment": [
       "dumbbell"
-    ]
+    ],
+    "setup": {
+      "en": "Hold the dumbbell at chest height, feet shoulder-width, toes slightly out; sit down with the chest tall.",
+      "es": "Sostén la mancuerna a la altura del pecho, pies al ancho de hombros y puntas ligeramente hacia fuera; baja con el pecho alto.",
+      "zh": "双手将哑铃抱在胸前，双脚与肩同宽，脚尖略外展；挺胸下蹲。"
+    },
+    "pregnancy_tip": {
+      "en": "Widen your stance a little and stop before you feel pressure in the abdomen; reduce depth if needed.",
+      "es": "Abre un poco más los pies y baja solo hasta donde estés cómoda; reduce el rango si sientes presión en el abdomen.",
+      "zh": "双脚可再宽一些，下蹲到腹部不适前即可；如有压迫感请减小幅度。"
+    },
+    "supine": false
   },
   {
     "id": "back-squat",
@@ -84,7 +95,18 @@
     "compound": true,
     "required_equipment": [
       "barbell"
-    ]
+    ],
+    "setup": {
+      "en": "Bar on the upper traps (not the neck), feet shoulder-width, core braced; descend with the chest tall.",
+      "es": "Barra sobre los trapecios (no en el cuello), pies al ancho de hombros y core apretado; baja con el pecho alto.",
+      "zh": "杠铃放在斜方肌上部（不要压颈），双脚与肩同宽，收紧核心；挺胸下蹲。"
+    },
+    "pregnancy_tip": {
+      "en": "Use a high-bar position or switch to goblet/Smith squat if the bar feels uncomfortable; avoid Valsalva.",
+      "es": "Usa una posición alta de barra o cambia a sentadilla goblet/Smith si la barra te incomoda; evita el Valsalva.",
+      "zh": "如杠铃不适，可改为高杠位或高脚杯/史密斯深蹲；避免憋气用力。"
+    },
+    "supine": false
   },
   {
     "id": "box-jumps",
@@ -119,7 +141,18 @@
     "compound": true,
     "required_equipment": [
       "box"
-    ]
+    ],
+    "setup": {
+      "en": "Stable box at knee height; land softly with bent knees and the chest tall.",
+      "es": "Caja estable a la altura de las rodillas; aterriza con las rodillas blandas y el pecho alto.",
+      "zh": "使用稳定的箱子，高度约到膝盖；屈膝轻落地，挺胸。"
+    },
+    "pregnancy_tip": {
+      "en": "Not recommended in pregnancy because of impact; switch to controlled step-ups.",
+      "es": "No recomendado en embarazo por el impacto; cambia a step-ups controlados.",
+      "zh": "孕期不建议做跳跃；请改为可控的台阶踏步。"
+    },
+    "supine": false
   },
   {
     "id": "romanian-deadlift",
@@ -160,7 +193,18 @@
     "compound": true,
     "required_equipment": [
       "barbell"
-    ]
+    ],
+    "setup": {
+      "en": "Bar close to the legs, knees softly bent, hinge at the hips; keep the spine neutral.",
+      "es": "Barra pegada a las piernas, rodillas ligeramente flexionadas y bisagra de cadera; mantén la espalda neutra.",
+      "zh": "杠铃贴近腿部，膝盖微屈，以髋部折叠；保持脊柱中立。"
+    },
+    "pregnancy_tip": {
+      "en": "Reduce the range and load; if the bar rubs the abdomen, use dumbbells or switch to hip thrust.",
+      "es": "Reduce el rango y la carga; si la barra roza el abdomen, usa mancuernas o cambia a hip thrust.",
+      "zh": "减小幅度和重量；若杠铃碰到腹部，改用哑铃或臀推。"
+    },
+    "supine": false
   },
   {
     "id": "hip-thrust",
@@ -200,7 +244,18 @@
     "required_equipment": [
       "barbell",
       "bench"
-    ]
+    ],
+    "setup": {
+      "en": "Upper back on the bench, feet hip-width, bar over the hip crease with a pad; ribs down, drive through the heels.",
+      "es": "Espalda alta en el banco, pies al ancho de cadera, barra sobre la cadera con almohadilla; costillas abajo y empuje con los talones.",
+      "zh": "上背靠凳，双脚与髋同宽，杠铃加护垫放在髋部褶皱处；肋骨下沉，脚跟发力。"
+    },
+    "pregnancy_tip": {
+      "en": "Allowed in pregnancy: keep the bar on the hips (never on the abdomen) and elevate the torso if the bench feels uncomfortable. If it is not comfortable, switch to a seated or machine variation.",
+      "es": "Permitido en embarazo: mantén la barra sobre la cadera (nunca sobre el abdomen) y eleva el torso si el banco te incomoda. Si no es cómodo, cambia a una variante sentada o en máquina.",
+      "zh": "孕期可做：杠铃放在髋部（绝不要压在腹部），如靠凳不适可抬高上身。若仍不舒服，请改为坐姿或器械变式。"
+    },
+    "supine": false
   },
   {
     "id": "glute-bridge",
@@ -232,7 +287,18 @@
     "compound": true,
     "required_equipment": [
       "none"
-    ]
+    ],
+    "setup": {
+      "en": "Lie on your back with knees bent and feet flat; if using weight, place it on the hips; lift by squeezing the glutes.",
+      "es": "Tumbada con rodillas flexionadas y pies planos; si usas peso, colócalo sobre la cadera; sube apretando los glúteos.",
+      "zh": "仰卧屈膝，双脚踩地；如加重量，放在髋部；收紧臀部抬起。"
+    },
+    "pregnancy_tip": {
+      "en": "Avoid prolonged supine from the second trimester; prop your upper back or switch to a seated bridge if you feel dizzy. The floor bridge is blocked from week 16.",
+      "es": "Evita el supino prolongado desde el segundo trimestre; eleva el torso o cambia a puente sentada si te marea. El puente en el suelo se bloquea desde la semana 16.",
+      "zh": "孕中期起避免长时间仰卧；如头晕请抬高上身或改为坐姿臀桥。孕16周起地面臀桥将被禁用。"
+    },
+    "supine": true
   },
   {
     "id": "walking-lunge",
@@ -273,7 +339,18 @@
     "compound": true,
     "required_equipment": [
       "dumbbell"
-    ]
+    ],
+    "setup": {
+      "en": "Dumbbells at your sides, long step, front knee over the foot; lower under control.",
+      "es": "Mancuernas a los lados, paso largo y rodilla delantera sobre el pie; baja controlada.",
+      "zh": "哑铃置于身体两侧，迈大步，前膝对准脚尖；控制下蹲。"
+    },
+    "pregnancy_tip": {
+      "en": "Use a shorter step and hold a wall or bench if balance changes; avoid the deepest range.",
+      "es": "Usa un paso más corto y apóyate en una pared o banco si cambia el equilibrio; evita el rango más profundo.",
+      "zh": "步幅缩短，如平衡变化可扶墙或扶凳；避免过深。"
+    },
+    "supine": false
   },
   {
     "id": "step-ups",
@@ -307,7 +384,18 @@
     "compound": true,
     "required_equipment": [
       "bench"
-    ]
+    ],
+    "setup": {
+      "en": "Stable bench at knee height; step up with the whole foot, no momentum.",
+      "es": "Banco estable a la altura de la rodilla; sube apoyando todo el pie, sin impulso.",
+      "zh": "使用稳定的凳子，高度约到膝盖；全脚掌踏上，不要借力。"
+    },
+    "pregnancy_tip": {
+      "en": "Use a lower bench and hold a wall; slow the tempo.",
+      "es": "Usa un banco más bajo y sujétate de una pared; baja el ritmo.",
+      "zh": "使用更低的凳子并扶墙；放慢速度。"
+    },
+    "supine": false
   },
   {
     "id": "leg-extension",
@@ -339,7 +427,18 @@
     "compound": false,
     "required_equipment": [
       "machine"
-    ]
+    ],
+    "setup": {
+      "en": "Adjust the backrest and the roller above the ankle; extend without locking the knee.",
+      "es": "Ajusta el respaldo y el rodillo sobre el tobillo; extiende sin bloquear la rodilla.",
+      "zh": "调整靠背和脚踝上方的滚垫；伸展时不要锁死膝盖。"
+    },
+    "pregnancy_tip": {
+      "en": "Keep the movement controlled and avoid locking the knee; reduce the load if uncomfortable.",
+      "es": "Mantén el movimiento controlado y evita bloquear la rodilla; reduce la carga si hay molestia.",
+      "zh": "动作保持可控，避免锁膝；如有不适请减重。"
+    },
+    "supine": false
   },
   {
     "id": "leg-curl",
@@ -371,7 +470,18 @@
     "compound": false,
     "required_equipment": [
       "machine"
-    ]
+    ],
+    "setup": {
+      "en": "Roller above the ankle, hips against the seat; curl without arching the back.",
+      "es": "Rodillo sobre el tobillo y cadera pegada al asiento; flexiona sin arquear la espalda.",
+      "zh": "滚垫放在脚踝上方，髋部贴紧座椅；屈腿时不要弓背。"
+    },
+    "pregnancy_tip": {
+      "en": "Control the tempo and avoid arching the back; reduce the load if the abdomen pulls.",
+      "es": "Controla el tempo y evita arquear la espalda; reduce la carga si tira el abdomen.",
+      "zh": "控制节奏，避免弓背；如腹部牵拉请减重。"
+    },
+    "supine": false
   },
   {
     "id": "calf-raise",
@@ -404,7 +514,18 @@
     "compound": false,
     "required_equipment": [
       "machine"
-    ]
+    ],
+    "setup": {
+      "en": "Balls of the feet on the edge, heels lower under control; rise to the toes.",
+      "es": "Puntas de los pies en el borde, talones bajan controlados; sube hasta la punta.",
+      "zh": "前脚掌踩在边缘，脚跟控制下放；踮起到最高点。"
+    },
+    "pregnancy_tip": {
+      "en": "Hold a bar or wall for balance; avoid bouncing.",
+      "es": "Sujétate de una barra o pared para el equilibrio; evita el rebote.",
+      "zh": "扶杠或扶墙保持平衡；避免弹震。"
+    },
+    "supine": false
   },
   {
     "id": "glute-kickback",
@@ -437,7 +558,18 @@
     "compound": false,
     "required_equipment": [
       "cable"
-    ]
+    ],
+    "setup": {
+      "en": "Stable torso, knee slightly bent; push the leg back without arching the lower back.",
+      "es": "Torso estable y rodilla ligeramente flexionada; empuja la pierna atrás sin arquear la zona lumbar.",
+      "zh": "躯干稳定，膝盖微屈；向后踢腿时不要塌腰。"
+    },
+    "pregnancy_tip": {
+      "en": "Hold the cable frame and avoid arching the lower back; reduce the range.",
+      "es": "Apóyate en el marco de la polea y evita arquear la zona lumbar; reduce el rango.",
+      "zh": "扶住滑轮架，避免塌腰；减小幅度。"
+    },
+    "supine": false
   },
   {
     "id": "plank",
@@ -476,7 +608,18 @@
     "compound": false,
     "required_equipment": [
       "none"
-    ]
+    ],
+    "setup": {
+      "en": "Elbows under the shoulders, body in a line, abs and glutes braced.",
+      "es": "Codos bajo los hombros, cuerpo en línea, abdomen y glúteos activos.",
+      "zh": "肘部在肩下，身体成一直线，收紧腹部和臀部。"
+    },
+    "pregnancy_tip": {
+      "en": "If the abdomen hangs or you feel pressure, put your hands on a bench (incline plank) or switch to side support.",
+      "es": "Si el abdomen cuelga o sientes presión, apoya las manos en un banco (plancha inclinada) o cambia a apoyo lateral.",
+      "zh": "如腹部下坠或有压迫感，可将手撑在凳上（斜板支撑）或改为侧支撑。"
+    },
+    "supine": false
   },
   {
     "id": "dead-bug",
@@ -508,7 +651,18 @@
     "compound": false,
     "required_equipment": [
       "none"
-    ]
+    ],
+    "setup": {
+      "en": "Lie on your back, arms up, knees at 90°; lower the opposite arm and leg without arching the back.",
+      "es": "Tumbada, brazos al techo y rodillas a 90°; baja el brazo y la pierna contraria sin arquear la espalda.",
+      "zh": "仰卧，双臂向上，膝盖90°；对侧手脚缓慢下放，不要塌腰。"
+    },
+    "pregnancy_tip": {
+      "en": "If supine is uncomfortable, do it seated or with the torso elevated and keep the abdomen active.",
+      "es": "Si el supino te incomoda, hazlo sentada o con el torso elevado y mantén el abdomen activo.",
+      "zh": "如仰卧不适，可坐姿或抬高上身完成，并保持腹部收紧。"
+    },
+    "supine": true
   },
   {
     "id": "side-plank",
@@ -540,7 +694,18 @@
     "compound": false,
     "required_equipment": [
       "none"
-    ]
+    ],
+    "setup": {
+      "en": "Elbow under the shoulder, hips lifted, body in a line; do not let the hip drop.",
+      "es": "Codo bajo el hombro, cadera elevada y cuerpo en línea; no dejes caer la cadera.",
+      "zh": "肘部在肩下，髋部抬起，身体成一直线；不要让髋部下沉。"
+    },
+    "pregnancy_tip": {
+      "en": "Support the lower knee or use a wall if balance or hips ask for it.",
+      "es": "Apoya la rodilla inferior o hazlo contra una pared si el equilibrio o la cadera lo piden.",
+      "zh": "如平衡或髋部需要，可屈膝支撑或靠墙完成。"
+    },
+    "supine": false
   },
   {
     "id": "hanging-leg-raise",
@@ -572,7 +737,18 @@
     "compound": false,
     "required_equipment": [
       "none"
-    ]
+    ],
+    "setup": {
+      "en": "Hang from the bar with active shoulders; raise the legs without swinging.",
+      "es": "Cuelga de la barra con los hombros activos; sube las piernas sin balanceo.",
+      "zh": "双手悬垂，肩部主动发力；抬腿时不要摆动。"
+    },
+    "pregnancy_tip": {
+      "en": "Not recommended in pregnancy because of swinging and pressure; switch to dead bug or an incline plank.",
+      "es": "No recomendado en embarazo por el balanceo y la presión; cambia a dead bug o plancha inclinada.",
+      "zh": "孕期不建议（摆动和腹压）；请改为死虫或斜板支撑。"
+    },
+    "supine": false
   },
   {
     "id": "lat-pulldown",
@@ -614,7 +790,18 @@
     "compound": true,
     "required_equipment": [
       "machine"
-    ]
+    ],
+    "setup": {
+      "en": "Wide grip, chest tall; bring the bar to the upper chest without pulling the head back.",
+      "es": "Agarre ancho y pecho alto; lleva la barra a la parte superior del pecho sin echar la cabeza atrás.",
+      "zh": "宽握，挺胸；将横杆拉至上胸，不要后仰头部。"
+    },
+    "pregnancy_tip": {
+      "en": "Avoid pulling the bar behind the head; keep the torso stable and reduce the load if it pulls on the abdomen.",
+      "es": "Evita llevar la barra detrás de la cabeza; mantén el torso estable y reduce la carga si tira del abdomen.",
+      "zh": "不要将横杆拉到颈后；保持躯干稳定，如腹部牵拉请减重。"
+    },
+    "supine": false
   },
   {
     "id": "bent-over-row",
@@ -649,7 +836,18 @@
     "compound": true,
     "required_equipment": [
       "barbell"
-    ]
+    ],
+    "setup": {
+      "en": "Hinge at the hips with a neutral spine; row the bar to the abdomen, elbows close.",
+      "es": "Bisagra de cadera con espalda neutra; lleva la barra al abdomen con los codos cerca.",
+      "zh": "髋部折叠，脊柱中立；将杠铃拉向腹部，肘部贴近身体。"
+    },
+    "pregnancy_tip": {
+      "en": "Use a bench for support or switch to a seated row to avoid loading the lower back.",
+      "es": "Hazlo con apoyo en banco o cambia a remo sentado para no cargar la espalda baja.",
+      "zh": "可扶凳支撑或改为坐姿划船，以减少下背负荷。"
+    },
+    "supine": false
   },
   {
     "id": "incline-bench-press",
@@ -691,7 +889,18 @@
     "required_equipment": [
       "barbell",
       "bench"
-    ]
+    ],
+    "setup": {
+      "en": "Bench at 30-45°, feet firm, bar to the upper chest; do not over-arch.",
+      "es": "Banco inclinado 30-45°, pies firmes y barra al pecho alto; no arquees en exceso.",
+      "zh": "凳面30-45°，双脚踩稳，杠铃下放至上胸；不要过度反弓。"
+    },
+    "pregnancy_tip": {
+      "en": "The incline bench is the best option in pregnancy; keep the feet planted and avoid Valsalva.",
+      "es": "El banco inclinado es la mejor opción en embarazo; mantén los pies apoyados y evita el Valsalva.",
+      "zh": "孕期首选斜板；双脚踩稳，避免憋气。"
+    },
+    "supine": false
   },
   {
     "id": "flat-bench-press",
@@ -732,7 +941,18 @@
     "required_equipment": [
       "barbell",
       "bench"
-    ]
+    ],
+    "setup": {
+      "en": "Flat bench, feet firm, bar to the chest; shoulder blades retracted.",
+      "es": "Banco plano, pies firmes y barra al pecho; escápulas retraídas.",
+      "zh": "平板凳，双脚踩稳，杠铃下放至胸部；肩胛骨后收。"
+    },
+    "pregnancy_tip": {
+      "en": "From week 16 avoid prolonged supine; switch to incline press or seated dumbbell press.",
+      "es": "Desde la semana 16 evita el supino prolongado; cambia a press inclinado o press sentada con mancuernas.",
+      "zh": "孕16周起避免长时间仰卧；改为斜板推或坐姿哑铃推。"
+    },
+    "supine": true
   },
   {
     "id": "overhead-press",
@@ -765,7 +985,18 @@
     "compound": true,
     "required_equipment": [
       "dumbbell"
-    ]
+    ],
+    "setup": {
+      "en": "Dumbbells at shoulder height, core braced; press without arching the back.",
+      "es": "Mancuernas a la altura de los hombros y core apretado; empuja sin arquear la espalda.",
+      "zh": "哑铃置于肩高，收紧核心；上推时不要反弓。"
+    },
+    "pregnancy_tip": {
+      "en": "If the abdomen protrudes or you feel pressure, do it seated with a backrest or switch to an incline press.",
+      "es": "Si el abdomen protruye o sientes presión, hazlo sentada con respaldo o cambia a press inclinado.",
+      "zh": "如腹部突出或有压迫感，请靠背坐姿完成或改为斜板推。"
+    },
+    "supine": false
   },
   {
     "id": "lateral-raise",
@@ -803,7 +1034,18 @@
     "compound": false,
     "required_equipment": [
       "dumbbell"
-    ]
+    ],
+    "setup": {
+      "en": "Dumbbells at the sides, elbows softly bent; raise to shoulder height.",
+      "es": "Mancuernas a los lados con codos ligeramente flexionados; sube hasta la altura de los hombros.",
+      "zh": "哑铃置于体侧，肘部微屈；抬至肩高。"
+    },
+    "pregnancy_tip": {
+      "en": "Reduce the load and avoid swinging; switch to a cable if the shoulder is uncomfortable.",
+      "es": "Reduce la carga y evita balancearte; cambia a polea si el hombro molesta.",
+      "zh": "减重，避免摆动；如肩部不适可改用滑轮。"
+    },
+    "supine": false
   },
   {
     "id": "biceps-curl",
@@ -842,7 +1084,18 @@
     "compound": false,
     "required_equipment": [
       "dumbbell"
-    ]
+    ],
+    "setup": {
+      "en": "Elbows close to the torso, dumbbells rise without swinging.",
+      "es": "Codos pegados al torso; las mancuernas suben sin balanceo.",
+      "zh": "肘部贴近躯干；哑铃上举时不要摆动。"
+    },
+    "pregnancy_tip": {
+      "en": "Keep the back supported and avoid arching; reduce the load if you feel pressure.",
+      "es": "Mantén la espalda apoyada y evita arquear; reduce la carga si sientes presión.",
+      "zh": "背部保持支撑，避免反弓；如有压迫感请减重。"
+    },
+    "supine": false
   },
   {
     "id": "hammer-curl",
@@ -875,7 +1128,18 @@
     "compound": false,
     "required_equipment": [
       "dumbbell"
-    ]
+    ],
+    "setup": {
+      "en": "Neutral grip, elbows fixed; curl without moving the shoulders.",
+      "es": "Agarre neutro y codos fijos; flexiona sin mover los hombros.",
+      "zh": "中立握法，肘部固定；弯举时肩膀不要移动。"
+    },
+    "pregnancy_tip": {
+      "en": "Same as the curl: stable back and no swinging.",
+      "es": "Igual que el curl: espalda estable y sin balanceo.",
+      "zh": "与弯举相同：背部稳定，不要摆动。"
+    },
+    "supine": false
   },
   {
     "id": "triceps-pushdown",
@@ -907,7 +1171,18 @@
     "compound": false,
     "required_equipment": [
       "cable"
-    ]
+    ],
+    "setup": {
+      "en": "Elbows close to the torso; push the rope/bar down without moving the shoulders.",
+      "es": "Codos pegados al torso; empuja la cuerda/barra hacia abajo sin mover los hombros.",
+      "zh": "肘部贴近躯干；下压绳索/横杆，肩膀不要移动。"
+    },
+    "pregnancy_tip": {
+      "en": "Keep the core active and avoid leaning forward.",
+      "es": "Mantén el core activo y evita inclinarte hacia delante.",
+      "zh": "保持核心收紧，避免身体前倾。"
+    },
+    "supine": false
   },
   {
     "id": "glute-activation-band",
@@ -941,7 +1216,18 @@
     "compound": false,
     "required_equipment": [
       "band"
-    ]
+    ],
+    "setup": {
+      "en": "Band above the knees, feet hip-width; open laterally without moving the torso.",
+      "es": "Banda sobre los muslos, pies al ancho de cadera; abre lateralmente sin mover el torso.",
+      "zh": "弹力带套在膝上，双脚与髋同宽；侧向打开，躯干不要移动。"
+    },
+    "pregnancy_tip": {
+      "en": "Keep it slow and controlled; hold on if balance changes.",
+      "es": "Movimiento suave y controlado; sujétate si cambia el equilibrio.",
+      "zh": "动作缓慢可控；如平衡变化请扶稳。"
+    },
+    "supine": false
   },
   {
     "id": "hip-mobility-flow",
@@ -975,7 +1261,18 @@
     "compound": false,
     "required_equipment": [
       "none"
-    ]
+    ],
+    "setup": {
+      "en": "Slow hip movements within a comfortable range; breathe.",
+      "es": "Movimientos lentos de cadera dentro de un rango cómodo; respira.",
+      "zh": "在舒适范围内缓慢活动髋部；保持呼吸。"
+    },
+    "pregnancy_tip": {
+      "en": "Avoid extreme ranges and prolonged supine; use support.",
+      "es": "Evita rangos extremos y el supino prolongado; usa apoyo.",
+      "zh": "避免极限幅度和长时间仰卧；使用支撑。"
+    },
+    "supine": false
   },
   {
     "id": "arm-circles",
@@ -1010,7 +1307,18 @@
     "compound": false,
     "required_equipment": [
       "none"
-    ]
+    ],
+    "setup": {
+      "en": "Large, slow arm circles with relaxed shoulders.",
+      "es": "Círculos amplios y lentos con los brazos; hombros relajados.",
+      "zh": "双臂大幅缓慢画圈，肩膀放松。"
+    },
+    "pregnancy_tip": {
+      "en": "No impact; keep breathing.",
+      "es": "Sin impacto; mantén la respiración.",
+      "zh": "无冲击；保持呼吸。"
+    },
+    "supine": false
   },
   {
     "id": "cat-cow",
@@ -1045,7 +1353,18 @@
     "compound": false,
     "required_equipment": [
       "none"
-    ]
+    ],
+    "setup": {
+      "en": "On all fours, alternate arching and rounding the back; move slowly.",
+      "es": "A cuatro patas, alterna arqueo y redondeo de la espalda; movimiento lento.",
+      "zh": "四点跪姿，交替拱背和塌腰；动作缓慢。"
+    },
+    "pregnancy_tip": {
+      "en": "Put your hands on a bench if your wrists or abdomen ask for it.",
+      "es": "Apoya las manos en un banco si las muñecas o el abdomen lo piden.",
+      "zh": "如手腕或腹部需要，可将手撑在凳上。"
+    },
+    "supine": false
   },
   {
     "id": "scapular-retraction",
@@ -1081,7 +1400,18 @@
     "compound": false,
     "required_equipment": [
       "none"
-    ]
+    ],
+    "setup": {
+      "en": "Squeeze the shoulder blades back and down; do not shrug.",
+      "es": "Aprieta las escápulas hacia atrás y abajo; no encojas los hombros.",
+      "zh": "肩胛骨向后下方收紧；不要耸肩。"
+    },
+    "pregnancy_tip": {
+      "en": "Gentle and without loading the neck.",
+      "es": "Suave y sin cargar el cuello.",
+      "zh": "动作轻柔，不要给颈部负担。"
+    },
+    "supine": false
   },
   {
     "id": "bird-dog",
@@ -1115,7 +1445,18 @@
     "compound": false,
     "required_equipment": [
       "none"
-    ]
+    ],
+    "setup": {
+      "en": "On all fours, extend the opposite arm and leg without arching the back.",
+      "es": "A cuatro patas, extiende brazo y pierna contrarios sin arquear la espalda.",
+      "zh": "四点跪姿，伸出对侧手臂和腿，不要塌腰。"
+    },
+    "pregnancy_tip": {
+      "en": "Put your hands on a bench and keep the core active.",
+      "es": "Apoya las manos en un banco y mantén el core activo.",
+      "zh": "可将手撑在凳上，并保持核心收紧。"
+    },
+    "supine": false
   },
   {
     "id": "assisted-pull-up",
@@ -1153,7 +1494,18 @@
     "required_equipment": [
       "machine",
       "pullup-bar"
-    ]
+    ],
+    "setup": {
+      "en": "Knees on the platform, wide grip; pull with the chest tall.",
+      "es": "Rodillas en la plataforma y agarre ancho; sube con el pecho alto.",
+      "zh": "双膝跪在辅助台上，宽握；挺胸上拉。"
+    },
+    "pregnancy_tip": {
+      "en": "Reduce the assistance and avoid swinging; switch to lat pulldown if the abdomen pulls.",
+      "es": "Reduce la asistencia y evita balancearte; cambia a jalón al pecho si tira el abdomen.",
+      "zh": "减少助力，避免摆动；如腹部牵拉请改为高位下拉。"
+    },
+    "supine": false
   },
   {
     "id": "assisted-chin-up",
@@ -1191,7 +1543,18 @@
     "required_equipment": [
       "machine",
       "pullup-bar"
-    ]
+    ],
+    "setup": {
+      "en": "Underhand grip, knees on the platform; pull under control.",
+      "es": "Agarre supino y rodillas en la plataforma; sube controlada.",
+      "zh": "反手握，双膝跪在辅助台上；控制上拉。"
+    },
+    "pregnancy_tip": {
+      "en": "No swinging; switch to lat pulldown if it is not comfortable.",
+      "es": "Sin balanceo; cambia a jalón al pecho si no es cómodo.",
+      "zh": "不要摆动；如不适请改为高位下拉。"
+    },
+    "supine": false
   },
   {
     "id": "assisted-dip",
@@ -1228,7 +1591,18 @@
     "required_equipment": [
       "machine",
       "dip-bar"
-    ]
+    ],
+    "setup": {
+      "en": "Hands on the parallel bars, knees on the platform; lower under control.",
+      "es": "Manos en las paralelas y rodillas en la plataforma; baja controlada.",
+      "zh": "双手撑双杠，双膝跪在辅助台上；控制下放。"
+    },
+    "pregnancy_tip": {
+      "en": "Avoid the deepest range; switch to an incline press if the shoulder or abdomen asks for it.",
+      "es": "Evita el rango profundo; cambia a press inclinado si el hombro o el abdomen lo piden.",
+      "zh": "避免过深；如肩部或腹部需要，请改为斜板推。"
+    },
+    "supine": false
   },
   {
     "id": "smith-squat",
@@ -1271,7 +1645,18 @@
     "compound": true,
     "required_equipment": [
       "smith"
-    ]
+    ],
+    "setup": {
+      "en": "Guided bar on the upper traps, feet shoulder-width; descend under control.",
+      "es": "Barra guiada sobre los trapecios y pies al ancho de hombros; baja controlada.",
+      "zh": "史密斯杠放在斜方肌上部，双脚与肩同宽；控制下蹲。"
+    },
+    "pregnancy_tip": {
+      "en": "Widen the feet and reduce the range; switch to goblet if the bar is uncomfortable.",
+      "es": "Abre los pies y reduce el rango; cambia a goblet si la barra te incomoda.",
+      "zh": "双脚加宽并减小幅度；如杠铃不适请改为高脚杯。"
+    },
+    "supine": false
   },
   {
     "id": "smith-hip-thrust",
@@ -1305,7 +1690,18 @@
     "compound": true,
     "required_equipment": [
       "smith"
-    ]
+    ],
+    "setup": {
+      "en": "Guided bar over the hips with a pad, upper back on the bench; drive through the heels.",
+      "es": "Barra guiada sobre la cadera con almohadilla y espalda alta en el banco; empuja con los talones.",
+      "zh": "史密斯杠加护垫放在髋部，上背靠凳；脚跟发力。"
+    },
+    "pregnancy_tip": {
+      "en": "Keep the bar on the hips, never on the abdomen; elevate the torso if the bench is uncomfortable.",
+      "es": "Mantén la barra sobre la cadera, nunca sobre el abdomen; eleva el torso si el banco te incomoda.",
+      "zh": "杠铃放在髋部，绝不要压在腹部；如靠凳不适可抬高上身。"
+    },
+    "supine": false
   },
   {
     "id": "hack-squat",
@@ -1341,7 +1737,18 @@
     "compound": true,
     "required_equipment": [
       "machine"
-    ]
+    ],
+    "setup": {
+      "en": "Back against the pad, feet shoulder-width; descend under control without locking.",
+      "es": "Espalda apoyada en el respaldo y pies al ancho de hombros; baja controlada sin bloquear.",
+      "zh": "背部贴紧靠垫，双脚与肩同宽；控制下蹲，不要锁膝。"
+    },
+    "pregnancy_tip": {
+      "en": "Reduce the range and load; switch to goblet if you feel pressure.",
+      "es": "Reduce el rango y la carga; cambia a goblet si sientes presión.",
+      "zh": "减小幅度和重量；如有压迫感请改为高脚杯。"
+    },
+    "supine": false
   },
   {
     "id": "leg-press",
@@ -1384,7 +1791,18 @@
     "compound": true,
     "required_equipment": [
       "machine"
-    ]
+    ],
+    "setup": {
+      "en": "Feet shoulder-width on the platform; lower to about 90° without lifting the hips.",
+      "es": "Pies al ancho de hombros en la plataforma; baja hasta unos 90° sin despegar la cadera.",
+      "zh": "双脚与肩同宽踩在踏板上；下放至约90°，髋部不要离开。"
+    },
+    "pregnancy_tip": {
+      "en": "Do not go so deep that the hips lift; reduce the range and avoid locking the knees.",
+      "es": "No bajes tanto como para despegar la cadera; reduce el rango y evita bloquear las rodillas.",
+      "zh": "不要下放过深以致髋部抬起；减小幅度，避免锁膝。"
+    },
+    "supine": false
   },
   {
     "id": "hip-thrust-machine",
@@ -1418,7 +1836,18 @@
     "compound": true,
     "required_equipment": [
       "machine"
-    ]
+    ],
+    "setup": {
+      "en": "Adjust the pad over the hips; feet flat; drive through the heels.",
+      "es": "Ajusta la almohadilla sobre la cadera; pies planos; empuja con los talones.",
+      "zh": "将护垫调整到髋部；双脚踩平；脚跟发力。"
+    },
+    "pregnancy_tip": {
+      "en": "Keep the pad on the hips; if the torso is too supine, elevate the backrest.",
+      "es": "Mantén la almohadilla sobre la cadera; si el torso queda muy supino, eleva el respaldo.",
+      "zh": "护垫放在髋部；如上身过于仰卧，请抬高靠背。"
+    },
+    "supine": false
   },
   {
     "id": "chest-fly",
@@ -1453,7 +1882,18 @@
     "compound": false,
     "required_equipment": [
       "machine"
-    ]
+    ],
+    "setup": {
+      "en": "Seat adjusted, elbows softly bent; bring the hands together without locking.",
+      "es": "Asiento ajustado y codos ligeramente flexionados; junta las manos sin bloquear.",
+      "zh": "调整座椅，肘部微屈；双手合拢时不要锁死。"
+    },
+    "pregnancy_tip": {
+      "en": "Reduce the range and avoid the maximum stretch.",
+      "es": "Reduce el rango y evita el estiramiento máximo.",
+      "zh": "减小幅度，避免最大拉伸。"
+    },
+    "supine": false
   },
   {
     "id": "cable-chest-fly",
@@ -1488,7 +1928,18 @@
     "compound": false,
     "required_equipment": [
       "cable"
-    ]
+    ],
+    "setup": {
+      "en": "Pulleys at chest height, step forward, bring the hands together under control.",
+      "es": "Poleas a la altura del pecho, paso al frente y junta las manos controlada.",
+      "zh": "滑轮调至胸高，向前迈步，控制双手合拢。"
+    },
+    "pregnancy_tip": {
+      "en": "No swinging; reduce the load.",
+      "es": "Sin balanceo; reduce la carga.",
+      "zh": "不要摆动；减重。"
+    },
+    "supine": false
   },
   {
     "id": "cable-lateral-raise",
@@ -1522,7 +1973,18 @@
     "compound": false,
     "required_equipment": [
       "cable"
-    ]
+    ],
+    "setup": {
+      "en": "Low pulley, arm crosses the body; raise to shoulder height.",
+      "es": "Polea baja, el brazo cruza el cuerpo; sube hasta la altura del hombro.",
+      "zh": "低位滑轮，手臂从身体前方交叉；抬至肩高。"
+    },
+    "pregnancy_tip": {
+      "en": "Reduce the load and avoid compensating with the torso.",
+      "es": "Reduce la carga y evita compensar con el torso.",
+      "zh": "减重，避免用躯干代偿。"
+    },
+    "supine": false
   },
   {
     "id": "pull-up",
@@ -1559,7 +2021,18 @@
     "compound": true,
     "required_equipment": [
       "pullup-bar"
-    ]
+    ],
+    "setup": {
+      "en": "Wide grip, active shoulders; pull with the chest.",
+      "es": "Agarre ancho y hombros activos; sube con el pecho.",
+      "zh": "宽握，肩部主动；挺胸上拉。"
+    },
+    "pregnancy_tip": {
+      "en": "Not recommended if you have diastasis or discomfort; use lat pulldown.",
+      "es": "No recomendado si hay diástasis o molestia; usa jalón al pecho.",
+      "zh": "如有腹直肌分离或不适，不建议做；请改用高位下拉。"
+    },
+    "supine": false
   },
   {
     "id": "dip",
@@ -1595,7 +2068,18 @@
     "compound": true,
     "required_equipment": [
       "dip-bar"
-    ]
+    ],
+    "setup": {
+      "en": "Hands on the parallel bars; lower under control without collapsing the shoulders.",
+      "es": "Manos en las paralelas; baja controlada sin colapsar los hombros.",
+      "zh": "双手撑双杠；控制下放，肩膀不要塌陷。"
+    },
+    "pregnancy_tip": {
+      "en": "Avoid the deepest range; switch to an incline press if it is not comfortable.",
+      "es": "Evita el rango profundo; cambia a press inclinado si no es cómodo.",
+      "zh": "避免过深；如不适请改为斜板推。"
+    },
+    "supine": false
   },
   {
     "id": "belt-squat",
@@ -1643,7 +2127,18 @@
     "compound": true,
     "required_equipment": [
       "machine"
-    ]
+    ],
+    "setup": {
+      "en": "Belt adjusted, feet shoulder-width; descend under control.",
+      "es": "Cinturón ajustado y pies al ancho de hombros; baja controlada.",
+      "zh": "调整腰带，双脚与肩同宽；控制下蹲。"
+    },
+    "pregnancy_tip": {
+      "en": "Adjust the belt without pressing the abdomen; reduce the range.",
+      "es": "Ajusta el cinturón sin presionar el abdomen; reduce el rango.",
+      "zh": "腰带不要压腹部；减小幅度。"
+    },
+    "supine": false
   },
   {
     "id": "pendulum-squat",
@@ -1691,7 +2186,18 @@
     "compound": true,
     "required_equipment": [
       "machine"
-    ]
+    ],
+    "setup": {
+      "en": "Back against the pad, feet shoulder-width; descend under control.",
+      "es": "Espalda apoyada y pies al ancho de hombros; baja controlada.",
+      "zh": "背部贴靠垫，双脚与肩同宽；控制下蹲。"
+    },
+    "pregnancy_tip": {
+      "en": "Reduce the range and load; switch to goblet if you feel pressure.",
+      "es": "Reduce el rango y la carga; cambia a goblet si sientes presión.",
+      "zh": "减小幅度和重量；如有压迫感请改为高脚杯。"
+    },
+    "supine": false
   },
   {
     "id": "v-squat",
@@ -1734,7 +2240,18 @@
     "compound": true,
     "required_equipment": [
       "machine"
-    ]
+    ],
+    "setup": {
+      "en": "Back against the pad, feet shoulder-width; descend under control.",
+      "es": "Espalda apoyada y pies al ancho de hombros; baja controlada.",
+      "zh": "背部贴靠垫，双脚与肩同宽；控制下蹲。"
+    },
+    "pregnancy_tip": {
+      "en": "Reduce the range; avoid locking the knees.",
+      "es": "Reduce el rango; evita bloquear las rodillas.",
+      "zh": "减小幅度；避免锁膝。"
+    },
+    "supine": false
   },
   {
     "id": "hip-abduction",
@@ -1776,7 +2293,18 @@
     "compound": false,
     "required_equipment": [
       "machine"
-    ]
+    ],
+    "setup": {
+      "en": "Sit with the back supported; open the legs against the resistance.",
+      "es": "Sentada con la espalda apoyada; abre las piernas contra la resistencia.",
+      "zh": "坐姿背部支撑；对抗阻力向外打开双腿。"
+    },
+    "pregnancy_tip": {
+      "en": "Keep it gentle; do not force the range.",
+      "es": "Movimiento suave; no fuerces el rango.",
+      "zh": "动作轻柔；不要强行加大幅度。"
+    },
+    "supine": false
   },
   {
     "id": "hip-adduction",
@@ -1817,7 +2345,18 @@
     "compound": false,
     "required_equipment": [
       "machine"
-    ]
+    ],
+    "setup": {
+      "en": "Sit with pads on the thighs; close the legs under control.",
+      "es": "Sentada con las almohadillas en los muslos; cierra las piernas controlada.",
+      "zh": "坐姿，护垫贴在大腿内侧；控制双腿合拢。"
+    },
+    "pregnancy_tip": {
+      "en": "Reduce the load and avoid bouncing.",
+      "es": "Reduce la carga y evita el rebote.",
+      "zh": "减重，避免弹震。"
+    },
+    "supine": false
   },
   {
     "id": "seated-cable-row",
@@ -1866,7 +2405,18 @@
     "compound": true,
     "required_equipment": [
       "cable"
-    ]
+    ],
+    "setup": {
+      "en": "Straight back, knees softly bent; pull the handle to the abdomen.",
+      "es": "Espalda recta y rodillas ligeramente flexionadas; lleva el mango al abdomen.",
+      "zh": "背部挺直，膝盖微屈；将把手拉向腹部。"
+    },
+    "pregnancy_tip": {
+      "en": "Keep the chest tall and avoid rounding the back.",
+      "es": "Mantén el pecho alto y evita redondear la espalda.",
+      "zh": "保持挺胸，避免弓背。"
+    },
+    "supine": false
   },
   {
     "id": "machine-shoulder-press",
@@ -1908,7 +2458,18 @@
     "compound": true,
     "required_equipment": [
       "machine"
-    ]
+    ],
+    "setup": {
+      "en": "Back supported, handles at shoulder height; press without arching.",
+      "es": "Espalda apoyada y manillas a la altura de los hombros; empuja sin arquear.",
+      "zh": "背部支撑，把手在肩高；上推时不要反弓。"
+    },
+    "pregnancy_tip": {
+      "en": "Use a high backrest and reduce the load if you feel pressure.",
+      "es": "Usa un respaldo alto y reduce la carga si sientes presión.",
+      "zh": "使用高靠背；如有压迫感请减重。"
+    },
+    "supine": false
   },
   {
     "id": "glute-ham-raise",
@@ -1950,7 +2511,18 @@
     "compound": true,
     "required_equipment": [
       "ghd"
-    ]
+    ],
+    "setup": {
+      "en": "Knees on the pad, ankles fixed; lower under control with the hips extended.",
+      "es": "Rodillas en el soporte y tobillos fijos; baja controlada con la cadera extendida.",
+      "zh": "膝盖跪在护垫上，脚踝固定；髋部伸展，控制下放。"
+    },
+    "pregnancy_tip": {
+      "en": "Not recommended because of the position and control demands; switch to hip thrust or bridge.",
+      "es": "No recomendado por la posición y el control; cambia a hip thrust o puente.",
+      "zh": "因体位和控制要求不建议；请改为臀推或臀桥。"
+    },
+    "supine": false
   },
   {
     "id": "db-bulgarian-split-squat",
@@ -1994,7 +2566,18 @@
     "required_equipment": [
       "dumbbell",
       "bench"
-    ]
+    ],
+    "setup": {
+      "en": "Rear foot on the bench, front foot firm; lower under control.",
+      "es": "Pie trasero en el banco y pie delantero firme; baja controlada.",
+      "zh": "后脚放在凳上，前脚踩稳；控制下蹲。"
+    },
+    "pregnancy_tip": {
+      "en": "Use a lower bench and hold on; reduce the range.",
+      "es": "Usa un banco más bajo y apóyate; reduce el rango.",
+      "zh": "使用更低的凳子并扶稳；减小幅度。"
+    },
+    "supine": false
   },
   {
     "id": "db-deadlift",
@@ -2037,7 +2620,18 @@
     "compound": true,
     "required_equipment": [
       "dumbbell"
-    ]
+    ],
+    "setup": {
+      "en": "Dumbbells at the sides, hinge at the hips, neutral spine.",
+      "es": "Mancuernas a los lados, bisagra de cadera y espalda neutra.",
+      "zh": "哑铃置于体侧，髋部折叠，脊柱中立。"
+    },
+    "pregnancy_tip": {
+      "en": "Reduce the load and range; switch to hip thrust if the dumbbells rub the abdomen.",
+      "es": "Reduce la carga y el rango; cambia a hip thrust si las mancuernas rozan el abdomen.",
+      "zh": "减小重量和幅度；如哑铃碰到腹部请改为臀推。"
+    },
+    "supine": false
   },
   {
     "id": "db-rdl",
@@ -2080,7 +2674,18 @@
     "compound": true,
     "required_equipment": [
       "dumbbell"
-    ]
+    ],
+    "setup": {
+      "en": "Dumbbells in front of the thighs, knees softly bent, hinge; neutral spine.",
+      "es": "Mancuernas frente a los muslos, rodillas ligeramente flexionadas y bisagra; espalda neutra.",
+      "zh": "哑铃放在大腿前，膝盖微屈，髋部折叠；脊柱中立。"
+    },
+    "pregnancy_tip": {
+      "en": "Reduce the range; keep the dumbbells from rubbing the abdomen.",
+      "es": "Reduce el rango; evita que las mancuernas rocen el abdomen.",
+      "zh": "减小幅度；避免哑铃碰到腹部。"
+    },
+    "supine": false
   },
   {
     "id": "db-row",
@@ -2125,7 +2730,18 @@
     "required_equipment": [
       "dumbbell",
       "bench"
-    ]
+    ],
+    "setup": {
+      "en": "One hand on the bench, flat back; row the dumbbell to the abdomen.",
+      "es": "Una mano en el banco y espalda plana; lleva la mancuerna al abdomen.",
+      "zh": "单手撑凳，背部平直；将哑铃拉向腹部。"
+    },
+    "pregnancy_tip": {
+      "en": "Support yourself well and avoid rotating the torso.",
+      "es": "Apóyate bien y evita rotar el torso.",
+      "zh": "支撑稳固，避免躯干旋转。"
+    },
+    "supine": false
   },
   {
     "id": "db-thruster",
@@ -2168,7 +2784,18 @@
     "compound": true,
     "required_equipment": [
       "dumbbell"
-    ]
+    ],
+    "setup": {
+      "en": "Dumbbells at the shoulders; squat and press overhead.",
+      "es": "Mancuernas a los hombros; sentadilla y empuje sobre la cabeza.",
+      "zh": "哑铃置于肩部；下蹲后向上推举。"
+    },
+    "pregnancy_tip": {
+      "en": "Avoid impact and Valsalva; if it is not comfortable, switch to goblet squat + seated press.",
+      "es": "Evita el impacto y el Valsalva; si no es cómodo, cambia a sentadilla goblet + press sentada.",
+      "zh": "避免冲击和憋气；如不适请改为高脚杯深蹲 + 坐姿推举。"
+    },
+    "supine": false
   },
   {
     "id": "cable-glute-kickback-2",
@@ -2210,6 +2837,17 @@
     "compound": false,
     "required_equipment": [
       "cable"
-    ]
+    ],
+    "setup": {
+      "en": "Ankle strap on the cable, stable torso; push the leg back without arching.",
+      "es": "Tobillera en la polea y torso estable; empuja la pierna atrás sin arquear.",
+      "zh": "脚踝绑带连接滑轮，躯干稳定；向后踢腿时不要塌腰。"
+    },
+    "pregnancy_tip": {
+      "en": "Hold on and reduce the range; avoid arching the lower back.",
+      "es": "Apóyate y reduce el rango; evita arquear la zona lumbar.",
+      "zh": "扶稳并减小幅度；避免塌腰。"
+    },
+    "supine": false
   }
 ]
