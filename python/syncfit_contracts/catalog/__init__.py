@@ -17,19 +17,81 @@ MACHINE_FILE = "machines.json"
 SYMPTOM_FILE = "symptoms.json"
 
 
+# Runtime overrides. The backend loads the catalogs from the database at start
+# and after every edit; everything that reads a catalog (backend services,
+# reasoning, simulator) sees the database rows through these globals.
+_OVERRIDES: dict[str, tuple] = {}
+
+
+def set_catalog(
+    *,
+    exercises: Iterable["Exercise"] | None = None,
+    machines: Iterable[GymMachine] | None = None,
+    symptoms: Iterable[dict] | None = None,
+    supplements: Iterable[Supplement] | None = None,
+) -> None:
+    """Replace the in-memory catalogs (database is the source of truth)."""
+    if exercises is not None:
+        _OVERRIDES["exercises"] = tuple(exercises)
+    if machines is not None:
+        _OVERRIDES["machines"] = tuple(machines)
+    if symptoms is not None:
+        _OVERRIDES["symptoms"] = tuple(symptoms)
+    if supplements is not None:
+        _OVERRIDES["supplements"] = tuple(supplements)
+
+
+def reset_catalog() -> None:
+    """Drop the overrides and fall back to the packaged JSON (tests, CLI)."""
+    _OVERRIDES.clear()
+
+
 @lru_cache(maxsize=1)
-def load_machines() -> tuple[GymMachine, ...]:
-    """Load and validate the gym machine catalog (cached)."""
+def packaged_machines() -> tuple[GymMachine, ...]:
+    """Gym machines shipped with the package (seed data)."""
     raw = (files(__package__) / MACHINE_FILE).read_text(encoding="utf-8")
-    data = json.loads(raw)
-    return tuple(GymMachine.model_validate(item) for item in data)
+    return tuple(GymMachine.model_validate(item) for item in json.loads(raw))
 
 
 @lru_cache(maxsize=1)
-def load_symptoms() -> tuple[dict, ...]:
-    """Load the symptom catalog (plain data)."""
+def packaged_symptoms() -> tuple[dict, ...]:
     raw = (files(__package__) / SYMPTOM_FILE).read_text(encoding="utf-8")
     return tuple(json.loads(raw))
+
+
+@lru_cache(maxsize=1)
+def packaged_exercises() -> tuple["Exercise", ...]:
+    raw = (files(__package__) / CATALOG_FILE).read_text(encoding="utf-8")
+    return tuple(Exercise.model_validate(item) for item in json.loads(raw))
+
+
+@lru_cache(maxsize=1)
+def packaged_supplements() -> tuple[Supplement, ...]:
+    raw = (files(__package__) / SUPPLEMENT_FILE).read_text(encoding="utf-8")
+    return tuple(Supplement.model_validate(item) for item in json.loads(raw))
+
+
+def packaged_catalog() -> dict[str, tuple]:
+    """Seed data by kind, for the database bootstrap."""
+    return {
+        "exercise": packaged_exercises(),
+        "machine": packaged_machines(),
+        "symptom": packaged_symptoms(),
+        "supplement": packaged_supplements(),
+    }
+
+
+def load_machines() -> tuple[GymMachine, ...]:
+    """Load the gym machine catalog (database override or packaged JSON)."""
+    if "machines" in _OVERRIDES:
+        return _OVERRIDES["machines"]  # type: ignore[return-value]
+    return packaged_machines()
+
+
+def load_symptoms() -> tuple[dict, ...]:
+    if "symptoms" in _OVERRIDES:
+        return _OVERRIDES["symptoms"]  # type: ignore[return-value]
+    return packaged_symptoms()
 
 
 def get_symptom(symptom_id: str) -> dict | None:
@@ -50,20 +112,16 @@ def machines_for_exercise(exercise_id: str) -> list[GymMachine]:
     return [m for m in load_machines() if exercise_id in m.exercises]
 
 
-@lru_cache(maxsize=1)
-def load_exercises() -> tuple[Exercise, ...]:
-    """Load and validate the exercise catalog (cached)."""
-    raw = (files(__package__) / CATALOG_FILE).read_text(encoding="utf-8")
-    data = json.loads(raw)
-    return tuple(Exercise.model_validate(item) for item in data)
+def load_exercises() -> tuple["Exercise", ...]:
+    if "exercises" in _OVERRIDES:
+        return _OVERRIDES["exercises"]  # type: ignore[return-value]
+    return packaged_exercises()
 
 
-@lru_cache(maxsize=1)
 def load_supplements() -> tuple[Supplement, ...]:
-    """Load and validate the supplement catalog (cached)."""
-    raw = (files(__package__) / SUPPLEMENT_FILE).read_text(encoding="utf-8")
-    data = json.loads(raw)
-    return tuple(Supplement.model_validate(item) for item in data)
+    if "supplements" in _OVERRIDES:
+        return _OVERRIDES["supplements"]  # type: ignore[return-value]
+    return packaged_supplements()
 
 
 def get_supplement(supplement_id: str) -> Supplement | None:
@@ -81,13 +139,10 @@ def supplements_for(
     result = list(load_supplements())
     if objective is not None:
         wanted = _value(objective)
-        result = [
-            s for s in result if wanted in {_value(o) for o in s.objectives}
-        ]
+        result = [s for s in result if wanted in {_value(o) for o in s.objectives}]
     if modality is not None and _value(modality) == "GESTATIONAL":
         result = [s for s in result if _value(s.safety_pregnancy) != "AVOID"]
     return result
-
 
 
 def get_exercise(exercise_id: str) -> Exercise | None:

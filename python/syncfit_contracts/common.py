@@ -260,7 +260,7 @@ class ExerciseAdaptation(BaseContractModel):
     reps_adapted: int = Field(ge=0, le=100)
     weight_suggested_kg: float = Field(ge=0)
     exercise_id: str | None = None
-    muscle_groups: list[MuscleGroup] = Field(default_factory=list)
+    muscle_groups: list[str] = Field(default_factory=list)
     impact: ExerciseImpact | None = None
     description: LocalizedText | None = None
     how_to: LocalizedText | None = None
@@ -286,7 +286,7 @@ class Exercise(BaseContractModel):
 
     id: str
     name: LocalizedText
-    muscle_groups: list[MuscleGroup] = Field(min_length=1)
+    muscle_groups: list[str] = Field(min_length=1)
     equipment: str
     impact: ExerciseImpact
     description: LocalizedText

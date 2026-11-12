@@ -36,7 +36,7 @@ class RoutineRequest(BaseContractModel):
 
     schema_version: str = SCHEMA_VERSION
     session_id: str | None = None
-    muscle_groups: list[MuscleGroup] = Field(min_length=1, max_length=4)
+    muscle_groups: list[str] = Field(min_length=1, max_length=4)
     language: Language = Language.EN
     symptoms: list[str] = Field(default_factory=list)
     modality: Modality | None = None
@@ -56,7 +56,7 @@ class RoutineResponse(BaseContractModel):
     schema_version: str = SCHEMA_VERSION
     session_id: str | None = None
     language: Language = Language.EN
-    muscle_groups: list[MuscleGroup] = Field(min_length=1)
+    muscle_groups: list[str] = Field(min_length=1)
     phase_inferred: InferredPhase | None = None
     fatigue_level: FatigueLevel | None = None
     k_load_multiplier: float | None = Field(default=None, ge=0.70, le=1.05)
