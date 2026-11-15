@@ -212,11 +212,19 @@ class BaseContractModel(BaseModel):
 
 
 class Biomarkers(BaseContractModel):
-    """Basal and neuromuscular biomarkers sampled at the edge."""
+    """Basal and neuromuscular biomarkers sampled at the edge.
+
+    The last four fields are raw device readings used by the check-in screen.
+    They have defaults so frames produced by older firmware still validate.
+    """
 
     delta_temperature_c: float = Field(ge=-2.0, le=2.0)
     rmssd_hrv_ms: float = Field(ge=0, le=300)
     isometric_force_loss_pct: float = Field(ge=0, le=100)
+    heart_rate_bpm: float = Field(default=0.0, ge=0, le=240)
+    force_kg: float = Field(default=0.0, ge=0, le=500)
+    object_temperature_c: float = Field(default=0.0, ge=-20, le=60)
+    finger_present: bool = False
 
 
 class MacroNutrients(BaseContractModel):
