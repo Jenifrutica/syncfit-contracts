@@ -278,7 +278,7 @@
     "OptionValue": {
       "type": "string",
       "description": "Slug of a database option (app_options), e.g. an objective or goal phase.",
-      "pattern": "^[A-Z0-9_]{1,60}$"
+      "pattern": "^[A-Z0-9_]{1,40}$"
     },
     "UserObjective": {
       "type": "string",

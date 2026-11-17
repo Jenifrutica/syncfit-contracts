@@ -137,7 +137,7 @@ class UserObjective(str, Enum):
 
 # Objective and goal-phase values live in the database (app_options); the enums
 # above/below only name the seeded defaults. Contracts accept any option slug.
-OptionValue = Annotated[str, Field(pattern=r"^[A-Z0-9_]{1,60}$")]
+OptionValue = Annotated[str, Field(pattern=r"^[A-Z0-9_]{1,40}$")]
 
 
 class SupplementSafety(str, Enum):
