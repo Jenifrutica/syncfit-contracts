@@ -24,7 +24,7 @@
     "macros": { "$ref": "common.schema.json#/$defs/MacroNutrients" },
     "objectives": {
       "type": "array",
-      "items": { "$ref": "common.schema.json#/$defs/UserObjective" }
+      "items": { "$ref": "common.schema.json#/$defs/OptionValue" }
     },
     "safety_general": { "$ref": "common.schema.json#/$defs/SupplementSafety" },
     "safety_pregnancy": { "$ref": "common.schema.json#/$defs/SupplementSafety" },

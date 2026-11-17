@@ -1,6 +1,5 @@
 import { z } from "zod";
 import {
-  GoalPhase,
   Language,
   LocalizedText,
   MacroNutrients,
@@ -10,7 +9,7 @@ import {
   SupplementCategory,
   SupplementFrequency,
   SupplementSafety,
-  UserObjective,
+  OptionValue,
   Uuid,
 } from "./common.js";
 
@@ -21,7 +20,7 @@ export const Supplement = z
     category: SupplementCategory,
     dosage: LocalizedText,
     macros: MacroNutrients,
-    objectives: z.array(UserObjective),
+    objectives: z.array(OptionValue),
     safety_general: SupplementSafety,
     safety_pregnancy: SupplementSafety,
     notes: LocalizedText,
@@ -49,8 +48,8 @@ export const SupplementRequest = z
     schema_version: SchemaVersion.default(SCHEMA_VERSION),
     language: Language.default("EN"),
     modality: Modality,
-    objective: UserObjective.optional(),
-    goal_phase: GoalPhase.optional(),
+    objective: OptionValue.optional(),
+    goal_phase: OptionValue.optional(),
     week: z.number().int().min(1).max(42).optional(),
     weight_kg: z.number().min(20).max(300).optional(),
     height_cm: z.number().min(80).max(250).optional(),
@@ -80,8 +79,8 @@ export const SupplementAdvice = z
     schema_version: SchemaVersion.default(SCHEMA_VERSION),
     language: Language.default("EN"),
     modality: Modality.optional(),
-    objective: UserObjective.optional(),
-    goal_phase: GoalPhase.optional(),
+    objective: OptionValue.optional(),
+    goal_phase: OptionValue.optional(),
     daily_macros: MacroNutrients.optional(),
     items: z.array(SupplementAdviceItem),
   })

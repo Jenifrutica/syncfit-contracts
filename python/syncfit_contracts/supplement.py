@@ -6,7 +6,6 @@ from pydantic import Field
 
 from .common import (
     BaseContractModel,
-    GoalPhase,
     Language,
     LocalizedText,
     MacroNutrients,
@@ -14,7 +13,7 @@ from .common import (
     SupplementCategory,
     SupplementFrequency,
     SupplementSafety,
-    UserObjective,
+    OptionValue,
 )
 from .version import SCHEMA_VERSION
 
@@ -27,7 +26,7 @@ class Supplement(BaseContractModel):
     category: SupplementCategory
     dosage: LocalizedText
     macros: MacroNutrients
-    objectives: list[UserObjective] = Field(default_factory=list)
+    objectives: list[OptionValue] = Field(default_factory=list)
     safety_general: SupplementSafety
     safety_pregnancy: SupplementSafety
     notes: LocalizedText
@@ -53,8 +52,8 @@ class SupplementRequest(BaseContractModel):
     schema_version: str = SCHEMA_VERSION
     language: Language = Language.EN
     modality: Modality
-    objective: UserObjective | None = None
-    goal_phase: GoalPhase | None = None
+    objective: OptionValue | None = None
+    goal_phase: OptionValue | None = None
     week: int | None = Field(default=None, ge=1, le=42)
     weight_kg: float | None = Field(default=None, ge=20, le=300)
     height_cm: float | None = Field(default=None, ge=80, le=250)
@@ -80,8 +79,8 @@ class SupplementAdvice(BaseContractModel):
     schema_version: str = SCHEMA_VERSION
     language: Language = Language.EN
     modality: Modality | None = None
-    objective: UserObjective | None = None
-    goal_phase: GoalPhase | None = None
+    objective: OptionValue | None = None
+    goal_phase: OptionValue | None = None
     daily_macros: MacroNutrients | None = None
     items: list[SupplementAdviceItem] = Field(default_factory=list)
 

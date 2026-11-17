@@ -275,6 +275,11 @@
       "description": "Subjective energy reported by the athlete before training.",
       "enum": ["ENERGY", "MODERATE", "NO_ENERGY"]
     },
+    "OptionValue": {
+      "type": "string",
+      "description": "Slug of a database option (app_options), e.g. an objective or goal phase.",
+      "pattern": "^[A-Z0-9_]{1,60}$"
+    },
     "UserObjective": {
       "type": "string",
       "description": "Training/nutrition objective selected by the athlete.",

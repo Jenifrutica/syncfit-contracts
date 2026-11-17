@@ -10,11 +10,10 @@ from .common import (
     BaseContractModel,
     EnergyLevel,
     ExerciseLoad,
-    GoalPhase,
     Language,
     MacroNutrients,
     Modality,
-    UserObjective,
+    OptionValue,
 )
 from .version import SCHEMA_VERSION
 
@@ -40,8 +39,8 @@ class UserProfile(BaseContractModel):
     body_fat_pct: float | None = Field(default=None, ge=3, le=60)
     daily_calories: int | None = Field(default=None, ge=800, le=6000)
     age: int | None = Field(default=None, ge=10, le=100)
-    objective: UserObjective | None = None
-    goal_phase: GoalPhase | None = None
+    objective: OptionValue | None = None
+    goal_phase: OptionValue | None = None
     modality: Modality | None = None
     available_machines: list[str] = Field(default_factory=list)
     symptoms: list[str] = Field(default_factory=list)

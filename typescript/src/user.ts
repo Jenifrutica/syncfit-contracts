@@ -2,14 +2,13 @@ import { z } from "zod";
 import {
   EnergyLevel,
   ExerciseLoad,
-  GoalPhase,
   Language,
   MacroNutrients,
   Modality,
   SCHEMA_VERSION,
   SchemaVersion,
   Timestamp,
-  UserObjective,
+  OptionValue,
   Uuid,
 } from "./common.js";
 
@@ -26,8 +25,8 @@ export const UserProfile = z
     body_fat_pct: z.number().min(3).max(60).optional(),
     daily_calories: z.number().int().min(800).max(6000).optional(),
     age: z.number().int().min(10).max(100).optional(),
-    objective: UserObjective.optional(),
-    goal_phase: GoalPhase.optional(),
+    objective: OptionValue.optional(),
+    goal_phase: OptionValue.optional(),
     modality: Modality.optional(),
     available_machines: z.array(z.string()).optional(),
     symptoms: z.array(z.string()).optional(),

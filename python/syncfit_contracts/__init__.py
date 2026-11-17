@@ -64,6 +64,7 @@ from .common import (
     SupplementSafety,
     Trimester,
     UserObjective,
+    OptionValue,
     WeightUnit,
 )
 from .gym import GymMembership, GymStation, JoinedGym
@@ -153,6 +154,7 @@ __all__ = [
     "TelemetryFrame",
     "Trimester",
     "UserObjective",
+    "OptionValue",
     "UserProfile",
     "SupplementMacro",
     "WsEnvelope",

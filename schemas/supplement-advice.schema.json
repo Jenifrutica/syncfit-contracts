@@ -10,8 +10,8 @@
     "schema_version": { "$ref": "common.schema.json#/$defs/SchemaVersion" },
     "language": { "$ref": "common.schema.json#/$defs/Language" },
     "modality": { "$ref": "common.schema.json#/$defs/Modality" },
-    "objective": { "$ref": "common.schema.json#/$defs/UserObjective" },
-    "goal_phase": { "$ref": "common.schema.json#/$defs/GoalPhase" },
+    "objective": { "$ref": "common.schema.json#/$defs/OptionValue" },
+    "goal_phase": { "$ref": "common.schema.json#/$defs/OptionValue" },
     "daily_macros": {
       "$ref": "common.schema.json#/$defs/MacroNutrients",
       "description": "Estimated daily macronutrient target for the athlete."

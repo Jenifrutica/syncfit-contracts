@@ -35,7 +35,7 @@
       "maximum": 180
     },
     "energy_level": { "$ref": "common.schema.json#/$defs/EnergyLevel" },
-    "objective": { "$ref": "common.schema.json#/$defs/UserObjective" },
+    "objective": { "$ref": "common.schema.json#/$defs/OptionValue" },
     "include_warmup": { "type": "boolean" }
   }
 }

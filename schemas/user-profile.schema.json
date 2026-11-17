@@ -18,8 +18,8 @@
     "body_fat_pct": { "type": "number", "minimum": 3, "maximum": 60 },
     "daily_calories": { "type": "integer", "minimum": 800, "maximum": 6000 },
     "age": { "type": "integer", "minimum": 10, "maximum": 100 },
-    "objective": { "$ref": "common.schema.json#/$defs/UserObjective" },
-    "goal_phase": { "$ref": "common.schema.json#/$defs/GoalPhase" },
+    "objective": { "$ref": "common.schema.json#/$defs/OptionValue" },
+    "goal_phase": { "$ref": "common.schema.json#/$defs/OptionValue" },
     "modality": { "$ref": "common.schema.json#/$defs/Modality" },
     "available_machines": {
       "type": "array",

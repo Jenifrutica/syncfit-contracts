@@ -10,7 +10,7 @@
     "schema_version": { "$ref": "common.schema.json#/$defs/SchemaVersion" },
     "language": { "$ref": "common.schema.json#/$defs/Language" },
     "modality": { "$ref": "common.schema.json#/$defs/Modality" },
-    "objective": { "$ref": "common.schema.json#/$defs/UserObjective" },
+    "objective": { "$ref": "common.schema.json#/$defs/OptionValue" },
     "week": { "type": "integer", "minimum": 1, "maximum": 42 }
   }
 }

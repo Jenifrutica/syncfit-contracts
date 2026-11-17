@@ -91,6 +91,10 @@ export type SetType = z.infer<typeof SetType>;
 export const EnergyLevel = z.enum(["ENERGY", "MODERATE", "NO_ENERGY"]);
 export type EnergyLevel = z.infer<typeof EnergyLevel>;
 
+/** Slug of a database option (objective, goal phase...). The enums only name the seeded defaults. */
+export const OptionValue = z.string().regex(/^[A-Z0-9_]{1,60}$/);
+export type OptionValue = z.infer<typeof OptionValue>;
+
 export const UserObjective = z.enum([
   "STRENGTH",
   "HYPERTROPHY",

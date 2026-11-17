@@ -9,7 +9,7 @@ import {
   MuscleGroup,
   SCHEMA_VERSION,
   SchemaVersion,
-  UserObjective,
+  OptionValue,
   Uuid,
 } from "./common.js";
 import { TelemetryFrame } from "./telemetry.js";
@@ -41,7 +41,7 @@ export const RoutineRequest = z
     exercises_count: z.number().int().min(1).max(12).optional(),
     time_budget_minutes: z.number().int().min(10).max(180).optional(),
     energy_level: EnergyLevel.optional(),
-    objective: UserObjective.optional(),
+    objective: OptionValue.optional(),
     include_warmup: z.boolean().optional(),
   })
   .strict();

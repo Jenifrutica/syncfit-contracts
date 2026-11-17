@@ -251,3 +251,17 @@ def test_exercise_required_equipment_and_filter():
     # bodyweight is always available
     bodyweight = {e.id for e in exercises_for_equipment([])}
     assert "plank" in bodyweight
+
+
+def test_objective_and_goal_phase_accept_database_slugs():
+    from pydantic import ValidationError
+    from syncfit_contracts import UserProfile
+
+    profile = UserProfile.model_validate({"profile_id": "p1", "display_name": "A", "objective": "MOBILITY", "goal_phase": "PEAK_WEEK"})
+    assert profile.objective == "MOBILITY" and profile.goal_phase == "PEAK_WEEK"
+    try:
+        UserProfile.model_validate({"profile_id": "p1", "display_name": "A", "objective": "not a slug"})
+    except ValidationError:
+        pass
+    else:
+        raise AssertionError("free text must not pass as an option slug")

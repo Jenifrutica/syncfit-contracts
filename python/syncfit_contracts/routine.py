@@ -13,7 +13,7 @@ from .common import (
     Language,
     Modality,
     MuscleGroup,
-    UserObjective,
+    OptionValue,
 )
 from .telemetry import TelemetryFrame
 from .version import SCHEMA_VERSION
@@ -46,7 +46,7 @@ class RoutineRequest(BaseContractModel):
     exercises_count: int | None = Field(default=None, ge=1, le=12)
     time_budget_minutes: int | None = Field(default=None, ge=10, le=180)
     energy_level: EnergyLevel | None = None
-    objective: UserObjective | None = None
+    objective: OptionValue | None = None
     include_warmup: bool = True
 
 

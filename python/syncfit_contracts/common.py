@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from enum import Enum
+from typing import Annotated
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -132,6 +133,11 @@ class UserObjective(str, Enum):
     RECOVERY = "RECOVERY"
     PERFORMANCE = "PERFORMANCE"
     GESTATIONAL_HEALTH = "GESTATIONAL_HEALTH"
+
+
+# Objective and goal-phase values live in the database (app_options); the enums
+# above/below only name the seeded defaults. Contracts accept any option slug.
+OptionValue = Annotated[str, Field(pattern=r"^[A-Z0-9_]{1,60}$")]
 
 
 class SupplementSafety(str, Enum):
@@ -349,6 +355,7 @@ __all__ = [
     "SetType",
     "EnergyLevel",
     "UserObjective",
+    "OptionValue",
     "SupplementSafety",
     "SupplementCategory",
     "BaseContractModel",
