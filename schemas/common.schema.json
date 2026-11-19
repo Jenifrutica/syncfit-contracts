@@ -54,7 +54,7 @@
     },
     "Biomarkers": {
       "type": "object",
-      "description": "Basal and neuromuscular biomarkers sampled at the edge.",
+      "description": "Basal and neuromuscular biomarkers sampled at the edge. The last four are raw device readings; they are optional so frames from older firmware still validate.",
       "additionalProperties": false,
       "required": [
         "delta_temperature_c",
@@ -79,6 +79,32 @@
           "description": "Percentage of isometric strength lost versus baseline, from the load cell.",
           "minimum": 0,
           "maximum": 100
+        },
+        "heart_rate_bpm": {
+          "type": "number",
+          "description": "Heart rate derived from the PPG window, in beats per minute.",
+          "minimum": 0,
+          "maximum": 240,
+          "default": 0.0
+        },
+        "force_kg": {
+          "type": "number",
+          "description": "Current load-cell reading, in kilograms.",
+          "minimum": 0,
+          "maximum": 500,
+          "default": 0.0
+        },
+        "object_temperature_c": {
+          "type": "number",
+          "description": "Absolute skin temperature from the infrared sensor, in Celsius.",
+          "minimum": -20,
+          "maximum": 60,
+          "default": 0.0
+        },
+        "finger_present": {
+          "type": "boolean",
+          "description": "Whether the optical sensor detects a finger on it.",
+          "default": false
         }
       }
     },
