@@ -1,5 +1,7 @@
 # SyncFit Contracts
 
+**Live app:** https://syncfit.jenilarper.dev
+
 Single source of truth for every interface between SyncFit Edge repositories. No layer may define its own payload: every telemetry frame, WebSocket message, REST response and AI output must validate against a schema published here.
 
 ## Purpose
@@ -216,3 +218,7 @@ weekly_training_goal, rest_days_allowance, weight_unit, photo_url),
 - (Opcional) Esquema/validador para `symptoms.json` (hoy sin schema).
 - (Opcional) Ampliar OpenAPI a perfiles, suplementos, calendario y compartición.
 - (Opcional) Revisar estrictitud entre Pydantic/Zod/JSON Schema (UUID, requeridos).
+
+## Data structures
+
+- No algorithmic structures: it defines the data models (JSON Schema, generated as Pydantic and Zod types) that every repo exchanges.
