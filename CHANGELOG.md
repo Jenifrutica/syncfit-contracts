@@ -5,6 +5,16 @@ All notable changes to the SyncFit Edge cross-repository contract are documented
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+
+- `Biomarkers` now documents the four live device readings (`heart_rate_bpm`,
+  `force_kg`, `object_temperature_c`, `finger_present`) in the JSON Schema and
+  the Zod model. They existed only in the Pydantic model, so every real frame
+  from the firmware was rejected by the other two validators. They are optional,
+  so frames from older firmware keep validating.
+
 ## [1.13.0] - 2026-09-24
 
 ### Added

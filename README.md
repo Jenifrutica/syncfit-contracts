@@ -151,12 +151,12 @@ Python 3.11+ (Pydantic v2, jsonschema) and TypeScript (Zod, vitest).
 
 ## Related repositories
 
-- [`syncfit-hardware`](../syncfit-hardware) — produces telemetry frames.
-- [`syncfit-backend`](../syncfit-backend) — consumes and validates schemas.
-- [`syncfit-core`](../syncfit-core) — feature and model I/O.
-- [`syncfit-ai-reasoning`](../syncfit-ai-reasoning) — validates strict AI output.
-- [`syncfit-simulator`](../syncfit-simulator) — generates schema-valid test data.
-- [`syncfit-frontend`](../syncfit-frontend) — consumes generated TypeScript types.
+- [`syncfit-hardware`](https://github.com/Jenifrutica/syncfit-hardware) — produces telemetry frames.
+- [`syncfit-backend`](https://github.com/Jenifrutica/syncfit-backend) — consumes and validates schemas.
+- [`syncfit-core`](https://github.com/Jenifrutica/syncfit-core) — feature and model I/O.
+- [`syncfit-ai-reasoning`](https://github.com/Jenifrutica/syncfit-ai-reasoning) — validates strict AI output.
+- [`syncfit-simulator`](https://github.com/Jenifrutica/syncfit-simulator) — generates schema-valid test data.
+- [`syncfit-frontend`](https://github.com/Jenifrutica/syncfit-frontend) — consumes generated TypeScript types.
 
 All code, comments, documentation and commits in this repository are written in English.
 

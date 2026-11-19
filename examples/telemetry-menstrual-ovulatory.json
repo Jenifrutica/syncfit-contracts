@@ -8,7 +8,11 @@
   "biomarkers": {
     "delta_temperature_c": 0.42,
     "rmssd_hrv_ms": 28.5,
-    "isometric_force_loss_pct": 12.8
+    "isometric_force_loss_pct": 12.8,
+    "heart_rate_bpm": 72.4,
+    "force_kg": 31.8,
+    "object_temperature_c": 33.6,
+    "finger_present": true
   },
   "ppg_window": {
     "sample_rate_hz": 100,

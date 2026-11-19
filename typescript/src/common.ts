@@ -204,6 +204,10 @@ export const Biomarkers = z
     delta_temperature_c: z.number().min(-2).max(2),
     rmssd_hrv_ms: z.number().min(0).max(300),
     isometric_force_loss_pct: z.number().min(0).max(100),
+    heart_rate_bpm: z.number().min(0).max(240).optional(),
+    force_kg: z.number().min(0).max(500).optional(),
+    object_temperature_c: z.number().min(-20).max(60).optional(),
+    finger_present: z.boolean().optional(),
   })
   .strict();
 export type Biomarkers = z.infer<typeof Biomarkers>;
