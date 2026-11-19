@@ -92,3 +92,15 @@ def test_all_schemas_are_valid_json_schema(registry):
     for schema_path in SCHEMAS_DIR.glob("*.schema.json"):
         Draft202012Validator.check_schema(load_json(schema_path))
 
+
+
+def test_every_example_is_validated():
+    """A new file in examples/ must be added to EXAMPLE_TO_SCHEMA, or it is never checked."""
+    assert sorted(p.name for p in EXAMPLES_DIR.glob("*.json")) == sorted(EXAMPLE_TO_SCHEMA)
+
+
+@pytest.mark.parametrize("schema_path", sorted(SCHEMAS_DIR.glob("*.schema.json")), ids=lambda p: p.name)
+def test_schema_id_matches_its_file_name_and_draft(schema_path):
+    schema = load_json(schema_path)
+    assert schema["$id"].endswith(f"/schemas/{schema_path.name}")
+    assert schema["$schema"] == "https://json-schema.org/draft/2020-12/schema"
